@@ -2,19 +2,40 @@
   "name": "auction-site",
   "version": "0.0.1",
   "description": "Auction site where users can sell items and bid ",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "sass src/scss:dist/css",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "sass --watch src/scss:dist/css & live-server"
+    "build": "sass src/scss:dist/css",
+    "watch": "sass --watch src/scss:dist/css & live-server",
+    "format": "prettier -w src/js/**/*.js",
+    "lint": "eslint src/**/*.js",
+    "lint-fix": "eslint src/**/*.js --cache --fix",
+    "prepare": "husky install"
   },
   "author": "Megumi Kimura <kimuramegumi@gmai.com>",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^8.33.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
     "live-server": "^1.2.2",
+    "prettier": "^2.8.3",
     "sass": "^1.57.1"
   },
   "dependencies": {
     "bootstrap": "^5.2.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ]
   }
 }
