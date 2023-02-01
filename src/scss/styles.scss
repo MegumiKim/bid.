@@ -1,1 +1,10 @@
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+// BS var overrides
+@import "variables";
+
+// BS styles
+// @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap-dark-5/dist/css/bootstrap-dark.min.css";
+
+// custom styles
+@import "./components/header";
+@import "./components/formInput";
