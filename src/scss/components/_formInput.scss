@@ -19,7 +19,7 @@ input:select {
 }
 
 .form-control:focus {
-  border-color: #454646;
+  border-bottom: 2px rgb(165, 163, 163) solid;
   // outline: 0;
   // box-shadow: 0 0 0 0.25rem rgba(83, 166, 166, 0.25);
   box-shadow: none;

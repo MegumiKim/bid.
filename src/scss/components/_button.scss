@@ -1,4 +1,9 @@
-.btn-secondary {
+.btn-sort {
   background: none;
   border: solid 2px pink;
+  color: pink;
+}
+.btn-sort:hover {
+  background: pink;
+  color: black;
 }

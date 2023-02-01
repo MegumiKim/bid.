@@ -9,6 +9,10 @@ body {
   font-family: "Noto Sans NKo", sans-serif;
 }
 
+.text-muted {
+  color: #d7d7d8;
+}
+
 // Color
 $white: #fff;
 $gray-100: #f8f9fa;
@@ -49,7 +53,7 @@ $warning: $myBlue;
 $danger: $red;
 $light: $gray-100;
 $dark: $gray-900;
-$search: $myPink;
+// $sort: $myPink;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -62,7 +66,7 @@ $theme-colors: (
   "danger": $danger,
   "light": $light,
   "dark": $dark,
-  "search": $search,
+  // "sort": $sort,
 );
 
 // scss-docs-start container-max-widths

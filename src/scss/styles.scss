@@ -8,6 +8,8 @@
 // custom styles
 @import "./components/header";
 @import "./components/formInput";
+@import "./components/button";
+@import "./components/card";
 
 // Font-styles
 
@@ -15,4 +17,8 @@ body {
   font-family: "Noto Sans NKo", sans-serif;
   background-color: #2b2d34;
   color: #fff;
+}
+
+.text-muted {
+  color: #d7d7d8;
 }
