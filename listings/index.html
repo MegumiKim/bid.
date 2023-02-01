@@ -30,7 +30,7 @@
               </a>
 
               <div class="d-flex align-items-center">
-                <button class="btn m-0 btn-circle">
+                <button class="add-btn btn m-0 btn-circle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="40"
@@ -59,7 +59,7 @@
                       class="rounded-circle"
                     />
                   </a>
-                  <ul class="dropdown-menu text-small">
+                  <ul class="dropdown-menu dropdown-menu-dark text-small">
                     <li><a class="dropdown-item" href="#">My Page</a></li>
                     <li><hr class="dropdown-divider" /></li>
                     <li><a class="dropdown-item" href="/">Sign out</a></li>
@@ -69,6 +69,57 @@
             </div>
           </div>
         </header>
+
+        <section
+          id="search-section"
+          class="container d-flex flex-wrap justify-content-between"
+        >
+          <div id="sort-btn col-md-3">
+            <button
+              type="button"
+              class="btn btn-search dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Sort items
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <button id="old-to-new-btn" class="dropdown-item" href="#">
+                  Latest items
+                </button>
+              </li>
+              <li>
+                <button id="old-to-new-btn" class="dropdown-item" href="#">
+                  Ending Soon
+                </button>
+              </li>
+              <li>
+                <button id="new-to-old-btn" class="dropdown-item" href="#">
+                  Most Popular
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <form class="col-12 col-lg-4 mb-2 mb-lg-0 mt-3" role="search">
+            <input
+              type="search"
+              class="form-control"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form>
+        </section>
+
+        <section>
+          <div class="row d-flex justify-content-between">
+            <div
+              class="row row-cols-1 row-cols-lg-2 g-4 my-1"
+              id="listings-container"
+            ></div>
+          </div>
+        </section>
       </main>
       <footer class="mt-auto py-3 my-5 pt-5 text-muted text-center text-small">
         <p class="mb-1">© 2023 auction platform - bid.</p>

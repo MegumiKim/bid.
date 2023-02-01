@@ -2,8 +2,33 @@
   border: none;
   border-bottom: 2px white solid;
   border-radius: 0;
+  font-size: 0.8rem;
+  background: #2b2d34;
 }
 
 .form-wrapper {
-  max-width: 300px;
+  max-width: 350px;
+}
+
+.foam-floating > label {
+  padding-left: 0;
+}
+
+input:select {
+  background-color: grey;
+}
+
+.form-control:focus {
+  border-color: #454646;
+  // outline: 0;
+  // box-shadow: 0 0 0 0.25rem rgba(83, 166, 166, 0.25);
+  box-shadow: none;
+  background-color: #67696f;
+  color: #2b2d34;
+}
+
+.form-control::placeholder {
+  color: #dcdcdd;
+  opacity: 1;
+  margin-left: 0;
 }
