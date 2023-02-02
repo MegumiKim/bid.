@@ -8,3 +8,14 @@
   background: $myGreen;
   color: $myDark;
 }
+
+.add-btn {
+  font-size: 40px;
+  color: $myGreen;
+  font-weight: normal;
+}
+
+.add-btn:hover {
+  text-decoration: none;
+  color: white;
+}

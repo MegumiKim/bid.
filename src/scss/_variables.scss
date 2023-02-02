@@ -9,15 +9,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-// .text-muted {
-//   color: #d7d7d8;
-// }
-
-// :root {
-//   --bs-link-color: #096194;
-//   --bs-link-hover-color: #074e76;
-// }
-
 // Color
 $white: #fff;
 $gray-100: #f8f9fa;
@@ -111,3 +102,9 @@ $enable-caret: false;
 // $enable-negative-margins: false !default;
 // $enable-deprecation-messages: true !default;
 // $enable-important-utilities: true !default;
+
+$nav-link-color: $myGreen;
+$nav-link-hover-color: white;
+$btn-close-color: white;
+$modal-content-bg: $myDark;
+$text-muted: $gray-500;
