@@ -23,83 +23,93 @@
           <h1 class="logo">bid.</h1>
           <p class="lead fs-6">Auction platform for Noroffers</p>
         </div>
-        <div class="row g-5 mx-2 .d-flex">
-          <div class="form-wrapper p-5 mx-auto border border-light">
+        <div class="row g-5 mx-2">
+          <div
+            class="col-10 col-sm-8 col-md-6 col-lg-10 p-5 mx-auto border border-light"
+          >
             <h4 class="mb-3 text-center">Welcome to bid.</h4>
 
-            <form action="" id="sign-up-form" method="POST">
-              <div class="form-floating mb-3">
-                <input
-                  type="text"
-                  name="name"
-                  pattern="^[\w]+$"
-                  title="a-Z, 0-9, and _. Example: My_Name123"
-                  class="form-control"
-                  id="username"
-                  placeholder="user name"
-                  required
-                />
-                <label for="username">User Name*</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input
-                  type="email"
-                  name="email"
-                  title="Please enter valid email with noroff domain (@stud.noroff.no or @noroff.no). Example: my_email@noroff.no"
-                  class="form-control"
-                  id="email"
-                  placeholder="@stud.noroff.no or @noroff.no"
-                  required
-                />
-                <label for="email">Email*</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input
-                  class="form-control"
-                  title="minimum 8 characters"
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="Password"
-                  minlength="8"
-                  required
-                />
-                <label for="password">Password*</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input
-                  class="form-control"
-                  type="url"
-                  name="avatar"
-                  id="avatar"
-                  placeholder="Avatar URL"
-                />
-                <label for="avatar">Avatar URL</label>
+            <form
+              action=""
+              id="sign-up-form"
+              method="POST"
+              class="d-lg-flex g-5"
+            >
+              <div class="col-lg-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    name="name"
+                    pattern="^[\w]+$"
+                    title="a-Z, 0-9, and _. Example: My_Name123"
+                    class="form-control"
+                    id="username"
+                    placeholder="user name"
+                    required
+                  />
+                  <label for="username">User Name*</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    name="email"
+                    title="Please enter valid email with noroff domain (@stud.noroff.no or @noroff.no). Example: my_email@noroff.no"
+                    class="form-control"
+                    id="email"
+                    placeholder="@stud.noroff.no or @noroff.no"
+                    required
+                  />
+                  <label for="email">Email*</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    title="minimum 8 characters"
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                    minlength="8"
+                    required
+                  />
+                  <label for="password">Password*</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    type="url"
+                    name="avatar"
+                    id="avatar"
+                    placeholder="Avatar URL"
+                  />
+                  <label for="avatar">Avatar URL</label>
+                </div>
+                <small class="text-muted">*required</small>
               </div>
 
-              <small class="text-muted">*required</small>
-
-              <p class="text-center mt-4">
-                You will receive 1,000 cash points upon registration on the
-                house.
-              </p>
-              <button
-                class="w-100 btn btn-primary btn-lg"
-                type="submit"
-                id="btn-submit"
-              >
-                Sign up
-              </button>
-              <div
-                id="user-alert"
-                class="alert mt-3"
-                role="alert"
-                style="display: none"
-              ></div>
-              <hr class="my-4" />
-              <p class="w-100 text-center">
-                Already have have an account? <a href="/./index.html">log in</a>
-              </p>
+              <div class="col-lg-6 ps-lg-5 mt-lg-5">
+                <p class="text-center mt-4">
+                  Upon registration, you will receive 1,000 cash points on the
+                  house.
+                </p>
+                <button
+                  class="w-100 btn btn-primary btn-lg"
+                  type="submit"
+                  id="btn-submit"
+                >
+                  Sign up
+                </button>
+                <div
+                  id="user-alert"
+                  class="alert mt-3"
+                  role="alert"
+                  style="display: none"
+                ></div>
+                <hr class="my-4" />
+                <p class="w-100 text-center">
+                  Already have an account? <a href="/login/">log in</a>
+                </p>
+              </div>
             </form>
           </div>
         </div>
