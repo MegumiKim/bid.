@@ -54,12 +54,12 @@
         </div>
       </div>
     </header>
-    <main class="mx-md-4">
-      <section id="welcome" class="container col-xxl-8 px-4 py-2">
+    <main class="mx-md-4 px-4">
+      <section id="welcome" class="container py-2">
         <div
-          class="mx-auto row flex-lg-row-reverse align-items-center g-5 p-md-5 mb-5"
+          class="mx-auto row flex-md-row-reverse align-items-center g-5 p-md-5 mb-5"
         >
-          <div class="mx-auto col-10 col-sm-8 col-lg-6">
+          <div class="mx-auto col-12 col-sm-8 col-md-6">
             <img
               src="asset/img/avatar-3814081_640.png"
               class="d-block mx-auto img-fluid"
@@ -69,21 +69,21 @@
               loading="lazy"
             />
           </div>
-          <div class="col-lg-6">
-            <h1 class="logo display-1 fw-bold lh-3 mb-3">bid.</h1>
+          <div class="col-md-6 text-center">
+            <h1 class="logo logo-large display-1 fw-bold lh-3 mb-3">bid.</h1>
             <p class="lead">Auction platform for Noroffers</p>
-            <div class="d-grid gap-2 d-flex justify-content-sm-start">
+            <div class="d-grid gap-2 d-sm-flex justify-content-center">
               <a
                 href="./login/"
                 type="button"
-                class="btn btn-primary btn-lg px-4 me-md-2"
+                class="btn btn-primary btn-md px-4 me-md-2"
               >
                 Log-in
               </a>
               <a
                 href="./signup/"
                 type="button"
-                class="btn btn-outline-secondary btn-lg px-4"
+                class="btn btn-outline-secondary btn-md px-4"
               >
                 Sign-up
               </a>
@@ -94,10 +94,10 @@
 
       <section
         id="categories"
-        class="row mb-5 d-flex align-items-center justify-content-center"
+        class="row mb-5 d-flex g-4 "
       >
-        <div class="col-6 col-md-3 align-items-center px-3">
-          <div class="mb-3 px-3">
+        <div class="col-6 col-md-3 align-items-center px-md-3">
+          <div class="mb-3 px-md-3 col-sm-8 m-auto">
             <img
               class="rounded-circle"
               src="./asset/img/avatar-3814081_640.png"
@@ -108,8 +108,8 @@
           </div>
           <h3 class="btn btn-primary d-block mx-4">Category 1</h3>
         </div>
-        <div class="col-6 col-md-3 align-items-center px-3">
-          <div class="mb-3 px-3">
+        <div class="col-6 col-md-3 align-items-center px-md-3">
+          <div class="mb-3 px-md-3 col-sm-8 m-auto">
             <img
               class="rounded-circle"
               src="./asset/img/avatar-3814081_640.png"
@@ -120,8 +120,8 @@
           </div>
           <h3 class="btn btn-primary d-block mx-4">Category 1</h3>
         </div>
-        <div class="col-6 col-md-3 align-items-center px-3">
-          <div class="mb-3 px-3">
+        <div class="col-6 col-md-3 align-items-center px-md-3">
+          <div class="mb-3 col-sm-8 px-md-3 m-auto">
             <img
               class="rounded-circle"
               src="./asset/img/avatar-3814081_640.png"
@@ -132,8 +132,8 @@
           </div>
           <h3 class="btn btn-primary d-block mx-4">Category 1</h3>
         </div>
-        <div class="col-6 col-md-3 align-items-center px-3">
-          <div class="mb-3 px-3">
+        <div class="col-6 col-md-3 align-items-center px-md-3">
+          <div class="mb-3 col-sm-8 px-md-3 m-auto">
             <img
               class="rounded-circle"
               src="./asset/img/avatar-3814081_640.png"
@@ -191,19 +191,15 @@
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
               <div class="card shadow-sm">
-                <svg
-                  class="bd-placeholder-img card-img-top"
-                  width="100%"
-                  height="225"
-                  xmlns="https://picsum.photos/200/300"
+                <img
+                  width="100%" class="h-100 w-100"
+                  src="asset/img/apple-1282241_640.jpg"
                   role="img"
                   aria-label="Placeholder: Thumbnail"
                   preserveAspectRatio="xMidYMid slice"
                   focusable="false"
                 >
-                  <!-- <title>Placeholder</title> -->
-                  <rect width="100%" height="100%" fill="#55595c"></rect>
-                </svg>
+                </img>
                 <div class="card-body">
                   <p class="card-title">Nice Item</p>
                   <div
@@ -220,71 +216,6 @@
       </div>
     </main>
 
-    <!-- Modal add new item -->
-
-    <div
-      class="modal fade"
-      id="add-new-item-modal"
-      tabindex="-1"
-      aria-labelledby="postModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="postModalLabel">Create a post</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <form class="modal-body gx-1" id="createPost">
-            <div class="form-group mb-3">
-              <label for="">Title (required)</label>
-              <input
-                type="text"
-                class="form-control"
-                name="title"
-                maxlength="30"
-                required
-              />
-            </div>
-            <div class="form-group mb-3">
-              <label for="">Texts</label>
-              <textarea
-                type="text"
-                class="form-control"
-                name="body"
-                maxlength="150"
-              ></textarea>
-            </div>
-            <div class="form-group mb-3">
-              <label for="">Tag</label>
-              <input type="text" class="form-control" name="tags" />
-            </div>
-            <div class="form-group mb-3">
-              <label for="">Media URL</label>
-              <input type="url" class="form-control" name="media" />
-            </div>
-
-            <div class="modal-footer">
-              <button class="btn btn-secondary" data-bs-dismiss="modal">
-                Close
-              </button>
-              <button
-                type="submit"
-                class="btn btn-primary"
-                data-bs-dismiss="modal"
-              >
-                Publish
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
 
     <!-- Modal Confirm Logout-->
     <div
