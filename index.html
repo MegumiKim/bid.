@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Welcome to bid. Popular auction platform among Noroff students community"
-    />
-    <title>bid. | Log in</title>
+    <meta name="description" content="Find the items you like and bid!" />
+    <title>bid. | Listings</title>
     <link rel="stylesheet" href="/dist/css/styles.css" />
     <script src="./src/js/index.mjs" type="module"></script>
     <script
@@ -16,61 +13,267 @@
       src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
     ></script>
   </head>
-  <body>
+  <body class="container">
+    <header class="p-3 mb-3">
+      <div>
+        <div class="d-flex justify-content-between">
+          <a href="/listings/" class="logo fs-1 mb-2 mb-lg-0 text-white">
+            bid.
+          </a>
+
+          <div class="d-flex align-items-center">
+            <a href="./login/" class="me-3">Log-in</a>
+            <div class="dropdown text-end">
+              <a
+                href="#"
+                class="d-block link-dark text-decoration-none dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="../asset/img/avatar-3814081_640.png"
+                  alt="mdo"
+                  width="32"
+                  height="32"
+                  class="rounded-circle"
+                />
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark text-small">
+                <li><a class="dropdown-item" href="#">My Page</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/"
+                    data-bs-toggle="modal"
+                    data-bs-target="#confirm-logout"
+                    >Sign out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <div class="container">
       <main class="text-white">
-        <div class="pt-5 pb-3 mt-lg-5 text-center">
-          <h1 class="logo">bid.</h1>
-          <p class="lead fs-6">Auction platform for Noroffers</p>
-        </div>
-        <div class="row g-5 mx-2 d-flex">
-          <div class="form-wrapper p-4 mx-auto border border-light">
-            <h4 class="mb-3 text-center">Log in</h4>
-            <form method="POST" id="login-form">
-              <div class="form-floating mb-3">
-                <input
-                  type="email"
-                  name="email"
-                  title="Please enter valid email with noroff domain (@stud.noroff.no or @noroff.no). Example: my_email@noroff.no"
-                  class="form-control"
-                  id="email"
-                  autocomplete="false"
-                  placeholder="email"
-                  required
-                />
-                <label for="email">Email</label>
+        <section id="welcome" class="container col-xxl-8 px-4 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img
+                src="asset/img/avatar-3814081_640.png"
+                class="d-block mx-lg-auto img-fluid"
+                alt="Bootstrap Themes"
+                width="700"
+                height="500"
+                loading="lazy"
+              />
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-1 fw-bold lh-3 mb-3">bid.</h1>
+              <p class="lead">Auction plat for for Noroffers</p>
+              <div class="d-grid gap-2 d-flex justify-content-sm-start">
+                <a
+                  href="./login/"
+                  type="button"
+                  class="btn btn-primary btn-lg px-4 me-md-2"
+                >
+                  Login
+                </a>
+                <a
+                  href="./signup/"
+                  type="button"
+                  class="btn btn-outline-secondary btn-lg px-4"
+                >
+                  Sign up
+                </a>
               </div>
-              <div class="form-floating">
-                <input
-                  class="form-control"
-                  name="password"
-                  type="password"
-                  title="minimum 8 characters"
-                  id="password"
-                  placeholder="Password"
-                  minlength="8"
-                  autocomplete="false"
-                  required
-                />
-                <label for="password">Password</label>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="search-section"
+          class="container d-flex flex-wrap justify-content-between"
+        >
+          <div id="sort-btn btn-outline-secondary btn-lg px-4">
+            <button
+              type="button"
+              class="btn btn-sort dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Sort items
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <button id="old-to-new-btn" class="dropdown-item" href="#">
+                  Latest items
+                </button>
+              </li>
+              <li>
+                <button id="old-to-new-btn" class="dropdown-item" href="#">
+                  Ending Soon
+                </button>
+              </li>
+              <li>
+                <button id="new-to-old-btn" class="dropdown-item" href="#">
+                  Most Popular
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <form class="col-12 col-lg-4 mb-2 mb-lg-0 mt-3" role="search">
+            <input
+              type="search"
+              class="form-control"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form>
+        </section>
+        <div class="album mt-5">
+          <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <div class="col">
+                <div class="card shadow-sm">
+                  <svg
+                    class="bd-placeholder-img card-img-top"
+                    width="100%"
+                    height="225"
+                    xmlns="https://picsum.photos/200/300"
+                    role="img"
+                    aria-label="Placeholder: Thumbnail"
+                    preserveAspectRatio="xMidYMid slice"
+                    focusable="false"
+                  >
+                    <!-- <title>Placeholder</title> -->
+                    <rect width="100%" height="100%" fill="#55595c"></rect>
+                  </svg>
+                  <div class="card-body">
+                    <p class="card-title">Nice Item</p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <small class="text-muted">Current Bid: 300pt </small>
+                      <small class="text-muted">Time remaining: 3 days</small>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <button
-                class="w-100 btn btn-primary btn-lg mt-4"
-                type="submit"
-                id="btn-submit"
-              >
-                Log in
-              </button>
-              <div id="user-alert" class="alert mt-3" role="alert"></div>
-              <hr class="my-4" />
-              <p class="w-100 text-center">
-                Don't have an account?
-                <a href="/signup/index.html">sign up</a>
-              </p>
-            </form>
+            </div>
           </div>
         </div>
       </main>
+
+      <!-- Modal add new item -->
+
+      <div
+        class="modal fade"
+        id="add-new-item-modal"
+        tabindex="-1"
+        aria-labelledby="postModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="postModalLabel">
+                Create a post
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <form class="modal-body gx-1" id="createPost">
+              <div class="form-group mb-3">
+                <label for="">Title (required)</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="title"
+                  maxlength="30"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="">Texts</label>
+                <textarea
+                  type="text"
+                  class="form-control"
+                  name="body"
+                  maxlength="150"
+                ></textarea>
+              </div>
+              <div class="form-group mb-3">
+                <label for="">Tag</label>
+                <input type="text" class="form-control" name="tags" />
+              </div>
+              <div class="form-group mb-3">
+                <label for="">Media URL</label>
+                <input type="url" class="form-control" name="media" />
+              </div>
+
+              <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">
+                  Close
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  data-bs-dismiss="modal"
+                >
+                  Publish
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Confirm Logout-->
+      <div
+        class="modal fade"
+        id="confirm-logout"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Log out</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to logout?</p>
+              <p></p>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">
+                  Back
+                </button>
+                <button
+                  class="btn btn-primary"
+                  data-bs-dismiss="modal"
+                  id="logout-btn"
+                >
+                  Log out
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <footer class="mt-auto py-3 my-5 pt-5 text-muted text-center text-small">
         <p class="mb-1">© 2023 auction platform - bid.</p>
         <ul class="list-inline">

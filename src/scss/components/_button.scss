@@ -1,9 +1,10 @@
 .btn-sort {
   background: none;
-  border: solid 2px pink;
-  color: pink;
+  border: solid 2px $myGreen;
+  color: $myGreen;
+  font-weight: bold;
 }
 .btn-sort:hover {
-  background: pink;
-  color: black;
+  background: $myGreen;
+  color: $myDark;
 }

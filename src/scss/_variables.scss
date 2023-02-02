@@ -13,6 +13,11 @@ body {
   color: #d7d7d8;
 }
 
+// :root {
+//   --bs-link-color: #096194;
+//   --bs-link-hover-color: #074e76;
+// }
+
 // Color
 $white: #fff;
 $gray-100: #f8f9fa;
@@ -44,6 +49,8 @@ $myYellow: #f2b441;
 $myPink: #faacaa;
 $myDark: #2b2d34;
 $myLightBlue: #2081b9;
+$myGreen: rgb(35, 189, 168);
+// $myPurple: rgb(213, 86, 252);
 // scss-docs-start theme-color-variables
 $primary: $myBlue;
 $secondary: $myYellow;
@@ -53,7 +60,7 @@ $warning: $myBlue;
 $danger: $red;
 $light: $gray-100;
 $dark: $gray-900;
-// $sort: $myPink;
+$main: $myGreen;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -66,7 +73,7 @@ $theme-colors: (
   "danger": $danger,
   "light": $light,
   "dark": $dark,
-  // "sort": $sort,
+  "main": $main,
 );
 
 // scss-docs-start container-max-widths
