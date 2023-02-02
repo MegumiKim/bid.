@@ -1,17 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Noto+Sans+NKo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Roboto&display=swap");
 
 // Font-styles
 // $font-family-sans-serif: Gudea, system-ui, -apple-system, "Segoe UI", Roboto;
 // $font-family-sans-serif: "Comfortaa";
-$headings-font-family: "Comfortaa", sans-serif;
+$headings-font-family: "Roboto", sans-serif;
 
 body {
-  font-family: "Noto Sans NKo", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-.text-muted {
-  color: #d7d7d8;
-}
+// .text-muted {
+//   color: #d7d7d8;
+// }
 
 // :root {
 //   --bs-link-color: #096194;
