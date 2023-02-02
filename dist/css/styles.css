@@ -10805,6 +10805,10 @@ textarea.form-control-lg {
   padding: 0 1rem 0 1rem;
 }
 
+.logo-large {
+  font-size: 6em;
+}
+
 .add-btn {
   padding: 0;
   color: #fff;
@@ -10883,6 +10887,10 @@ input:select {
 
 .card-title {
   color: #2b2d34;
+}
+
+.card {
+  overflow: hidden;
 }
 
 .container {
