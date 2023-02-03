@@ -10885,12 +10885,12 @@ input:select {
   color: white;
 }
 
-.card-title {
-  color: #2b2d34;
+.bi-backspace:hover {
+  opacity: 0.4;
 }
 
-.card {
-  overflow: hidden;
+.card-title {
+  color: #2b2d34;
 }
 
 .card-specific {
@@ -10899,8 +10899,18 @@ input:select {
   border: none;
 }
 
-.accordion {
+.accordion-collapse {
   background-color: #2b2d34;
+}
+
+.accordion-button {
+  background-color: #2b2d34;
+  color: white;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #2b2d34;
+  color: #f2b441;
 }
 
 .container {

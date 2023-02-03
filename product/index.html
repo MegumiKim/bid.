@@ -17,16 +17,9 @@
     <header class="p-3 mb-3">
       <div>
         <div class="d-flex justify-content-between align-items-center">
-          <a href="/" class="logo fs-1 text-white"> bid. </a>
+          <a href="/" class="logo fs-1"> bid. </a>
 
           <div class="d-flex align-items-center">
-            <a
-              href="./login/"
-              class="add-btn rounded-circle me-3"
-              data-bs-toggle="modal"
-              data-bs-target="#add-new-item-modal"
-              >+</a
-            >
             <div class="dropdown text-end">
               <a
                 href="#"
@@ -62,6 +55,23 @@
       </div>
     </header>
     <main class="mx-4 mx-md-5">
+      <button class="btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          fill="white"
+          class="bi bi-backspace"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"
+          />
+          <path
+            d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"
+          />
+        </svg>
+      </button>
       <section
         id="product-main"
         class="my-5 row row-cols-1 row-cols-sm-2 d-flex"
@@ -135,7 +145,7 @@
         <div class="col col-sm-4">
           <div class="card card-specific mb-4 rounded-3 shadow-sm">
             <div class="card-header py-3">
-              <h2 class="my-0 fw-normal">Apple Pro</h2>
+              <h1 class="my-0 fw-normal">Apple Pro</h1>
             </div>
             <div class="card-body">
               <h4 class="card-title pricing-card-title">Current bid: 898 pt</h4>
@@ -146,7 +156,7 @@
               </ul>
               <button
                 type="button"
-                class="w-100 btn btn-lg btn-primary"
+                class="w-100 btn btn-lg btn-outline-main"
                 data-bs-toggle="modal"
                 data-bs-target="#bidModal"
               >
@@ -163,7 +173,7 @@
       >
         <div class="card card-specific mb-4 rounded-3 shadow-sm col col-sm-5">
           <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">Product Description</h2>
+            <h3 class="my-0 fw-normal">Product Description</h3>
           </div>
           <div class="card-body">
             <h4 class="card-title pricing-card-title">Current bid: 898 pt</h4>
@@ -173,7 +183,7 @@
         </div>
         <div class="card card-specific mb-4 rounded-3 shadow-sm col col-sm-5">
           <div class="card-header py-3">
-            <h2 class="my-0 fw-normal">Seller</h2>
+            <h3 class="my-0 fw-normal">Seller</h3>
           </div>
           <div class="card-body">
             <ul class="list-unstyled mt-3 mb-4">
@@ -184,74 +194,6 @@
         </div>
       </section>
     </main>
-
-    <!-- Modal add new item -->
-
-    <div
-      class="modal fade"
-      id="add-new-item-modal"
-      tabindex="-1"
-      aria-labelledby="postModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="postModalLabel">
-              Create a new listing
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <form class="modal-body gx-1" id="createPost">
-            <div class="form-group mb-3">
-              <label for="">Title (required)</label>
-              <input
-                type="text"
-                class="form-control"
-                name="title"
-                maxlength="30"
-                required
-              />
-            </div>
-            <div class="form-group mb-3">
-              <label for="">Texts</label>
-              <textarea
-                type="text"
-                class="form-control"
-                name="body"
-                maxlength="150"
-              ></textarea>
-            </div>
-            <div class="form-group mb-3">
-              <label for="">Tag</label>
-              <input type="text" class="form-control" name="tags" />
-            </div>
-            <div class="form-group mb-3">
-              <label for="">Media URL</label>
-              <input type="url" class="form-control" name="media" />
-            </div>
-
-            <div class="modal-footer">
-              <button class="btn btn-secondary" data-bs-dismiss="modal">
-                Close
-              </button>
-              <button
-                type="submit"
-                class="btn btn-primary"
-                data-bs-dismiss="modal"
-              >
-                Publish
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
 
     <!-- Modal place a bid -->
     <div
@@ -264,7 +206,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="bidModal">Place a bid</h1>
+            <h3 class="modal-title fs-5 h1" id="bidModal">Apple Pro</h3>
             <button
               type="button"
               class="btn-close"
@@ -275,18 +217,19 @@
           <form class="modal-body gx-1" id="createPost">
             <p>Current bid: 895 pt</p>
             <p>Ends in 3 hours</p>
+            <p>Your cash point balance: 900pt</p>
             <div class="form-group mb-3">
               <label for="">Your bid</label>
               <input type="text" class="" name="tags" />
             </div>
 
             <div class="modal-footer">
-              <button class="btn btn-secondary" data-bs-dismiss="modal">
+              <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
                 Close
               </button>
               <button
                 type="submit"
-                class="btn btn-primary"
+                class="btn btn-secondary"
                 data-bs-dismiss="modal"
               >
                 Bid now

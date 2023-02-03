@@ -17,7 +17,7 @@
     <header class="p-3 mb-3">
       <div>
         <div class="d-flex justify-content-between">
-          <a href="/" class="logo fs-1 mb-2 mb-lg-0 text-white"> bid. </a>
+          <a href="/" class="logo fs-1 mb-2 mb-lg-0 "> bid. </a>
 
           <div class="d-flex align-items-center">
             <a href="./login/" class="me-3">Login</a>
@@ -55,18 +55,18 @@
       </div>
     </header>
     <main class="mx-md-4 px-4">
-      <section id="welcome" class="container py-2">
+      <section id="welcome" class="">
         <div
           class="mx-auto row align-items-center g-5 p-md-5 mb-5"
         >
-        <div class="col-md-6 text-center">
+        <div class="col col-md-6 text-center">
           <h1 class="logo logo-large display-1 fw-bold lh-3 mb-3">bid.</h1>
           <p class="lead">Auction platform for Noroffers</p>
           <div class="d-grid gap-2 d-sm-flex justify-content-center">
             <a
               href="./login/"
               type="button"
-              class="btn btn-secondary btn-md px-4 me-md-2"
+              class="btn btn-secondary btn-md px-4 me-sm-2"
             >
               Log-in
             </a>
@@ -80,7 +80,11 @@
           </div>
         </div>
 
-        <div class="card shadow-sm mx-auto col-12 col-sm-8 col-md-6">
+        <div class="card shadow-sm mx-auto col-12 col-sm-8 col-md-6 position-relative">
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            Most Popular Item
+            <span class="visually-hidden">unread messages</span>
+          </span>
           <img
             width="100%" class="h-100 w-100"
             src="asset/img/apple-1282241_640.jpg"
@@ -104,7 +108,7 @@
         </div>
       </section>
 
-      <section
+      <!-- <section
         id="categories"
         class="row mb-5 d-flex g-4 "
       >
@@ -156,15 +160,15 @@
           </div>
           <h3 class="btn btn-primary d-block mx-4">Category 1</h3>
         </div>
-      </section>
+      </section> -->
       <section
         id="search-section"
-        class="pt-4 d-flex flex-wrap justify-content-between"
+        class="pt-4 d-flex flex-wrap justify-content-between align-items-end"
       >
-        <div id="sort-btn btn-outline-secondary btn-lg px-4">
+        <div id="sort-btn">
           <button
             type="button"
-            class="btn btn-sort dropdown-toggle"
+            class="btn btn-outline-main btn-md px-4 dropdown-toggle"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >

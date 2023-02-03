@@ -24,8 +24,8 @@
           <p class="lead fs-6">Auction platform for Noroffers</p>
         </div>
         <div class="row g-5 mx-2 d-flex">
-          <div class="form-wrapper p-4 mx-auto border border-light">
-            <h4 class="mb-3 text-center">Log-in</h4>
+          <div class="form-wrapper p-4 mx-auto border border-light rounded-4">
+            <h1 class="h2 mb-3 text-center">Log-in</h1>
             <form method="POST" id="login-form">
               <div class="form-floating mb-3">
                 <input
@@ -52,19 +52,21 @@
                 />
                 <label for="password">Password</label>
               </div>
+              <div id="user-alert" class="alert mt-1" role="alert"></div>
               <a
                 href="/"
-                class="w-100 btn btn-secondary btn-lg mt-4"
+                class="w-100 btn btn-outline-main btn-lg"
                 type="submit"
                 id="btn-submit"
               >
                 Log in
               </a>
-              <div id="user-alert" class="alert mt-3" role="alert"></div>
-              <hr class="my-4" />
-              <p class="w-100 text-center">
+
+              <p class="w-100 text-center mt-3">
                 Don't have an account?
-                <a href="/signup/index.html"> Sign-up</a>
+                <a class="text-decoration-underline" href="/signup/index.html">
+                  Sign-up</a
+                >
               </p>
             </form>
           </div>
