@@ -10893,6 +10893,16 @@ input:select {
   overflow: hidden;
 }
 
+.card-specific {
+  color: #fff;
+  background: #2b2d34;
+  border: none;
+}
+
+.accordion {
+  background-color: #2b2d34;
+}
+
 .container {
   max-width: 1080px;
 }

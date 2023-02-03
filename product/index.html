@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Find the items you like and bid!" />
+    <title>bid. | Product Name</title>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <!-- <script src="./src/js/index.mjs" type="module"></script> -->
+    <script
+      defer
+      src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  </head>
+  <body class="container">
+    <header class="p-3 mb-3">
+      <div>
+        <div class="d-flex justify-content-between align-items-center">
+          <a href="/" class="logo fs-1 text-white"> bid. </a>
+
+          <div class="d-flex align-items-center">
+            <a
+              href="./login/"
+              class="add-btn rounded-circle me-3"
+              data-bs-toggle="modal"
+              data-bs-target="#add-new-item-modal"
+              >+</a
+            >
+            <div class="dropdown text-end">
+              <a
+                href="#"
+                class="d-block link-dark text-decoration-none dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="../asset/img/avatar-3814081_640.png"
+                  alt="mdo"
+                  width="32"
+                  height="32"
+                  class="rounded-circle"
+                />
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark text-small">
+                <li><a class="dropdown-item" href="../">Listings | Home</a></li>
+                <li><a class="dropdown-item" href="../profile/">My Page</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/"
+                    data-bs-toggle="modal"
+                    data-bs-target="#confirm-logout"
+                    >Sign out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="mx-4 mx-md-5">
+      <section
+        id="product-main"
+        class="my-5 row row-cols-1 row-cols-sm-2 d-flex"
+      >
+        <div id="carouselExampleIndicators" class="carousel slide col col-sm-8">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="../asset/img/apple-1282241_640.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../asset/img/feet-1840619_640.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../asset/img/wristwatch-407096_640.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <div class="col col-sm-4">
+          <div class="card card-specific mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h2 class="my-0 fw-normal">Apple Pro</h2>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title pricing-card-title">Current bid: 898 pt</h4>
+
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Last bid: 3h ago</li>
+                <li>Ends in: 3 days</li>
+              </ul>
+              <button
+                type="button"
+                class="w-100 btn btn-lg btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#bidModal"
+              >
+                Place a bid
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="product-description"
+        class="row row-cols-1 row-cols-sm-2 d-flex"
+      >
+        <div class="card card-specific mb-4 rounded-3 shadow-sm col col-sm-5">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">Product Description</h2>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title pricing-card-title">Current bid: 898 pt</h4>
+
+            <p>This is a product description</p>
+          </div>
+        </div>
+        <div class="card card-specific mb-4 rounded-3 shadow-sm col col-sm-5">
+          <div class="card-header py-3">
+            <h2 class="my-0 fw-normal">Seller</h2>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Christine Johns</li>
+              <li>christine@noroff.no</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal add new item -->
+
+    <div
+      class="modal fade"
+      id="add-new-item-modal"
+      tabindex="-1"
+      aria-labelledby="postModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="postModalLabel">
+              Create a new listing
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form class="modal-body gx-1" id="createPost">
+            <div class="form-group mb-3">
+              <label for="">Title (required)</label>
+              <input
+                type="text"
+                class="form-control"
+                name="title"
+                maxlength="30"
+                required
+              />
+            </div>
+            <div class="form-group mb-3">
+              <label for="">Texts</label>
+              <textarea
+                type="text"
+                class="form-control"
+                name="body"
+                maxlength="150"
+              ></textarea>
+            </div>
+            <div class="form-group mb-3">
+              <label for="">Tag</label>
+              <input type="text" class="form-control" name="tags" />
+            </div>
+            <div class="form-group mb-3">
+              <label for="">Media URL</label>
+              <input type="url" class="form-control" name="media" />
+            </div>
+
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-dismiss="modal">
+                Close
+              </button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Publish
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal place a bid -->
+    <div
+      class="modal fade"
+      id="bidModal"
+      tabindex="-1"
+      aria-labelledby="postModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="bidModal">Place a bid</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form class="modal-body gx-1" id="createPost">
+            <p>Current bid: 895 pt</p>
+            <p>Ends in 3 hours</p>
+            <div class="form-group mb-3">
+              <label for="">Your bid</label>
+              <input type="text" class="" name="tags" />
+            </div>
+
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-dismiss="modal">
+                Close
+              </button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Bid now
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Confirm Logout-->
+    <div
+      class="modal fade"
+      id="confirm-logout"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Log out</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to logout?</p>
+            <p></p>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-dismiss="modal">
+                Back
+              </button>
+              <button
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+                id="logout-btn"
+              >
+                Log out
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="mt-auto py-3 my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">© 2023 auction platform - bid.</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

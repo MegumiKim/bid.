@@ -12,6 +12,7 @@
 @import "./components/card";
 @import "./components/welcome";
 @import "./components/modal";
+@import "./components/accordion";
 
 // global styling
 
@@ -23,7 +24,3 @@ body {
   background-color: #2b2d34;
   color: #fff;
 }
-
-// .text-muted {
-//   color: #d7d7d8;
-// }

@@ -46,7 +46,7 @@
                 />
               </a>
               <ul class="dropdown-menu dropdown-menu-dark text-small">
-                <li><a class="dropdown-item" href="../">Listings</a></li>
+                <li><a class="dropdown-item" href="../">Listings | Home</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
                   <a
@@ -102,32 +102,152 @@
           </div>
         </section>
 
-
-        <section id="my-items">
-          <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">My listings</button>
-              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">My Bids</button>
-              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">My Wins</button>
-              <button class="nav-link" id="nav-favorite-tab" data-bs-toggle="tab" data-bs-target="#nav-favorite" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">My Favorites</button>
-
+<section id="my-items">
+  <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+          My Listings
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+        <div class="accordion-body">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <a class="card shadow-sm" href="../product/">
+                <img
+                  width="100%" class="h-100 w-100"
+                  src="../asset/img/apple-1282241_640.jpg"
+                  role="img"
+                  aria-label="Placeholder: Thumbnail"
+                  preserveAspectRatio="xMidYMid slice"
+                  focusable="false"
+                >
+                </img>
+                <div class="card-body">
+                  <h4 class="card-title">Nice Item</h4>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <small class="text-dark">Current Bid: 300pt </small>
+                    <small class="text-dark">Time remaining: 3 days</small>
+                  </div>
+                </div>
+              </a>
             </div>
-          </nav>
-          <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="nav-favorite" role="tabpanel" aria-labelledby="nav-favorite-tab" tabindex="0">This is my favorites</div>
           </div>
-
-          
-        </section>
-
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+          My Bids
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+        <div class="accordion-body">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <a class="card shadow-sm" href="../product/">
+                <img
+                  width="100%" class="h-100 w-100"
+                  src="../asset/img/apple-1282241_640.jpg"
+                  role="img"
+                  aria-label="Placeholder: Thumbnail"
+                  preserveAspectRatio="xMidYMid slice"
+                  focusable="false"
+                >
+                </img>
+                <div class="card-body">
+                  <h4 class="card-title">Nice Item</h4>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <small class="text-dark">Current Bid: 300pt </small>
+                    <small class="text-dark">Time remaining: 3 days</small>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+          My Wins
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+        <div class="accordion-body">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <a class="card shadow-sm" href="../product/">
+              <img
+                width="100%" class="h-100 w-100"
+                src="../asset/img/apple-1282241_640.jpg"
+                role="img"
+                aria-label="Placeholder: Thumbnail"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+              >
+              </img>
+              <div class="card-body">
+                <h4 class="card-title">Nice Item</h4>
+                <div
+                  class="d-flex justify-content-between align-items-center"
+                >
+                  <small class="text-dark">Current Bid: 300pt </small>
+                  <small class="text-dark">Time remaining: 3 days</small>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+          My Favorites
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+        <div class="accordion-body">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <a class="card shadow-sm" href="../product/">
+              <img
+                width="100%" class="h-100 w-100"
+                src="../asset/img/apple-1282241_640.jpg"
+                role="img"
+                aria-label="Placeholder: Thumbnail"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+              >
+              </img>
+              <div class="card-body">
+                <h4 class="card-title">Nice Item</h4>
+                <div
+                  class="d-flex justify-content-between align-items-center"
+                >
+                  <small class="text-dark">Current Bid: 300pt </small>
+                  <small class="text-dark">Time remaining: 3 days</small>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       </main>
-
-
-
       <!-- Modal add new item -->
 
       <div

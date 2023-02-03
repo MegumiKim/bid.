@@ -20,12 +20,12 @@
     <div class="container">
       <main class="text-white">
         <div class="pt-5 pb-3 mt-lg-5 text-center">
-          <h1 class="logo">bid.</h1>
+          <a href="/" class="logo h1">bid.</a>
           <p class="lead fs-6">Auction platform for Noroffers</p>
         </div>
         <div class="row g-5 mx-2 d-flex">
           <div class="form-wrapper p-4 mx-auto border border-light">
-            <h4 class="mb-3 text-center">Log in</h4>
+            <h4 class="mb-3 text-center">Log-in</h4>
             <form method="POST" id="login-form">
               <div class="form-floating mb-3">
                 <input
@@ -36,7 +36,6 @@
                   id="email"
                   autocomplete="false"
                   placeholder="email"
-                  required
                 />
                 <label for="email">Email</label>
               </div>
@@ -50,22 +49,22 @@
                   placeholder="Password"
                   minlength="8"
                   autocomplete="false"
-                  required
                 />
                 <label for="password">Password</label>
               </div>
-              <button
-                class="w-100 btn btn-primary btn-lg mt-4"
+              <a
+                href="/"
+                class="w-100 btn btn-secondary btn-lg mt-4"
                 type="submit"
                 id="btn-submit"
               >
                 Log in
-              </button>
+              </a>
               <div id="user-alert" class="alert mt-3" role="alert"></div>
               <hr class="my-4" />
               <p class="w-100 text-center">
                 Don't have an account?
-                <a href="/signup/index.html">sign up</a>
+                <a href="/signup/index.html"> Sign-up</a>
               </p>
             </form>
           </div>
