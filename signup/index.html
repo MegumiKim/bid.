@@ -31,7 +31,7 @@
 
             <form
               action=""
-              id="sign-up-form"
+              id="signup-form"
               method="POST"
               class="d-lg-flex g-5"
             >
@@ -45,9 +45,11 @@
                     class="form-control"
                     id="username"
                     placeholder="user name"
-                    required
                   />
-                  <label for="username">User Name*</label>
+                  <label for="username"
+                    >User Name
+                    <small class="text-muted"> (required)</small></label
+                  >
                 </div>
                 <div class="form-floating mb-3">
                   <input
@@ -57,9 +59,10 @@
                     class="form-control"
                     id="email"
                     placeholder="@stud.noroff.no or @noroff.no"
-                    required
                   />
-                  <label for="email">Email*</label>
+                  <label for="email"
+                    >Email <small class="text-muted"> (required)</small></label
+                  >
                 </div>
                 <div class="form-floating mb-3">
                   <input
@@ -70,9 +73,11 @@
                     id="password"
                     placeholder="Password"
                     minlength="8"
-                    required
                   />
-                  <label for="password">Password*</label>
+                  <label for="password"
+                    >Password
+                    <small class="text-muted"> (required)</small></label
+                  >
                 </div>
                 <div class="form-floating mb-3">
                   <input
@@ -84,7 +89,6 @@
                   />
                   <label for="avatar">Avatar URL</label>
                 </div>
-                <small class="text-muted">*required field</small>
               </div>
 
               <div class="col-lg-6 ps-lg-5 mt-lg-5">

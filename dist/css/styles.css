@@ -10835,6 +10835,7 @@ a:hover {
   border-radius: 0;
   font-size: 0.8rem;
   background: #2b2d34;
+  color: #fff;
 }
 
 .form-wrapper {
@@ -10845,15 +10846,12 @@ a:hover {
   padding-left: 0;
 }
 
-input:select {
-  background-color: grey;
-}
-
 .form-control:focus {
   border-bottom: 2px rgb(165, 163, 163) solid;
   box-shadow: none;
-  background-color: #67696f;
-  color: #2b2d34;
+  background-color: #2b2d34;
+  color: #fff;
+  border-bottom: 3px solid rgb(35, 189, 168);
 }
 
 .form-control::placeholder {
