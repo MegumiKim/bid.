@@ -1,9 +1,9 @@
 import { API_BASE_URL } from "../../API/constants.mjs";
-import { signup } from "../../API/auth/signup.mjs";
+import { fetchAPI } from "../../API/fetchAPI.mjs";
 import { login } from "./login.mjs";
 
-const registerURL = `${API_BASE_URL}/api/v1/auction/auth/register`;
-const loginURL = `${API_BASE_URL}/api/v1/auction/auth/login`;
+const registerURL = `${API_BASE_URL}auth/register`;
+const loginURL = `${API_BASE_URL}auth/login`;
 
 export async function signUpListener(event) {
   event.preventDefault();
@@ -17,7 +17,7 @@ export async function signUpListener(event) {
 
   try {
     const loginPayload = { email, password };
-    await signup(registerURL, options);
+    await fetchAPI(registerURL, options);
     await login(loginURL, loginPayload);
   } catch (e) {
     console.log(e);

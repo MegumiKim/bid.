@@ -1,5 +1,5 @@
 import { API_BASE_URL } from "../../API/constants.mjs";
-import { fetchAPI } from "../../API/auth/login.mjs";
+import { fetchAPI } from "../../API/fetchAPI.mjs";
 import { save } from "../../storage/local.mjs";
 
 const loginURL = `${API_BASE_URL}/api/v1/auction/auth/login`;
