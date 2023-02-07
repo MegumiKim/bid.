@@ -1,9 +1,6 @@
-import { API_BASE_URL } from "../../API/constants.mjs";
-import { fetchAPI } from "../../API/fetchAPI.mjs";
-import { login } from "./login.mjs";
-
-const registerURL = `${API_BASE_URL}auth/register`;
-const loginURL = `${API_BASE_URL}auth/login`;
+import { signup } from "../../API/auth/signup.mjs";
+import { login } from "../../API/auth/login.mjs";
+import { save } from "../../storage/local.mjs";
 
 export async function signUpListener(event) {
   event.preventDefault();
@@ -11,25 +8,22 @@ export async function signUpListener(event) {
   const form = event.target;
   const formData = new FormData(form);
   const signupInputs = Object.fromEntries(formData.entries());
-  const options = makeOptions(signupInputs);
   const email = formData.get("email");
   const password = formData.get("password");
 
   try {
-    const loginPayload = { email, password };
-    await fetchAPI(registerURL, options);
-    await login(loginURL, loginPayload);
+    await signup(signupInputs);
+    const { accessToken, credits, ...userDetails } = await login({
+      email,
+      password,
+    });
+
+    save("accessToken", accessToken);
+    save("credits", credits);
+    save("userDetails", userDetails);
+
+    window.location.assign("/");
   } catch (e) {
     console.log(e);
   }
-}
-
-function makeOptions(payload) {
-  return {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(payload),
-  };
 }
