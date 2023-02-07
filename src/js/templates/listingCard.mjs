@@ -1,9 +1,12 @@
 export const listingCardTemplate = (data) => {
   return `
-  <a class="card shadow-sm" href="./product/">
+  <div class='col col-sm-3'>
+  <a class="card p-3 " href="./product/?id=${data.id}">
   <img
     width="100%" class="h-100 w-100"
     src="${data.media[0]}"
+    alt="${data.title}"
+    onerror="this.onerror=null;this.src='../../../asset/img/placeholder_img.png'"
     role="img"
     aria-label="Placeholder: Thumbnail"
     preserveAspectRatio="xMidYMid slice"
@@ -16,7 +19,9 @@ export const listingCardTemplate = (data) => {
       class="d-flex justify-content-between align-items-center"
     >
       <small class="text-dark">Bids${data.title}  </small>
-      <small class="text-dark">Ends at ${data.endsAt}</small>
+      <small class="text-dark">Ends at ${new Date(
+        data.endsAt
+      ).toLocaleDateString("en-GB")}</small>
     </div>
   </div>
 </a>
