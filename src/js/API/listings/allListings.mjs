@@ -1,6 +1,6 @@
 import { API_BASE_URL } from "../../API/constants.mjs";
 
-const allListingsURL = `${API_BASE_URL}listings?limit=10`;
+const allListingsURL = `${API_BASE_URL}listings?_active=true&limit=20`;
 
 export async function fetchListings() {
   const options = makeOptions();
