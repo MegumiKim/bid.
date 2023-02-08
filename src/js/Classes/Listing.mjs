@@ -1,5 +1,7 @@
 import { carouselTemplate } from "../templates/carouselTemplate.mjs";
 import { singleEntryTemplate } from "../templates/singleEntryTemplate.mjs";
+import { remainingTime } from "../utils/remainingTime.mjs";
+import { createSingleEntry } from "./classFunctions/createSingleEntry.mjs";
 
 export class Listing {
   constructor(data) {
@@ -8,7 +10,7 @@ export class Listing {
     this.media = data.media;
     this.tags = data.tags;
     this.created = new Date(data.created).toLocaleDateString("en-GB");
-    this.endsAt = new Date(data.endsAt).toLocaleDateString();
+    this.endsAt = new Date(data.endsAt);
     this.bids = data.bids;
     this.seller = data.seller;
     this.description = data.description;
@@ -18,14 +20,12 @@ export class Listing {
     return singleEntryTemplate(this);
   }
 
-  render(containerOne, containerTwo) {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(this.template, "text/html");
-    const productSummary = doc.querySelector(".listing");
-    const productDescription = doc.querySelector(" #description");
+  get remainingTime() {
+    return remainingTime(this.endsAt);
+  }
 
-    containerOne.append(productSummary);
-    containerTwo.append(productDescription);
+  render(container, container2) {
+    return createSingleEntry(this, container, container2);
   }
 }
 

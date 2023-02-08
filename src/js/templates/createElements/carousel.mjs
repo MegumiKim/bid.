@@ -5,6 +5,11 @@ export function carousel(data, parent) {
   // const title = createElement("title", undefined, data.title);
   // const created = createElement("h4", undefined, data.created);
   // const endsAt = createElement("h4", undefined, data.endsAt);
+  const placeHolderImg = "../../../../asset/img/placeholder_img.png";
+
+  if (!data.media.length) {
+    parent.innerHTML += carouselTemplate(placeHolderImg);
+  }
 
   data.media.forEach((item) => {
     const slide = carouselTemplate(item);

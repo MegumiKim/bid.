@@ -1,5 +1,5 @@
 import { fetchSingleEntry } from "../API/listings/singleEntry.mjs";
-import { getParam } from "../API/utils/getParam.mjs";
+import { getParam } from "../utils/getParam.mjs";
 import { Listing } from "../Classes/Listing.mjs";
 import { carousel } from "../templates/createElements/carousel.mjs";
 
