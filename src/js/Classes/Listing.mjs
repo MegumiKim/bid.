@@ -3,7 +3,7 @@ import { singleEntryTemplate } from "../templates/singleEntryTemplate.mjs";
 import { remainingTime } from "../utils/remainingTime.mjs";
 import { createSingleEntry } from "./classFunctions/createSingleEntry.mjs";
 
-export class Listing {
+export default class Listing {
   constructor(data) {
     this.title = data.title;
     this.id = data.id;
