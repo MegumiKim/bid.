@@ -15,7 +15,7 @@ export default class User {
     return myPageTemplate(this);
   }
 
-  createListing() {}
+  get myItems() {}
 
   render(parent) {
     const parser = new DOMParser();

@@ -12,7 +12,7 @@ export async function createListingListener(event) {
   payload.endsAt = new Date(payload.endsAt);
 
   try {
-    const result = await createListing(payload);
+    await createListing(payload);
   } catch (e) {
     console.log(e);
   }
