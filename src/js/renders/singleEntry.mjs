@@ -10,6 +10,9 @@ export const singleEntry = async () => {
   const bidContainer = document.querySelector("#bid-info-container");
   container.innerHTML = "";
   carouselContainer.innerHTML = "";
+  descriptionContainer.innerHTML = "";
+  bidContainer.innerHTML = "";
+
   const id = getParam("id");
 
   try {
@@ -19,7 +22,6 @@ export const singleEntry = async () => {
     const listing = new Listing(data);
     listing.render(container, descriptionContainer);
     listing.renderBidInfo(bidContainer);
-    console.log(bidContainer);
   } catch (e) {
     console.log(e);
   }

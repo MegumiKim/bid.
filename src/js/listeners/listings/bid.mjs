@@ -1,4 +1,8 @@
 import { makeBid } from "../../API/listings/bid.mjs";
+import { fetchSingleUser } from "../../API/user/singleUser.mjs";
+import { singleEntry } from "../../renders/singleEntry.mjs";
+import { save } from "../../storage/local.mjs";
+import { getMyCredits } from "../../utils/getMyCredits.mjs";
 import { getParam } from "../../utils/getParam.mjs";
 
 export async function makeBidListener(event) {
@@ -12,6 +16,9 @@ export async function makeBidListener(event) {
 
   try {
     await makeBid(id, payload);
+    const myCredits = await getMyCredits();
+    save("credits", myCredits);
+    singleEntry();
   } catch (e) {
     console.log(e);
   }
