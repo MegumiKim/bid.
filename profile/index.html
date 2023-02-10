@@ -137,30 +137,7 @@
                 <div
                   class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
                   id="my-wins-container"
-                >
-                  <!-- <div class="col">
-                <a class="card shadow-sm" href="../product/">
-                  <img
-                    width="100%" class="h-100 w-100"
-                    src="../asset/img/apple-1282241_640.jpg"
-                    role="img"
-                    aria-label="Placeholder: Thumbnail"
-                    preserveAspectRatio="xMidYMid slice"
-                    focusable="false"
-                  >
-                  </img>
-                  <div class="card-body">
-                    <h4 class="card-title">Nice Item</h4>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <small class="text-dark">Current Bid: 300pt </small>
-                      <small class="text-dark">Time remaining: 3 days</small>
-                    </div>
-                  </div>
-                </a>
-              </div> -->
-                </div>
+                ></div>
               </div>
             </div>
           </div>
@@ -186,30 +163,7 @@
                 <div
                   class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
                   id="my-favs-container"
-                >
-                  <!-- <div class="col">
-                <a class="card shadow-sm" href="../product/">
-                  <img
-                    width="100%" class="h-100 w-100"
-                    src="../asset/img/apple-1282241_640.jpg"
-                    role="img"
-                    aria-label="Placeholder: Thumbnail"
-                    preserveAspectRatio="xMidYMid slice"
-                    focusable="false"
-                  >
-                  </img>
-                  <div class="card-body">
-                    <h4 class="card-title">Nice Item</h4>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <small class="text-dark">Current Bid: 300pt </small>
-                      <small class="text-dark">Time remaining: 3 days</small>
-                    </div>
-                  </div>
-                </a>
-              </div> -->
-                </div>
+                ></div>
               </div>
             </div>
           </div>
@@ -282,6 +236,52 @@
                 data-bs-dismiss="modal"
               >
                 Publish
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal edit avatar -->
+
+    <div
+      class="modal fade"
+      id="edit-avatar-modal"
+      tabindex="-1"
+      aria-labelledby="postModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog m-4 mx-sm-auto">
+        <div class="modal-content p-3 p-sm-5">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="postModalLabel">
+              Change Profile Picture
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form class="modal-body gx-1" id="edit-avatar">
+            <div class="form-group mb-3">
+              <label for="">Media URL (required)</label>
+              <input type="URL" class="form-control" name="avatar" />
+            </div>
+
+            <div class="modal-footer">
+              <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                Close
+              </button>
+              <button
+                type="submit"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+                id="edit-avatar-confirm"
+              >
+                Change
               </button>
             </div>
           </form>

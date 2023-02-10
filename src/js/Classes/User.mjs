@@ -1,3 +1,4 @@
+import { editAvatarListener } from "../listeners/index.mjs";
 import { listingCardTemplate } from "../templates/listingCard.mjs";
 import { myPageTemplate } from "../templates/myPageTemplate.mjs";
 import { createMyListings } from "./classFunctions/createMyListings.mjs";
@@ -27,7 +28,6 @@ export default class User {
     const doc = parser.parseFromString(this.template, "text/html");
     const userSummary = doc.querySelector("#user-summary");
 
-    console.log(this.wins);
     parent.append(userSummary);
   }
 }

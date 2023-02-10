@@ -22,5 +22,6 @@ export function router() {
     render.myPage();
     qs.createListingForm();
     listeners.logout();
+    qs.editAvatarBtn();
   }
 }
