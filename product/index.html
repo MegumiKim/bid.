@@ -124,10 +124,10 @@
       aria-labelledby="postModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog">
+      <div class="modal-dialog" id="bid-container">
         <div class="modal-content">
           <div class="modal-header">
-            <h3 class="modal-title fs-5 h1" id="bidModal">Apple Pro</h3>
+            <h3 class="modal-title fs-5 h1" id="bidModal">Make a bid</h3>
             <button
               type="button"
               class="btn-close"
@@ -135,28 +135,41 @@
               aria-label="Close"
             ></button>
           </div>
-          <form class="modal-body gx-1" id="createPost">
-            <p>Current bid: 895 pt</p>
-            <p>Ends in 3 hours</p>
-            <p>Your cash point balance: 900pt</p>
-            <div class="form-group mb-3">
-              <label for="">Your bid</label>
-              <input type="text" class="" name="tags" />
-            </div>
 
-            <div class="modal-footer">
-              <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                Close
-              </button>
-              <button
-                type="submit"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Bid now
-              </button>
+          <div class="modal-body">
+            <div>
+              <div id="bid-info-container">
+
+              </div>
             </div>
-          </form>
+            <form class="gx-1" id="bid-form">
+              <div class="form-group mb-3">
+                <label for="">Your bid</label>
+                <input type="number" class="" name="amount" required  />
+                <button class="btn text-light" type="button" data-bs-toggle="collapse" data-bs-target="#user-help" aria-expanded="false" aria-controls="#user-help">
+                  ?
+                </button>
+              </div>
+              <!-- user help -->
+              <div class="collapse dark" id="user-help">
+                <div class="card card-body">
+                  <small class="text-muted">When the listing ends, the winning bid amount will be transferred to the seller's account. All losing bids will be refunded to the original bidder's account balance.</small>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                  Close
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Bid now
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

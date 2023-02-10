@@ -7,19 +7,19 @@ export const singleEntry = async () => {
   const container = document.querySelector("#product-container");
   const carouselContainer = document.querySelector("#carousel-container");
   const descriptionContainer = document.querySelector("#product-description");
+  const bidContainer = document.querySelector("#bid-info-container");
   container.innerHTML = "";
   carouselContainer.innerHTML = "";
   const id = getParam("id");
 
   try {
     const data = await fetchSingleEntry(id);
-    console.log(data);
     carousel(data, carouselContainer);
 
     const listing = new Listing(data);
     listing.render(container, descriptionContainer);
-
-    console.log(listing.remainingTime);
+    listing.renderBidInfo(bidContainer);
+    console.log(bidContainer);
   } catch (e) {
     console.log(e);
   }

@@ -9,18 +9,15 @@ export function createSingleEntry(data, containerOne, containerTwo) {
 
   // Bids
   if (data.bids.length) {
-    currentBid.innerHTML = `Current bid: ${data.bids.pop().amount} pt`;
+    currentBid.innerText = `Current bid: ${data.bids.pop().amount} pt`;
   } else {
-    currentBid.innerHTML = "Chance! Be the first bidder";
+    currentBid.innerText = "Chance! Be the first bidder";
   }
-  // Remaining Time
-  const endTime = doc.querySelector(".endTime");
-  endTime.innerHTML = `Ends in: ${data.remainingTime} `;
 
   // Tags
 
   if (!data.tags.length) {
-    tags.innerHTML = "No tag";
+    tags.innerText = "No tag";
   }
 
   data.tags.forEach((item) => {
@@ -29,7 +26,7 @@ export function createSingleEntry(data, containerOne, containerTwo) {
 
   // Bid history
   if (!data.bids.length) {
-    tags.innerHTML = "No bids";
+    tags.innerText = "No bids yet";
   }
 
   data.bids
@@ -38,7 +35,7 @@ export function createSingleEntry(data, containerOne, containerTwo) {
     .forEach((item) => {
       bidsHistory.innerHTML += `<li> ${item.amount}pt by ${
         item.bidderName
-      } at ${new Date(item.created).toLocaleDateString("en-GB")}</li>`;
+      } on ${new Date(item.created).toLocaleDateString("en-GB")}</li>`;
     });
 
   containerOne.append(productSummary);

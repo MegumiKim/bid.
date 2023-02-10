@@ -1,7 +1,10 @@
+import { bidInfoTemplate } from "../templates/bidFormTemplate.mjs";
 import { carouselTemplate } from "../templates/carouselTemplate.mjs";
 import { singleEntryTemplate } from "../templates/singleEntryTemplate.mjs";
 import { remainingTime } from "../utils/remainingTime.mjs";
+import { createBidInfo } from "./classFunctions/createBidInfo.mjs";
 import { createSingleEntry } from "./classFunctions/createSingleEntry.mjs";
+import { load } from "../storage/local.mjs";
 
 export default class Listing {
   constructor(data) {
@@ -16,16 +19,27 @@ export default class Listing {
     this.description = data.description;
   }
 
-  get template() {
-    return singleEntryTemplate(this);
+  get myPoint() {
+    return load("credits");
   }
-
   get remainingTime() {
     return remainingTime(this.endsAt);
   }
 
+  get template() {
+    return singleEntryTemplate(this);
+  }
+
+  get bidTemplate() {
+    return bidInfoTemplate(this, this.myPoint);
+  }
+
   render(container, container2) {
     return createSingleEntry(this, container, container2);
+  }
+
+  renderBidInfo(container) {
+    return createBidInfo(this, container);
   }
 }
 

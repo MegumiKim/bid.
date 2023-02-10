@@ -1,10 +1,10 @@
 import { API_BASE_URL } from "../constants.mjs";
 import { load } from "../../storage/local.mjs";
 
-export async function createListing(body) {
-  const createListingURL = `${API_BASE_URL}listings`;
+export async function makeBid(id, body) {
+  const URL = `${API_BASE_URL}listings/${id}/bids`;
   const options = makeOptions(body);
-  const response = await fetch(createListingURL, options);
+  const response = await fetch(URL, options);
 
   if (response.ok) {
     return await response.json();

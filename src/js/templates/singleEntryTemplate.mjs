@@ -10,7 +10,7 @@ export const singleEntryTemplate = (data) => {
     <div class="card-body">
       <ul class="list-unstyled mt-3 mb-4">
         <li class="currentBid"></li>
-        <li class="endTime"></li>
+        <li class="endTime"> Ends in: ${data.remainingTime} </li>
       </ul>
       <button
         type="button"
@@ -18,7 +18,7 @@ export const singleEntryTemplate = (data) => {
         data-bs-toggle="modal"
         data-bs-target="#bidModal"
       >
-        Place a bid
+        Make a bid
       </button>
     </div>
   </div>

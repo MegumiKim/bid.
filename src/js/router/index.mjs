@@ -17,6 +17,7 @@ export function router() {
     render.singleEntry();
     qs.myPageBtn();
     listeners.logout();
+    qs.bidForm();
   } else if (path === "/profile/") {
     render.myPage();
     qs.createListingForm();
