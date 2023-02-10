@@ -22,7 +22,7 @@ export function myPageTemplate(data) {
                   role="img"
                   focusable="false"
                   src="${data.avatar}"
-                  onerror="this.onerror=null;this.src='"../../../asset/img/avatar-3814081_640.png"'"
+                  onerror="this.onerror=null;this.src='../../../asset/img/avatar-3814081_640.png'"
                 >
                 <div class="position-absolute top-0 start-100 ">
                 <img src="../../../asset/icons/pencil-square.svg">

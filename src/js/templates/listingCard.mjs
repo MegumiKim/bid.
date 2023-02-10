@@ -1,10 +1,10 @@
 export const listingCardTemplate = (data) => {
   return `
-  <div class='col col-sm-3'>
+  <div class='col col-sm-3 card-template'>
   <a class="card p-3 " href="./product/?id=${data.id}">
   <img
     width="100%" class="h-100 w-100"
-    src="${data.media[0]}"
+    // src="${data.media[0]}"
     alt="${data.title}"
     onerror="this.onerror=null;this.src='../../../asset/img/placeholder_img.png'"
     role="img"
@@ -25,6 +25,5 @@ export const listingCardTemplate = (data) => {
     </div>
   </div>
 </a>
-
   `;
 };

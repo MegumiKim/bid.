@@ -5,6 +5,7 @@ import { remainingTime } from "../utils/remainingTime.mjs";
 import { createBidInfo } from "./classFunctions/createBidInfo.mjs";
 import { createSingleEntry } from "./classFunctions/createSingleEntry.mjs";
 import { load } from "../storage/local.mjs";
+import { listingCardTemplate } from "../templates/listingCard.mjs";
 
 export default class Listing {
   constructor(data) {

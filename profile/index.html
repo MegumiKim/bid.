@@ -15,204 +15,207 @@
   </head>
   <body class="container">
     <header class="p-3 mb-3">
-        <div class="d-flex justify-content-between align-items-center">
-          <a href="/" class="logo fs-1">
-            bid.
-          </a>
+      <div class="d-flex justify-content-between align-items-center">
+        <a href="/" class="logo fs-1"> bid. </a>
 
-          <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center">
+          <a
+            href="./login/"
+            class="add-btn rounded-circle me-3"
+            data-bs-toggle="modal"
+            data-bs-target="#add-new-item-modal"
+            >+</a
+          >
+          <div class="dropdown text-end">
             <a
-              href="./login/"
-              class="add-btn rounded-circle me-3"
-              data-bs-toggle="modal"
-              data-bs-target="#add-new-item-modal"
-              >+</a
+              href="#"
+              class="d-block link-dark text-decoration-none dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
             >
-            <div class="dropdown text-end">
-              <a
-                href="#"
-                class="d-block link-dark text-decoration-none dropdown-toggle"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-   
-                <img
-                  src="../asset/img/avatar-3814081_640.png"
-                  alt="mdo"
-                  width="32"
-                  height="32"
-                  class="rounded-circle"
-                />
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark text-small">
-                <li><a class="dropdown-item" href="../">Listings | Home</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/"
-                    data-bs-toggle="modal"
-                    data-bs-target="#confirm-logout"
-                    >Log out</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-    </header>
-      <main class="mx-4 mx-md-5 row" >
-        <section class="my-5" id="profile-container">
-          
-        </section>
-
-    <section id="my-items">
-      <div class="accordion" id="accordionPanelsStayOpenExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-              My Listings
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-            <div class="accordion-body">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div class="col">
-                  <a class="card shadow-sm" href="../product/">
-                    <img
-                      width="100%" class="h-100 w-100"
-                      src="../asset/img/apple-1282241_640.jpg"
-                      role="img"
-                      aria-label="Placeholder: Thumbnail"
-                      preserveAspectRatio="xMidYMid slice"
-                      focusable="false"
-                    >
-                    </img>
-                    <div class="card-body">
-                      <h4 class="card-title">Nice Item</h4>
-                      <div
-                        class="d-flex justify-content-between align-items-center"
-                      >
-                        <small class="text-dark">Current Bid: 300pt </small>
-                        <small class="text-dark">Time remaining: 3 days</small>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-              My Bids
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-            <div class="accordion-body">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div class="col">
-                  <a class="card shadow-sm" href="../product/">
-                    <img
-                      width="100%" class="h-100 w-100"
-                      src="../asset/img/apple-1282241_640.jpg"
-                      role="img"
-                      aria-label="Placeholder: Thumbnail"
-                      preserveAspectRatio="xMidYMid slice"
-                      focusable="false"
-                    >
-                    </img>
-                    <div class="card-body">
-                      <h4 class="card-title">Nice Item</h4>
-                      <div
-                        class="d-flex justify-content-between align-items-center"
-                      >
-                        <small class="text-dark">Current Bid: 300pt </small>
-                        <small class="text-dark">Time remaining: 3 days</small>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-              My Wins
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-            <div class="accordion-body">
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <div class="col">
-                <a class="card shadow-sm" href="../product/">
-                  <img
-                    width="100%" class="h-100 w-100"
-                    src="../asset/img/apple-1282241_640.jpg"
-                    role="img"
-                    aria-label="Placeholder: Thumbnail"
-                    preserveAspectRatio="xMidYMid slice"
-                    focusable="false"
-                  >
-                  </img>
-                  <div class="card-body">
-                    <h4 class="card-title">Nice Item</h4>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <small class="text-dark">Current Bid: 300pt </small>
-                      <small class="text-dark">Time remaining: 3 days</small>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-              My Favorites
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
-            <div class="accordion-body">
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <div class="col">
-                <a class="card shadow-sm" href="../product/">
-                  <img
-                    width="100%" class="h-100 w-100"
-                    src="../asset/img/apple-1282241_640.jpg"
-                    role="img"
-                    aria-label="Placeholder: Thumbnail"
-                    preserveAspectRatio="xMidYMid slice"
-                    focusable="false"
-                  >
-                  </img>
-                  <div class="card-body">
-                    <h4 class="card-title">Nice Item</h4>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <small class="text-dark">Current Bid: 300pt </small>
-                      <small class="text-dark">Time remaining: 3 days</small>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
+              <img
+                src="../asset/img/avatar-3814081_640.png"
+                alt="mdo"
+                width="32"
+                height="32"
+                class="rounded-circle"
+              />
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small">
+              <li><a class="dropdown-item" href="../">Listings | Home</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/"
+                  data-bs-toggle="modal"
+                  data-bs-target="#confirm-logout"
+                  >Log out</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
+    </header>
+    <main class="mx-4 mx-md-5 row">
+      <section class="my-5" id="profile-container"></section>
 
-      </main>
+      <section id="my-items">
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne"
+                aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseOne"
+              >
+                My Listings
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="panelsStayOpen-headingOne"
+            >
+              <div class="accordion-body">
+                <div
+                  class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
+                  id="my-listings-container"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo"
+              >
+                My Bids
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingTwo"
+            >
+              <div class="accordion-body">
+                <div
+                  class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
+                  id="my-bids-container"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree"
+              >
+                My Wins
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingThree"
+            >
+              <div class="accordion-body">
+                <div
+                  class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
+                  id="my-wins-container"
+                >
+                  <!-- <div class="col">
+                <a class="card shadow-sm" href="../product/">
+                  <img
+                    width="100%" class="h-100 w-100"
+                    src="../asset/img/apple-1282241_640.jpg"
+                    role="img"
+                    aria-label="Placeholder: Thumbnail"
+                    preserveAspectRatio="xMidYMid slice"
+                    focusable="false"
+                  >
+                  </img>
+                  <div class="card-body">
+                    <h4 class="card-title">Nice Item</h4>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <small class="text-dark">Current Bid: 300pt </small>
+                      <small class="text-dark">Time remaining: 3 days</small>
+                    </div>
+                  </div>
+                </a>
+              </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFour"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree"
+              >
+                My Favorites
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingFour"
+            >
+              <div class="accordion-body">
+                <div
+                  class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
+                  id="my-favs-container"
+                >
+                  <!-- <div class="col">
+                <a class="card shadow-sm" href="../product/">
+                  <img
+                    width="100%" class="h-100 w-100"
+                    src="../asset/img/apple-1282241_640.jpg"
+                    role="img"
+                    aria-label="Placeholder: Thumbnail"
+                    preserveAspectRatio="xMidYMid slice"
+                    focusable="false"
+                  >
+                  </img>
+                  <div class="card-body">
+                    <h4 class="card-title">Nice Item</h4>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <small class="text-dark">Current Bid: 300pt </small>
+                      <small class="text-dark">Time remaining: 3 days</small>
+                    </div>
+                  </div>
+                </a>
+              </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Modal add new item -->
 
@@ -258,7 +261,7 @@
             </div>
             <div class="form-group mb-3">
               <label for="">Ends at</label>
-              <input type="date" class="form-control" name="endsAt" required/>
+              <input type="date" class="form-control" name="endsAt" required />
             </div>
             <div class="form-group mb-3">
               <label for="">Short description</label>
@@ -286,52 +289,51 @@
       </div>
     </div>
 
-      <!-- Modal Confirm Logout-->
-      <div
-        class="modal fade"
-        id="confirm-logout"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Log out</h1>
+    <!-- Modal Confirm Logout-->
+    <div
+      class="modal fade"
+      id="confirm-logout"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Log out</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to logout?</p>
+            <p></p>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-dismiss="modal">
+                Back
+              </button>
               <button
-                type="button"
-                class="btn-close"
+                class="btn btn-primary"
                 data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <p>Are you sure you want to logout?</p>
-              <p></p>
-              <div class="modal-footer">
-                <button class="btn btn-secondary" data-bs-dismiss="modal">
-                  Back
-                </button>
-                <button
-                  class="btn btn-primary"
-                  data-bs-dismiss="modal"
-                  id="logout-btn"
-                >
-                  Log out
-                </button>
-              </div>
+                id="logout-btn"
+              >
+                Log out
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <footer class="mt-auto py-3 my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">© 2023 auction platform - bid.</p>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">Privacy</a></li>
-          <li class="list-inline-item"><a href="#">Terms</a></li>
-          <li class="list-inline-item"><a href="#">Support</a></li>
-        </ul>
-      </footer>
-
+    </div>
+    <footer class="mt-auto py-3 my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">© 2023 auction platform - bid.</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+    </footer>
   </body>
 </html>
