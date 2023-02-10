@@ -10888,12 +10888,16 @@ a:hover {
 }
 
 .card-title {
-  color: #2b2d34;
+  color: white;
 }
 
 .card {
-  background-color: rgb(239, 237, 237);
+  background-color: #2b2d34;
   border-radius: 0;
+}
+
+.card:hover {
+  background-color: rgb(56, 56, 56);
 }
 
 .card-specific {
@@ -10910,6 +10914,10 @@ img {
 #user-help .card {
   background-color: #2b2d34;
   color: #fff;
+}
+
+.lead {
+  color: rgb(35, 189, 168);
 }
 
 .accordion-collapse {

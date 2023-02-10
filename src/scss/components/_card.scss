@@ -1,10 +1,15 @@
 .card-title {
-  color: $myDark;
+  color: white;
 }
 
 .card {
-  background-color: rgb(239, 237, 237);
+  background-color: $myDark;
+  // background-color: rgb(239, 237, 237);
   border-radius: 0;
+}
+
+.card:hover {
+  background-color: rgb(56, 56, 56);
 }
 
 .card-specific {

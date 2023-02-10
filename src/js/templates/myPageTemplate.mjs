@@ -16,14 +16,10 @@ export function myPageTemplate(data) {
             </div>
             <div class="col-sm-5">
               <div class="mx-auto mb-3 col-6 col-md-10 col-lg-7 position-relative">
-                <img
-                  class="rounded-circle d-block mx-auto img-fluid "
-                  max-width="100%"
-                  role="img"
-                  focusable="false"
-                  src="${data.avatar}"
-                  onerror="this.onerror=null;this.src='../../../asset/img/avatar-3814081_640.png'"
-                >
+
+                <img class="rounded-circle" src="${data.avatar}"
+                 onerror="data.onerror=null; data.src='../../../asset/img/avatar-3814081_640.png'" alt="${data.name}" width="200" height="200" style="object-position: center center; object-fit: cover">
+
                 <div class="position-absolute top-0 start-100" id="edit-avatar"                 
                 data-bs-toggle="modal"
                 data-bs-target="#edit-avatar-modal">

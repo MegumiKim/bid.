@@ -1,4 +1,4 @@
-import { listingCardTemplate } from "../../templates/listingCard.mjs";
+import { listingCardTemplate } from "../../templates/listingCardTemplate.mjs";
 
 export function createMyListings(listings, parent) {
   if (listings.length) {
