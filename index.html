@@ -165,8 +165,12 @@
         id="search-section"
         class="pt-4 d-flex flex-wrap justify-content-between align-items-end"
       >
-        <div id="sort-btn">
-          <button
+        <select id="sort" class="form-select btn btn-outline-main btn-md px-4" name="sort">
+          <option value="Latest">Latest</option>
+          <option value="Most Popular">Most Popular</option>
+          <option value="Ending Soon">Ending Soon</option>
+        
+          <!-- <button
             type="button"
             class="btn btn-outline-main btn-md px-4 dropdown-toggle"
             data-bs-toggle="dropdown"
@@ -175,23 +179,23 @@
             Sort items
           </button>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li>
+            <option>
               <button id="old-to-new-btn" class="dropdown-item" href="#">
                 Latest items
               </button>
-            </li>
-            <li>
+            </option>
+            <op>
               <button id="old-to-new-btn" class="dropdown-item" href="#">
                 Ending Soon
               </button>
-            </li>
+            </op>
             <li>
               <button id="new-to-old-btn" class="dropdown-item" href="#">
                 Most Popular
               </button>
             </li>
-          </ul>
-        </div>
+          </ul> -->
+        </select>
 
         <form class="col-12 col-lg-4 mb-2 mb-lg-0 mt-3" role="search">
           <input

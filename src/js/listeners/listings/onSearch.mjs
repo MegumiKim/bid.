@@ -1,7 +1,7 @@
 import { load } from "../../storage/session.mjs";
 import { renderCard } from "../../renders/renderCard.mjs";
-import { searchFilter } from "../../utils/searchFilter.mjs";
-import { clearHTML } from "../../utils/clearHTML.mjs";
+import { searchFilter } from "../../tools/filters/searchFilter.mjs";
+// import { clearHTML } from "../../utils/clear.mjs";
 
 export function onSearch(event, listings, container) {
   event.preventDefault();
@@ -13,6 +13,7 @@ export function onSearch(event, listings, container) {
 
   if (!searchTerm.length) {
     container.innerHTML = "";
+
     listings.forEach((listing) => {
       renderCard(container, listing, ".card");
     });

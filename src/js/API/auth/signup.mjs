@@ -5,15 +5,12 @@ const registerURL = `${API_BASE_URL}auth/register`;
 export async function signup(payload) {
   const options = makeOptions("POST", payload);
   const response = await fetch(registerURL, options);
-  const data = await response.json();
+  const result = await response.json();
 
   if (response.ok) {
-    console.log(data);
-
-    return data;
-  } else {
-    throw new Error(JSON.stringify(data.errors[0].message));
+    return result;
   }
+  throw new Error(JSON.stringify(result.errors));
 }
 
 function makeOptions(method, payload) {

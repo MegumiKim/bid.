@@ -5,13 +5,12 @@ const loginURL = `${API_BASE_URL}auth/login`;
 export async function login(payload) {
   const options = makeOptions("POST", payload);
   const response = await fetch(loginURL, options);
-  const data = await response.json();
+  const result = await response.json();
 
   if (response.ok) {
-    return data;
-  } else {
-    throw new Error(JSON.stringify(data.errors[0].message));
+    return result;
   }
+  throw new Error(JSON.stringify(result.errors));
 }
 
 function makeOptions(method, payload) {

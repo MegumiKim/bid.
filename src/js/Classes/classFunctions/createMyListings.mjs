@@ -19,6 +19,6 @@ export function createMyListings(listings, parent) {
       parent.append(card);
     });
   } else {
-    parent.innerHTML = "<p>No Listings</p>";
+    parent.innerHTML = "<p class='text-muted text-center'>No Listings</p>";
   }
 }

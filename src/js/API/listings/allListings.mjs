@@ -1,15 +1,24 @@
 import { API_BASE_URL } from "../../API/constants.mjs";
 
-const allListingsURL = `${API_BASE_URL}listings?_active=true&limit=50`;
+// const allListingsURL = `${API_BASE_URL}listings?_active=true&limit=50`;
+
+const limit = "limit=50";
+const active = "&_active=true";
+const bids = "&_bids=true";
+const seller = "&_seller=true";
+const url = API_BASE_URL + "listings?" + limit + active + bids + seller;
+// const url = `${API_BASE_URL}listings?${limit}&${active}&${sort}&_bids=true&_seller=true`;
 
 export async function fetchListings() {
   const options = makeOptions();
-  const response = await fetch(allListingsURL, options);
+  const response = await fetch(url, options);
+  const result = await response.json();
 
   if (response.ok) {
-    return await response.json();
+    console.log(result);
+    return result;
   }
-  throw new Error(JSON.stringify(response.statusText));
+  throw new Error(JSON.stringify(result.errors));
 }
 
 function makeOptions() {
