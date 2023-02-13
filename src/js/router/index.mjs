@@ -9,6 +9,7 @@ export function router() {
     render.allListings();
     qs.myPageBtn();
     listeners.logout();
+    // qs.searchInput();
   } else if (path === "/signup/") {
     qs.signupForm();
   } else if (path === "/login/") {

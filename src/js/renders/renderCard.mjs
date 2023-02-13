@@ -13,6 +13,6 @@ export const renderCard = (parent, data, selector = ".col") => {
       tagsContainer.innerText += `#${tag} `;
     });
   }
-  console.log(data);
+
   parent.append(element);
 };
