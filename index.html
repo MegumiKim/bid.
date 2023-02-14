@@ -20,7 +20,10 @@
           <a href="/" class="logo fs-1 mb-2 mb-lg-0 "> bid. </a>
 
           <div class="d-flex align-items-center">
-            <a href="./login/" class="me-3">Login</a>
+            <div id="nav-link">
+              <a href="./profile/" class="me-3" >My Page</a>
+            </div>
+            
             <div class="dropdown text-end">
               <a
                 href="./login/"
@@ -29,14 +32,16 @@
                 aria-expanded="false"
               >
                 <img
-                  src="../asset/img/avatar-3814081_640.png"
-                  alt="mdo"
+               
+                  onerror="this.onerror=null;this.src='./asset/img/avatar-3814081_640.png'"
+                  alt="profile avatar"
                   width="32"
                   height="32"
                   class="rounded-circle"
+                  id="navBtn"
                 />
               </a>
-              <ul class="dropdown-menu dropdown-menu-dark text-small">
+              <ul class="dropdown-menu dropdown-menu-dark text-small" id="nav-dropdown">
                 <li><a class="dropdown-item" id="my-page">My Page</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
@@ -106,7 +111,7 @@
 
       <section
         id="search-section"
-        class="pt-4 d-flex flex-wrap justify-content-between align-items-end"
+        class="d-flex flex-wrap justify-content-between align-items-end"
       >
         <select id="sort" class="btn btn-outline-main btn-md px-4" name="sort">
           <option value="Latest" selected>Sort by latest items</option>
@@ -146,7 +151,7 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog">
+      <div class="modal-dialog m-4 mx-sm-auto">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">Log out</h1>

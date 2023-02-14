@@ -2,10 +2,13 @@ import * as qs from "../querySelectors/index.mjs";
 import * as render from "../renders/index.mjs";
 import * as listeners from "../listeners/index.mjs";
 
+import { checkLogin } from "../tools/checkLogin.mjs";
+
 const path = location.pathname;
 
 export function router() {
   if (path === "/index.html" || path === "/") {
+    checkLogin();
     render.allListings();
     qs.myPageBtn();
     listeners.logout();
@@ -19,6 +22,7 @@ export function router() {
     qs.myPageBtn();
     listeners.logout();
     qs.bidForm();
+    checkLogin();
   } else if (path === "/profile/") {
     render.myPage();
     qs.createListingForm();

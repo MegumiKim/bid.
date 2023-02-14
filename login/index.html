@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Welcome to bid. Popular auction platform among Noroff students community"
+      content="Welcome to bid. Popular auction platform for Noroff students community"
     />
     <title>bid. | Log in</title>
     <link rel="stylesheet" href="/dist/css/styles.css" />
@@ -29,6 +29,7 @@
             <form method="" id="login-form">
               <div class="form-floating mb-3">
                 <input
+                  required
                   type="email"
                   name="email"
                   title="Please enter valid email with noroff domain (@stud.noroff.no or @noroff.no). Example: my_email@noroff.no"
@@ -41,6 +42,7 @@
               </div>
               <div class="form-floating">
                 <input
+                  required
                   class="form-control"
                   name="password"
                   type="password"
@@ -69,6 +71,12 @@
               </p>
             </form>
           </div>
+          <a
+            href="/"
+            class="mt-2 text-center text-muted text-decoration-underline"
+          >
+            Skip login and visit the site.
+          </a>
         </div>
       </main>
       <footer class="mt-auto py-3 my-5 pt-5 text-muted text-center text-small">

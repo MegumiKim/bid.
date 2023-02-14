@@ -1,25 +1,26 @@
 export const singleEntryTemplate = (data) => {
   return `        
-
-
 <div class="listing col-12">
   <div class="card card-specific mb-4 rounded-3 shadow-sm">
     <div class="card-header py-3">
       <h1 class="my-0 fw-normal">${data.title}</h1>
     </div>
-    <div class="card-body">
+    <div class="card-body" id="product-summary">
       <ul class="list-unstyled mt-3 mb-4">
         <li class="currentBid"></li>
         <li class="endTime"> Ends in: ${data.remainingTime} </li>
       </ul>
+      <div id="bidBtn-container">
       <button
         type="button"
         class="w-100 btn btn-lg btn-outline-main"
         data-bs-toggle="modal"
         data-bs-target="#bidModal"
+        id="bidBtn"
       >
         Make a bid
       </button>
+      </div>
     </div>
   </div>
 </div>
@@ -65,9 +66,6 @@ export const singleEntryTemplate = (data) => {
       </ul>
     </div>
   </div>
-
-
-
 </div>
 
 `;

@@ -23,3 +23,11 @@
 .bi-backspace:hover {
   opacity: 0.4;
 }
+.btn {
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: $myDark;
+  color: $myYellow;
+}

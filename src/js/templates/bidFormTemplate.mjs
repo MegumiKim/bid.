@@ -5,7 +5,7 @@ export const bidInfoTemplate = (data, myPoint) => {
   <ul>
     <h6 class="min-bid"></h6>
     <h6 class="end-time">Ends in: ${data.remainingTime}  </h6>
-    <h6 class="my-points">Available points:${data.myPoint} </h6>
+    <h6 class="my-points">Available points: ${data.myPoint} pt</h6>
   </ul>
 </div>`;
 };

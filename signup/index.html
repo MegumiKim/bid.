@@ -38,6 +38,7 @@
               <div class="col-lg-6">
                 <div class="form-floating mb-3">
                   <input
+                    required
                     type="text"
                     name="name"
                     pattern="^[\w]+$"
@@ -53,6 +54,7 @@
                 </div>
                 <div class="form-floating mb-3">
                   <input
+                    required
                     type="email"
                     name="email"
                     title="Please enter valid email with noroff domain (@stud.noroff.no or @noroff.no). Example: my_email@noroff.no"
@@ -66,6 +68,7 @@
                 </div>
                 <div class="form-floating mb-3">
                   <input
+                    required
                     class="form-control"
                     title="minimum 8 characters"
                     type="password"
@@ -108,8 +111,8 @@
                   role="alert"
                   style="display: none"
                 ></div>
-                <hr class="my-4" />
-                <p class="w-100 text-center">
+                <!-- <hr class="my-4" /> -->
+                <p class="w-100 text-center mt-3">
                   Already have an account?
                   <a class="text-decoration-underline" href="/login/">Login</a>
                 </p>
