@@ -80,11 +80,7 @@
           </div>
         </div>
 
-        <div class="card shadow-sm mx-auto col-12 col-sm-8 col-md-6 position-relative">
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-            Most Popular Item
-            <span class="visually-hidden"> Most Popular Item</span>
-          </span>
+        <div class="card shadow-sm mx-auto col-12 col-sm-8 col-md-6" id="most-popular-container">
           <img
             width="100%" class="h-100 w-100"
             src="asset/img/placeholder_img.png"
@@ -108,93 +104,16 @@
         </div>
       </section>
 
-      <!-- <section
-        id="categories"
-        class="row mb-5 d-flex g-4 "
-      >
-        <div class="col-6 col-md-3 align-items-center px-md-3">
-          <div class="mb-3 px-md-3 col-sm-8 m-auto">
-            <img
-              class="rounded-circle"
-              src="./asset/img/avatar-3814081_640.png"
-              alt=""
-              width="100%"
-              height="100%"
-            />
-          </div>
-          <h3 class="btn btn-primary d-block mx-4">Category 1</h3>
-        </div>
-        <div class="col-6 col-md-3 align-items-center px-md-3">
-          <div class="mb-3 px-md-3 col-sm-8 m-auto">
-            <img
-              class="rounded-circle"
-              src="./asset/img/avatar-3814081_640.png"
-              alt=""
-              width="100%"
-              height="100%"
-            />
-          </div>
-          <h3 class="btn btn-primary d-block mx-4">Category 1</h3>
-        </div>
-        <div class="col-6 col-md-3 align-items-center px-md-3">
-          <div class="mb-3 col-sm-8 px-md-3 m-auto">
-            <img
-              class="rounded-circle"
-              src="./asset/img/avatar-3814081_640.png"
-              alt=""
-              width="100%"
-              height="100%"
-            />
-          </div>
-          <h3 class="btn btn-primary d-block mx-4">Category 1</h3>
-        </div>
-        <div class="col-6 col-md-3 align-items-center px-md-3">
-          <div class="mb-3 col-sm-8 px-md-3 m-auto">
-            <img
-              class="rounded-circle"
-              src="./asset/img/avatar-3814081_640.png"
-              alt=""
-              width="100%"
-              height="100%"
-            />
-          </div>
-          <h3 class="btn btn-primary d-block mx-4">Category 1</h3>
-        </div>
-      </section> -->
       <section
         id="search-section"
         class="pt-4 d-flex flex-wrap justify-content-between align-items-end"
       >
-        <select id="sort" class="form-select btn btn-outline-main btn-md px-4" name="sort">
-          <option value="Latest">Latest</option>
+        <select id="sort" class="btn btn-outline-main btn-md px-4" name="sort">
+          <option value="Latest" selected>Sort by latest items</option>
           <option value="Most Popular">Most Popular</option>
           <option value="Ending Soon">Ending Soon</option>
-        
-          <!-- <button
-            type="button"
-            class="btn btn-outline-main btn-md px-4 dropdown-toggle"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Sort items
-          </button>
-          <ul class="dropdown-menu dropdown-menu-dark">
-            <option>
-              <button id="old-to-new-btn" class="dropdown-item" href="#">
-                Latest items
-              </button>
-            </option>
-            <op>
-              <button id="old-to-new-btn" class="dropdown-item" href="#">
-                Ending Soon
-              </button>
-            </op>
-            <li>
-              <button id="new-to-old-btn" class="dropdown-item" href="#">
-                Most Popular
-              </button>
-            </li>
-          </ul> -->
+          <option value="Highest">Highest Bid</option>
+          <option value="no test">Exclude test</option>
         </select>
 
         <form class="col-12 col-lg-4 mb-2 mb-lg-0 mt-3" role="search">

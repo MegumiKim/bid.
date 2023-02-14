@@ -3,9 +3,14 @@ import { save } from "../storage/session.mjs";
 import { renderCard } from "./renderCard.mjs";
 import { debounce } from "../tools/filters/debounce.mjs";
 import { onSearch } from "../listeners/listings/onSearch.mjs";
+import { onChangeSortSelect } from "../tools/sort/sort.mjs";
+import { mostPopular } from "../tools/filters/mostPopular.mjs";
 
 export const allListings = async () => {
   const container = document.querySelector("#listings-container");
+  const mostPopularContainer = document.querySelector(
+    "#most-popular-container"
+  );
   const search = document.querySelector("#search");
   const select = document.querySelector("select#sort");
 
@@ -13,11 +18,15 @@ export const allListings = async () => {
     const listings = await fetchListings();
     save("cached-listings", listings);
 
+    mostPopular(container);
+
     listings.forEach((data) => {
       renderCard(container, data, ".card");
     });
 
-    select.addEventListener("change", console.log);
+    select.addEventListener("change", (event) =>
+      onChangeSortSelect(event, container)
+    );
 
     search.addEventListener(
       "input",

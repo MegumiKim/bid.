@@ -15,7 +15,6 @@ export async function fetchListings() {
   const result = await response.json();
 
   if (response.ok) {
-    console.log(result);
     return result;
   }
   throw new Error(JSON.stringify(result.errors));

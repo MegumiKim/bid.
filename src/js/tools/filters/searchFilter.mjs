@@ -4,12 +4,11 @@ export function searchFilter(listing, searchTerm) {
     ? listing.description.toLowerCase()
     : "";
 
-  // const tags = Boolean(
-  //   listing.tags
-  //     .map((tag) => tag.toLowerCase())
-  //     .filter((tag) => tag.includes(searchTerm).length)
-  // );
-  console.log(listing);
+  const tags = Boolean(
+    listing.tags
+      .map((tag) => tag.toLowerCase())
+      .filter((tag) => tag.includes(searchTerm)).length
+  );
 
-  return title.includes(searchTerm) || description.includes(searchTerm);
+  return title.includes(searchTerm) || description.includes(searchTerm) || tags;
 }
