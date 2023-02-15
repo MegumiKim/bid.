@@ -5,6 +5,7 @@ import { debounce } from "../tools/filters/debounce.mjs";
 import { onSearch } from "../listeners/listings/onSearch.mjs";
 import { onChangeSortSelect } from "../tools/sort/sort.mjs";
 import { mostPopular } from "../tools/filters/mostPopular.mjs";
+import { clearHTML } from "../utils/clear.mjs";
 
 export const allListings = async () => {
   const container = document.querySelector("#listings-container");
@@ -15,6 +16,7 @@ export const allListings = async () => {
   const select = document.querySelector("select#sort");
 
   try {
+    container.clearHTML();
     const listings = await fetchListings();
     save("cached-listings", listings);
 

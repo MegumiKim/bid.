@@ -53,7 +53,7 @@ alt="..."
 export function createSlide(item, title) {
   const image = createElement(
     "img",
-    ["w-100 h-100 m-auto"],
+    "w-100 h-100 m-auto",
     undefined,
     undefined,
     item,
