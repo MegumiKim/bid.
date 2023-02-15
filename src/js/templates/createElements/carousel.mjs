@@ -1,36 +1,33 @@
-import { carouselTemplate } from "../carouselTemplate.mjs";
-import { createElement } from "./createElement.mjs";
+import { carouselTemplate, createSlide } from "../carouselTemplate.mjs";
 
 export function carousel(data, parent) {
-  // const title = createElement("title", undefined, data.title);
-  // const created = createElement("h4", undefined, data.created);
-  // const endsAt = createElement("h4", undefined, data.endsAt);
-  const placeHolderImg = "../../../../asset/img/placeholder_img.png";
+  renderSlide(data, parent, 0);
 
-  if (!data.media.length) {
-    parent.innerHTML += carouselTemplate(placeHolderImg);
+  const prev = document.querySelector(".carousel-control-prev");
+  const next = document.querySelector(".carousel-control-next");
+
+  if (data.media.length < 2) {
+    prev.style.display = "none";
+    next.style.display = "none";
   }
 
-  data.media.forEach((item) => {
-    const slide = carouselTemplate(item);
-    parent.innerHTML += slide;
-  });
+  next.addEventListener("click", showNextSlide);
+  prev.addEventListener("click", showPrevSlide);
 
-  // const image = createElement(
-  //   "img",
-  //   ["d-block", "w-100"],
-  //   undefined,
-  //   undefined,
-  //   item,
-  //   data.title
-  // );
-  // const element = createElement(
-  //   "div",
-  //   ["carousel-item", "active"],
-  //   undefined,
-  //   [image]
-  // );
+  let index = 0;
+  function showNextSlide() {
+    index = (index + 1) % data.media.length;
+    renderSlide(data, parent, index);
+  }
+  function showPrevSlide() {
+    index = Math.abs((index - 1) % data.media.length);
+    renderSlide(data, parent, index);
+  }
+}
 
-  // console.log(element);
-  // parent.append(element);
+function renderSlide(data, parent, index) {
+  parent.clearHTML();
+  const currentMedia = data.media[index];
+  const slide = carouselTemplate(currentMedia);
+  parent.innerHTML = slide;
 }

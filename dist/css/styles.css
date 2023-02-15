@@ -10887,6 +10887,15 @@ a:hover {
   opacity: 0.4;
 }
 
+.btn {
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: #2b2d34;
+  color: #f2b441;
+}
+
 .card-title {
   color: white;
 }
@@ -10916,6 +10925,10 @@ img {
   color: #fff;
 }
 
+#product-summary:hover {
+  background-color: none;
+}
+
 .lead {
   color: rgb(35, 189, 168);
 }
@@ -10932,6 +10945,23 @@ img {
 .accordion-button:not(.collapsed) {
   background-color: #2b2d34;
   color: #f2b441;
+}
+
+.carousel-item {
+  max-height: 400px;
+  margin: auto;
+}
+
+.carousel-item > * {
+  max-width: 100%;
+  max-height: 100%;
+  object-position: center center;
+  object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #2b2d34;
 }
 
 .container {

@@ -1,6 +1,7 @@
 export function createElement(tag, classes, innerHTML, children, src, altTxt) {
   const element = document.createElement(tag);
-  element.classList.add(classes);
+
+  element.classList = classes;
 
   if (innerHTML) {
     element.innerHTML = innerHTML;
