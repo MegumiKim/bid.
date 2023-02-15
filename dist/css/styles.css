@@ -10860,6 +10860,10 @@ a:hover {
   margin-left: 0;
 }
 
+textarea.form-control {
+  border: none;
+}
+
 .btn-sort {
   background: none;
   border: solid 2px rgb(35, 189, 168);
@@ -10913,6 +10917,10 @@ a:hover {
   color: #fff;
   background: #2b2d34;
   border: none;
+}
+
+.card-specific:hover {
+  background-color: #2b2d34;
 }
 
 img {

@@ -11,6 +11,9 @@ export function carousel(data, parent) {
     next.style.display = "none";
   }
 
+  if (!data.media.length) {
+    renderSlide(data, parent, 0);
+  }
   next.addEventListener("click", showNextSlide);
   prev.addEventListener("click", showPrevSlide);
 
@@ -28,6 +31,7 @@ export function carousel(data, parent) {
 function renderSlide(data, parent, index) {
   parent.clearHTML();
   const currentMedia = data.media[index];
-  const slide = carouselTemplate(currentMedia);
+  const altTxt = data.title;
+  const slide = carouselTemplate(currentMedia, altTxt);
   parent.innerHTML = slide;
 }

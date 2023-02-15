@@ -19,12 +19,12 @@
         <div class="d-flex justify-content-between">
           <a href="/" class="logo fs-1 mb-2 mb-lg-0 "> bid. </a>
 
-          <div class="d-flex align-items-center">
-            <div id="nav-link">
-              <a href="./profile/" class="me-3" >My Page</a>
-            </div>
+          <div class="align-items-center text-center">
+            <!-- <div id="nav-link">
+              <a id="my-page-link" href="./profile/" class="me-3" >My Page</a>
+            </div> -->
             
-            <div class="dropdown text-end">
+            <div class="dropstart">
               <a
                 href="./login/"
                 class="d-block link-dark text-decoration-none dropdown-toggle"
@@ -33,15 +33,15 @@
               >
                 <img
                
-                  onerror="this.onerror=null;this.src='./asset/img/avatar-3814081_640.png'"
+                  onerror="this.onerror=null;this.src='./asset/img/avatar-placeholder.png'"
                   alt="profile avatar"
-                  width="32"
-                  height="32"
+                  width="40"
+                  height="40"
                   class="rounded-circle"
                   id="navBtn"
                 />
               </a>
-              <ul class="dropdown-menu dropdown-menu-dark text-small" id="nav-dropdown">
+              <ul class="dropdown-menu dropdown-menu-dark text-small me-2" id="nav-dropdown">
                 <li><a class="dropdown-item" id="my-page">My Page</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
@@ -55,6 +55,7 @@
                 </li>
               </ul>
             </div>
+            <div id="points-display"></div>
           </div>
         </div>
       </div>

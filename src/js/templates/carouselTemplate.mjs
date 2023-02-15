@@ -1,14 +1,15 @@
 import { createElement } from "../templates/createElements/createElement.mjs";
 
-export const carouselTemplate = (data) => {
+export const carouselTemplate = (media, altTxt) => {
   return `
   <div class="carousel-item active" 
   data-bs-toggle="modal"
   data-bs-target="#modal-img" >
     <img
-      src="${data}"
+      src="${media}"
       class="d-block w-100 m-auto"
-      alt="..."
+      alt="${altTxt}"
+      onerror="this.onerror=null;this.src='../../../asset/img/placeholder_img.png'"
     />
   </div>
 
@@ -21,10 +22,7 @@ export const carouselTemplate = (data) => {
     aria-hidden="true"
   >
     <div class="modal-dialog">
-
       <div class="modal-content" >
-
-
     <div class="modal-header">
 
     <button
@@ -38,9 +36,10 @@ export const carouselTemplate = (data) => {
   
 <div>
 <img  
-src="${data}"
+src="${media}"
 class="d-block w-100 m-auto"
-alt="..."
+alt="${altTxt}"
+onerror="this.onerror=null;this.src='../../../asset/img/placeholder_img.png'"
 />
 </div>
       </div>
