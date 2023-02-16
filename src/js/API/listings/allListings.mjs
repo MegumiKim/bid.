@@ -6,7 +6,8 @@ const limit = "limit=50";
 const active = "&_active=true";
 const bids = "&_bids=true";
 const seller = "&_seller=true";
-const url = API_BASE_URL + "listings?" + limit + active + bids + seller;
+const sort = "&sort=created&sortOrder=desc";
+const url = API_BASE_URL + "listings?" + limit + active + bids + seller + sort;
 // const url = `${API_BASE_URL}listings?${limit}&${active}&${sort}&_bids=true&_seller=true`;
 
 export async function fetchListings() {

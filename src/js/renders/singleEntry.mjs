@@ -3,6 +3,8 @@ import { getParam } from "../utils/getParam.mjs";
 import { carousel } from "../templates/createElements/carousel.mjs";
 import Listing from "../Classes/Listing.mjs";
 import { showEditBtn } from "../tools/showEditBtn.mjs";
+import { editForm } from "../querySelectors/listings/editForm.mjs";
+import { deleteBtn } from "../querySelectors/listings/deleteBtn.mjs";
 
 export const singleEntry = async () => {
   const container = document.querySelector("#product-container");
@@ -25,6 +27,9 @@ export const singleEntry = async () => {
     listing.renderBidInfo(bidContainer);
 
     showEditBtn(data);
+
+    editForm(id);
+    deleteBtn(id);
   } catch (e) {
     console.log(e);
   }

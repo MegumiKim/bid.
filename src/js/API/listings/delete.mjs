@@ -1,29 +1,27 @@
 import { API_BASE_URL } from "../constants.mjs";
 import { load } from "../../storage/local.mjs";
 
-export async function createListing(body) {
-  const createListingURL = `${API_BASE_URL}listings`;
-  const options = makeOptions(body);
-  const response = await fetch(createListingURL, options);
+export async function deleteListing(id) {
+  const URL = `${API_BASE_URL}listings/${id}`;
+  const options = makeOptions();
+  const response = await fetch(URL, options);
 
+  console.log(response);
   if (response.ok) {
-    const result = await response.json();
-    console.log(result);
-    return result;
+    return;
   }
   throw new Error(JSON.stringify(response.statusText));
 }
 
 /** returns fetch options with body/auth */
-function makeOptions(body) {
+function makeOptions() {
   const token = load("accessToken");
   const options = {
-    method: "POST",
+    method: "DELETE",
     headers: {
       "Content-Type": "application/json",
       authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify(body),
   };
 
   return options;

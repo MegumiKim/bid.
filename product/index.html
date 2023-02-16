@@ -200,7 +200,7 @@
               aria-label="Close"
             ></button>
           </div>
-          <form class="modal-body gx-1" id="edit-listing">
+          <form class="modal-body gx-1" id="edit-form">
             <div class="form-group mb-3">
               <label for="">Title </label>
               <input
@@ -211,14 +211,14 @@
               />
             </div>
 
-            <div class="form-group mb-3">
+              <div class="form-group mb-3">
               <label for="">Tag</label>
               <input type="text" class="form-control" name="tags" />
             </div>
             <div class="form-group mb-3">
               <label for="">Media URL</label>
               <input type="url" class="form-control" name="media" />
-            </div>
+            </div> 
             <div class="form-group mb-3">
               <label for="">Short description</label>
               <textarea
@@ -245,6 +245,43 @@
       </div>
     </div>
 
+    <!-- Modal Delete Listing-->
+    <div
+      class="modal fade"
+      id="delete-modal"
+      tabindex="-1"
+      aria-labelledby="delete"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="logout">Delete</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to delete this item?</p>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-dismiss="modal">
+                Cancel
+              </button>
+              <button
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+                id="delete-btn"
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Modal Confirm Logout-->
     <div
       class="modal fade"

@@ -1,6 +1,6 @@
 export const listingCardTemplate = (data) => {
   return `
-  <div class='col col-sm-3 card-template'>
+  <div class='col card-template'>
   <a class="card  " href="/product/?id=${data.id}">
 
 <div class="m-auto p-3 p-md-3" style="overflow:hidden; max-width:300px; height:300px;">

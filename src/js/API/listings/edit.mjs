@@ -1,14 +1,13 @@
 import { API_BASE_URL } from "../constants.mjs";
 import { load } from "../../storage/local.mjs";
 
-export async function createListing(body) {
-  const createListingURL = `${API_BASE_URL}listings`;
+export async function editListing(body, id) {
+  const URL = `${API_BASE_URL}listings/${id}`;
   const options = makeOptions(body);
-  const response = await fetch(createListingURL, options);
-
+  const response = await fetch(URL, options);
+  console.log(options);
   if (response.ok) {
     const result = await response.json();
-    console.log(result);
     return result;
   }
   throw new Error(JSON.stringify(response.statusText));
@@ -18,7 +17,7 @@ export async function createListing(body) {
 function makeOptions(body) {
   const token = load("accessToken");
   const options = {
-    method: "POST",
+    method: "PUT",
     headers: {
       "Content-Type": "application/json",
       authorization: `Bearer ${token}`,
