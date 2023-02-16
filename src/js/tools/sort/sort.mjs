@@ -37,7 +37,7 @@ function latest(listings) {
   return listings;
 }
 
-const endingSoon = (listings) => {
+export const endingSoon = (listings) => {
   listings.sort((a, b) => new Date(a.endsAt > b.endsAt).getTime());
   return listings;
 };

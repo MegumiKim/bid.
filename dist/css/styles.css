@@ -10941,6 +10941,11 @@ img {
   color: rgb(35, 189, 168);
 }
 
+.badge {
+  top: -10px;
+  right: 0px;
+}
+
 .accordion-collapse {
   background-color: #2b2d34;
 }
