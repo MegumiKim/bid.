@@ -25,7 +25,6 @@ function sort(listings, selectedOption) {
     return noTests(listings);
   }
   if (selectedOption === "Highest") {
-    console.log(highest(listings));
     return highest(listings);
   } else {
     return latest(listings);
@@ -48,9 +47,18 @@ const mostPopular = (listings) => {
 };
 
 function highest(listings) {
-  listings.sort((a, b) =>
-    new Date(a.bids.pop().amount > b.bids.pop().amount).getTime()
-  );
+  // listings.sort((a, b) =>
+  //   new Date(a.bids[0].amount > b.bids[0].amount).getTime()
+  // );
+
+  // listings = listings.map((listing) => {
+  //   listing.bids.sort((a, b) => {
+  //     listing.bids ? listing.bids.amount : 0;
+  //     return a.amount - b.amount;
+  //   });
+  //   return listing;
+  // });
+  return listings;
 }
 
 const noTests = (listings) => {

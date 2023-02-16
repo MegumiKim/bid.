@@ -16,42 +16,48 @@
   <body class="container">
     <header class="p-3 mb-3">
       <div>
-        <div class="d-flex justify-content-between align-items-center">
-          <a href="/" class="logo fs-1"> bid. </a>
+        <div class="d-flex justify-content-between">
+          <a href="/" class="logo fs-1 mb-2 mb-lg-0"> bid. </a>
 
-          <div class="d-flex align-items-center">
-            <div class="dropdown text-end">
+          <div class="align-items-center text-center">
+            <div id="nav-link">
+              <a id="my-page-link" href="./profile/" class="me-3">My Page</a>
+            </div>
+
+            <div class="dropstart">
               <a
-              
-                href="#"
+                href="./login/"
                 class="d-block link-dark text-decoration-none dropdown-toggle"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 <img
-                  src="../asset/img/avatar-placeholder.png"
-                  alt="mdo"
-                  width="32"
-                  height="32"
+                  onerror="this.onerror=null;this.src='./asset/img/avatar-placeholder.png'"
+                  alt="profile avatar"
+                  width="40"
+                  height="40"
                   class="rounded-circle"
                   id="navBtn"
                 />
               </a>
-              <ul class="dropdown-menu dropdown-menu-dark text-small">
-                <li><a class="dropdown-item" href="../">Listings | Home</a></li>
-                <li><a class="dropdown-item" id="my-page" >My Page</a></li>
+              <ul
+                class="dropdown-menu dropdown-menu-dark text-small me-2"
+                id="nav-dropdown"
+              >
+                <li><a class="dropdown-item" id="my-page">My Page</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a
+                  <button
                     class="dropdown-item"
-                    href="/"
                     data-bs-toggle="modal"
                     data-bs-target="#confirm-logout"
-                    >Log out</a
                   >
+                    Logout
+                  </button>
                 </li>
               </ul>
             </div>
+            <div id="points-display"></div>
           </div>
         </div>
       </div>
@@ -109,14 +115,14 @@
           id="product-container"
           class="my-1 col col-md-4 d-flex"
         >
-
+        
         </section>
 
       </div>
       <section
-      id="product-description" class="row g-3 my-1"
+      id="product-description" class="row g-3 mt-3"
       >
-        <img class="loader-icon m-auto m-100" src="/asset/icons/spinner.svg" alt="loader">
+     <img class="loader-icon m-auto m-100" src="/asset/icons/spinner.svg" alt="loader">
       </section>
 
     </main>

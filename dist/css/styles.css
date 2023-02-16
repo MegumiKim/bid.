@@ -10961,8 +10961,9 @@ img {
 }
 
 .carousel-item {
-  max-height: 400px;
+  height: 300px;
   margin: auto;
+  overflow-y: hidden;
 }
 
 .carousel-item > * {

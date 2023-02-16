@@ -1,4 +1,5 @@
 import { login } from "../../API/auth/login.mjs";
+import { userAlert } from "../../renders/userAlert.mjs";
 import { save } from "../../storage/local.mjs";
 
 export async function loginListener(event) {
@@ -7,7 +8,7 @@ export async function loginListener(event) {
   const form = event.target;
   const formData = new FormData(form);
   const payload = Object.fromEntries(formData.entries());
-
+  const error = document.querySelector("#user-alert");
   try {
     const { accessToken, credits, ...userDetails } = await login(payload);
 
@@ -17,6 +18,6 @@ export async function loginListener(event) {
 
     window.location.assign("/");
   } catch (e) {
-    console.log(e);
+    userAlert(error, e.message, "secondary");
   }
 }
