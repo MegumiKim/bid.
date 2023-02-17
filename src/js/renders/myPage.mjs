@@ -1,19 +1,21 @@
 import { fetchSingleUser } from "../API/user/singleUser.mjs";
 import { getParam } from "../utils/getParam.mjs";
 import { fetchMyBids } from "../API/listings/fetchMybids.mjs";
-
 import User from "../Classes/User.mjs";
 import { renderCard } from "./renderCard.mjs";
+import { userAlert } from "./userAlert.mjs";
+import { clearHTML } from "../utils/clear.mjs";
 
 export const myPage = async () => {
   const container = document.querySelector("#profile-container");
   const myListingsContainer = document.querySelector("#my-listings-container");
   const myBidsContainer = document.querySelector("#my-bids-container");
   const myWinsContainer = document.querySelector("#my-wins-container");
-  container.innerHTML = "";
-  myListingsContainer.innerHTML = "";
-  myBidsContainer.innerHTML = "";
-  myWinsContainer.innerHTML = "";
+
+  container.clearHTML();
+  myListingsContainer.clearHTML();
+  myBidsContainer.clearHTML();
+  myWinsContainer.clearHTML();
 
   const name = getParam("name");
 
@@ -29,6 +31,6 @@ export const myPage = async () => {
     user.render(container);
     user.renderMyListings(myListingsContainer);
   } catch (e) {
-    console.log(e);
+    userAlert(container, e.message, "secondary");
   }
 };

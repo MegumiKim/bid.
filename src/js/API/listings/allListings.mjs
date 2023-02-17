@@ -7,7 +7,7 @@ const active = "&_active=true";
 const bids = "&_bids=true";
 const seller = "&_seller=true";
 const sort = "&sort=created&sortOrder=desc";
-const url = API_BASE_URL + "listings?" + limit + active + bids + seller + sort;
+const url = API_BASE_URL + "listings??" + limit + active + bids + seller + sort;
 // const url = `${API_BASE_URL}listings?${limit}&${active}&${sort}&_bids=true&_seller=true`;
 
 export async function fetchListings() {
@@ -18,7 +18,10 @@ export async function fetchListings() {
   if (response.ok) {
     return result;
   }
-  throw new Error(JSON.stringify(result.errors));
+  const errorText = result.errors[0].message
+    ? result.errors[0].message
+    : "Server error";
+  throw new Error(errorText);
 }
 
 function makeOptions() {

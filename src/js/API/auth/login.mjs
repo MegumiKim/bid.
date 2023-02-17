@@ -1,19 +1,20 @@
 import { API_BASE_URL } from "../constants.mjs";
-import { getErrorMessage } from "../getErrorMsg.mjs";
 
 const loginURL = `${API_BASE_URL}auth/login`;
 
 export async function login(payload) {
   const options = makeOptions("POST", payload);
   const response = await fetch(loginURL, options);
+  const result = await response.json();
 
   if (response.ok) {
-    const result = await response.json();
     return result;
   }
-  const responseText = await response.text();
-  let errorString = getErrorMessage(responseText);
-  throw new Error(JSON.stringify(errorString));
+
+  const errorText = result.errors[0].message
+    ? result.errors[0].message
+    : "Log in error";
+  throw new Error(errorText);
 }
 
 function makeOptions(method, payload) {

@@ -5,11 +5,14 @@ export async function fetchSingleUser(name) {
   const singleProfileURL = `${API_BASE_URL}profiles/${name}?_listings=true`;
   const options = makeOptions();
   const response = await fetch(singleProfileURL, options);
-
+  const result = await response.json();
   if (response.ok) {
-    return await response.json();
+    return result;
   }
-  throw new Error(JSON.stringify(response.statusText));
+  const errorText = result.errors[0].message
+    ? result.errors[0].message
+    : "Server error";
+  throw new Error(errorText);
 }
 
 function makeOptions() {

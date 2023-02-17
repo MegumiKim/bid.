@@ -1,5 +1,6 @@
 import { makeBid } from "../../API/listings/bid.mjs";
 import { singleEntry } from "../../renders/singleEntry.mjs";
+import { userAlert } from "../../renders/userAlert.mjs";
 import { save } from "../../storage/local.mjs";
 import { getMyCredits } from "../../utils/getMyCredits.mjs";
 import { getParam } from "../../utils/getParam.mjs";
@@ -9,6 +10,7 @@ export async function makeBidListener(event) {
   const id = getParam("id");
   const form = event.target;
   const formData = new FormData(form);
+  const error = document.querySelector("#user-alert");
 
   let payload = Object.fromEntries(formData.entries());
   payload.amount = parseInt(payload.amount);
@@ -19,6 +21,6 @@ export async function makeBidListener(event) {
     save("credits", myCredits);
     singleEntry();
   } catch (e) {
-    console.log(e);
+    userAlert(error, e.message, "secondary");
   }
 }

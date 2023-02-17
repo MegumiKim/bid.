@@ -5,16 +5,17 @@ import Listing from "../Classes/Listing.mjs";
 import { showEditBtn } from "../tools/showEditBtn.mjs";
 import { editForm } from "../querySelectors/listings/editForm.mjs";
 import { deleteBtn } from "../querySelectors/listings/deleteBtn.mjs";
+import { clearHTML } from "../utils/clear.mjs";
 
 export const singleEntry = async () => {
   const container = document.querySelector("#product-container");
   const carouselContainer = document.querySelector("#carousel-container");
   const descriptionContainer = document.querySelector("#product-description");
   const bidContainer = document.querySelector("#bid-info-container");
-  container.innerHTML = "";
-  carouselContainer.innerHTML = "";
-  descriptionContainer.innerHTML = "";
-  bidContainer.innerHTML = "";
+  container.clearHTML();
+  carouselContainer.clearHTML();
+  descriptionContainer.clearHTML();
+  bidContainer.clearHTML();
 
   const id = getParam("id");
 
@@ -31,6 +32,6 @@ export const singleEntry = async () => {
     editForm(id);
     deleteBtn(id);
   } catch (e) {
-    console.log(e);
+    userAlert(container, e.message, "secondary");
   }
 };

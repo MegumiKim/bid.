@@ -5,12 +5,15 @@ export async function editListing(body, id) {
   const URL = `${API_BASE_URL}listings/${id}`;
   const options = makeOptions(body);
   const response = await fetch(URL, options);
-  console.log(options);
+  const result = await response.json();
+
   if (response.ok) {
-    const result = await response.json();
     return result;
   }
-  throw new Error(JSON.stringify(response.statusText));
+  const errorText = result.errors[0].message
+    ? result.errors[0].message
+    : "Server error";
+  throw new Error(errorText);
 }
 
 /** returns fetch options with body/auth */

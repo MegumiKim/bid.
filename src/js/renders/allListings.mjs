@@ -6,6 +6,7 @@ import { onSearch } from "../listeners/listings/onSearch.mjs";
 import { onChangeSortSelect } from "../tools/sort/sort.mjs";
 import { mostPopular } from "../tools/filters/mostPopular.mjs";
 import { clearHTML } from "../utils/clear.mjs";
+import { userAlert } from "./userAlert.mjs";
 
 export const allListings = async () => {
   const container = document.querySelector("#listings-container");
@@ -35,6 +36,6 @@ export const allListings = async () => {
       debounce((event) => onSearch(event, listings, container), 300)
     );
   } catch (e) {
-    console.log(e);
+    userAlert(container, e.message, "secondary");
   }
 };

@@ -201,7 +201,6 @@
                 required
               />
             </div>
-
             <div class="form-group mb-3">
               <label for="">Tag</label>
               <input type="text" class="form-control" name="tags" />
@@ -223,17 +222,12 @@
                 maxlength="150"
               ></textarea>
             </div>
+            <div id="user-alert"></div>
             <div class="modal-footer">
               <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                Close
+                Cancel
               </button>
-              <button
-                type="submit"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Publish
-              </button>
+              <button type="submit" class="btn btn-secondary">Confirm</button>
             </div>
           </form>
         </div>
@@ -269,13 +263,13 @@
             </div>
 
             <div class="modal-footer">
+              <div id="user-alert-avatar"></div>
               <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
                 Close
               </button>
               <button
                 type="submit"
                 class="btn btn-secondary"
-                data-bs-dismiss="modal"
                 id="edit-avatar-confirm"
               >
                 Change

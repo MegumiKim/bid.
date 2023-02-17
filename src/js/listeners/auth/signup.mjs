@@ -14,7 +14,7 @@ export async function signUpListener(event) {
   const error = document.querySelector("#user-alert");
 
   try {
-    const result = await signup(signupInputs);
+    await signup(signupInputs);
     const { accessToken, credits, ...userDetails } = await login({
       email,
       password,
