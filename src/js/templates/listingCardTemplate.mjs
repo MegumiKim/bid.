@@ -11,6 +11,7 @@ export const listingCardTemplate = (data) => {
 
   <div class="card-body">
     <h4 class="card-title ">${data.title}</h4>
+
     <div
       class="justify-content-between align-items-center"
     >

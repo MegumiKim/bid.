@@ -1,16 +1,15 @@
 import { API_BASE_URL } from "../../API/constants.mjs";
 
-// const allListingsURL = `${API_BASE_URL}listings?_active=true&limit=50`;
+export async function fetchListings(offsetNum = 0) {
+  const limit = "limit=12";
+  const offset = `&offset=${offsetNum}`;
+  const active = "&_active=true";
+  const bids = "&_bids=true";
+  const seller = "&_seller=true";
+  const sort = "&sort=created&sortOrder=desc";
+  const url =
+    API_BASE_URL + "listings?" + limit + active + bids + seller + sort + offset;
 
-const limit = "limit=50";
-const active = "&_active=true";
-const bids = "&_bids=true";
-const seller = "&_seller=true";
-const sort = "&sort=created&sortOrder=desc";
-const url = API_BASE_URL + "listings??" + limit + active + bids + seller + sort;
-// const url = `${API_BASE_URL}listings?${limit}&${active}&${sort}&_bids=true&_seller=true`;
-
-export async function fetchListings() {
   const options = makeOptions();
   const response = await fetch(url, options);
   const result = await response.json();

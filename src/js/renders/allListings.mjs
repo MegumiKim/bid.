@@ -10,18 +10,18 @@ import { userAlert } from "./userAlert.mjs";
 
 export const allListings = async () => {
   const container = document.querySelector("#listings-container");
-  const mostPopularContainer = document.querySelector(
-    "#most-popular-container"
-  );
+  // const mostPopularContainer = document.querySelector(
+  //   "#most-popular-container"
+  // );
   const search = document.querySelector("#search");
   const select = document.querySelector("select#sort");
 
   try {
     container.clearHTML();
     const listings = await fetchListings();
+    console.log(listings);
     save("cached-listings", listings);
-
-    mostPopular(container);
+    // mostPopular(container);
 
     listings.forEach((data) => {
       renderCard(container, data, ".card");
@@ -39,3 +39,42 @@ export const allListings = async () => {
     userAlert(container, e.message, "secondary");
   }
 };
+
+let perPage = 12;
+let currentPage = 1;
+let offset = 0;
+function prevPage() {
+  if (currentPage > 1) {
+    offset = (currentPage - 1) * perPage;
+    currentPage--;
+  } else {
+    offset = 0;
+  }
+  renderAllListings(offset);
+}
+
+function nextPage() {
+  // / if (currentPage * pageSize < listings.length) {
+  offset = currentPage * perPage;
+  currentPage++;
+  renderAllListings(offset);
+}
+
+document.querySelector("#prevBtn").addEventListener("click", prevPage);
+document.querySelector("#nextBtn").addEventListener("click", nextPage);
+
+async function renderAllListings(offset) {
+  const container = document.querySelector("#listings-container");
+
+  try {
+    container.clearHTML();
+    const listings = await fetchListings(offset);
+
+    console.log(listings);
+    listings.forEach((data) => {
+      renderCard(container, data, ".card");
+    });
+  } catch (e) {
+    console.log(e);
+  }
+}
