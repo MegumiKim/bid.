@@ -6,6 +6,8 @@ import { showEditBtn } from "../tools/showEditBtn.mjs";
 import { editForm } from "../querySelectors/listings/editForm.mjs";
 import { deleteBtn } from "../querySelectors/listings/deleteBtn.mjs";
 import { clearHTML } from "../utils/clear.mjs";
+import { userAlert } from "./userAlert.mjs";
+import { postBidForm } from "../templates/bidForm.mjs";
 
 export const singleEntry = async () => {
   const container = document.querySelector("#product-container");
@@ -25,9 +27,11 @@ export const singleEntry = async () => {
 
     const listing = new Listing(data);
     listing.render(container, descriptionContainer);
-    listing.renderBidInfo(bidContainer);
+    // listing.renderBidInfo(bidContainer);
 
-    showEditBtn(data);
+    postBidForm(data, bidContainer);
+
+    // showEditBtn(data);
 
     editForm(id);
     deleteBtn(id);

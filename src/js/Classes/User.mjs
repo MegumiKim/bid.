@@ -1,5 +1,6 @@
 import { editAvatarListener } from "../listeners/index.mjs";
 import { listingCardTemplate } from "../templates/listingCardTemplate.mjs";
+import { postMyPage } from "../templates/myPage.mjs";
 import { myPageTemplate } from "../templates/myPageTemplate.mjs";
 import { createMyListings } from "./classFunctions/createMyListings.mjs";
 

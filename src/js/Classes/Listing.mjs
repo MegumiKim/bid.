@@ -1,4 +1,4 @@
-import { bidInfoTemplate } from "../templates/bidFormTemplate.mjs";
+// import { bidInfoTemplate } from "../templates/bidFormTemplate.mjs";
 import { carouselTemplate } from "../templates/carouselTemplate.mjs";
 import { singleEntryTemplate } from "../templates/singleEntryTemplate.mjs";
 import { remainingTime } from "../utils/remainingTime.mjs";
@@ -31,9 +31,9 @@ export default class Listing {
     return singleEntryTemplate(this);
   }
 
-  get bidTemplate() {
-    return bidInfoTemplate(this, this.myPoint);
-  }
+  // get bidTemplate() {
+  //   return bidInfoTemplate(this, this.myPoint);
+  // }
 
   render(container, container2) {
     return createSingleEntry(this, container, container2);

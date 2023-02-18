@@ -9,7 +9,9 @@ const path = location.pathname;
 export function router() {
   if (path === "/index.html" || path === "/") {
     checkLogin();
-    render.allListings();
+    qs.NextBtn();
+    qs.prevBtn();
+    render.renderAllListings(0);
     qs.myPageBtn();
     listeners.logout();
     qs.endingSoonItem();
