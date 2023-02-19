@@ -1,11 +1,11 @@
 // import { bidInfoTemplate } from "../templates/bidFormTemplate.mjs";
-import { carouselTemplate } from "../templates/carouselTemplate.mjs";
+// import { carouselTemplate } from "../templates/carouselTemplate.mjs";
 import { singleEntryTemplate } from "../templates/singleEntryTemplate.mjs";
 import { remainingTime } from "../utils/remainingTime.mjs";
 import { createBidInfo } from "./classFunctions/createBidInfo.mjs";
 import { createSingleEntry } from "./classFunctions/createSingleEntry.mjs";
 import { load } from "../storage/local.mjs";
-import { listingCardTemplate } from "../templates/listingCardTemplate.mjs";
+// import { listingCardTemplate } from "../templates/listingCardTemplate.mjs";
 
 export default class Listing {
   constructor(data) {

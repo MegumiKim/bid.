@@ -6,6 +6,7 @@ export async function fetchMyBids(name) {
   const options = makeOptions();
   const response = await fetch(URL, options);
   const result = await response.json();
+
   if (response.ok) {
     return result;
   }

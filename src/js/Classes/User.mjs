@@ -1,7 +1,7 @@
 import { editAvatarListener } from "../listeners/index.mjs";
 import { listingCardTemplate } from "../templates/listingCardTemplate.mjs";
 import { postMyPage } from "../templates/myPage.mjs";
-import { myPageTemplate } from "../templates/myPageTemplate.mjs";
+// import { myPageTemplate } from "../templates/myPageTemplate.mjs";
 import { createMyListings } from "./classFunctions/createMyListings.mjs";
 
 export default class User {
@@ -16,9 +16,9 @@ export default class User {
     this.bids = data.bids;
   }
 
-  get template() {
-    return myPageTemplate(this);
-  }
+  // get template() {
+  //   return myPageTemplate(this);
+  // }
 
   renderMyListings(parent) {
     createMyListings(this.listings, parent);

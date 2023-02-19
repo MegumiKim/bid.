@@ -1,11 +1,12 @@
 import { fetchListings } from "../API/listings/allListings.mjs";
 import { save } from "../storage/session.mjs";
-import { renderCard } from "./renderCard.mjs";
 import { debounce } from "../tools/filters/debounce.mjs";
 import { onSearch } from "../listeners/listings/onSearch.mjs";
 import { onChangeSortSelect } from "../tools/sort/sort.mjs";
 import { clearHTML } from "../utils/clear.mjs";
 import { userAlert } from "./userAlert.mjs";
+import { postListingCard } from "../templates/listingCard.mjs";
+import { renderCards } from "./renderCards.mjs";
 
 // document.querySelector("#prevBtn").addEventListener("click", prevPage);
 // document.querySelector("#nextBtn").addEventListener("click", nextPage);
@@ -16,12 +17,8 @@ export async function renderAllListings(offset) {
   try {
     container.clearHTML();
     const listings = await fetchListings(offset);
-    console.log(listings);
+    renderCards(listings, container);
     // save("cached-listings", listings);
-
-    listings.forEach((data) => {
-      renderCard(container, data, ".card");
-    });
 
     const search = document.querySelector("#search");
     const select = document.querySelector("select#sort");
@@ -38,33 +35,3 @@ export async function renderAllListings(offset) {
     userAlert(container, e.message, "secondary");
   }
 }
-// export const allListings = async () => {
-//   const container = document.querySelector("#listings-container");
-//   // const mostPopularContainer = document.querySelector(
-//   //   "#most-popular-container"
-//   // );
-//   // const search = document.querySelector("#search");
-//   // const select = document.querySelector("select#sort");
-
-//   try {
-//     container.clearHTML();
-//     const listings = await fetchListings();
-//     save("cached-listings", listings);
-//     // mostPopular(container);
-
-//     listings.forEach((data) => {
-//       renderCard(container, data, ".card");
-//     });
-
-//     // select.addEventListener("change", (event) =>
-//     //   onChangeSortSelect(event, container)
-//     // );
-
-//     // search.addEventListener(
-//     //   "input",
-//     //   debounce((event) => onSearch(event, listings, container), 300)
-//     // );
-//   } catch (e) {
-//     userAlert(container, e.message, "secondary");
-//   }
-// };

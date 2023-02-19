@@ -28,6 +28,7 @@ export function router() {
     checkLogin();
   } else if (path === "/profile/") {
     render.myPage();
+    render.myBids();
     qs.createListingForm();
     listeners.logout();
     qs.editAvatarBtn();

@@ -1,17 +1,15 @@
-import { renderCard } from "../../renders/renderCard.mjs";
-
+import { clearHTML } from "../../utils/clear.mjs";
 import { load } from "../../storage/session.mjs";
 import { searchFilter } from "../filters/searchFilter.mjs";
+import { renderCards } from "../../renders/renderCards.mjs";
 
 export function onChangeSortSelect(event, container) {
   const selectedOption = event.target.value;
   const listings = load("cached-listings");
   const sortedListings = sort(listings, selectedOption);
 
-  container.innerHTML = "";
-  sortedListings.forEach((listing) => {
-    renderCard(container, listing, ".card");
-  });
+  container.clearHTML();
+  renderCards(sortedListings, container);
 }
 
 function sort(listings, selectedOption) {

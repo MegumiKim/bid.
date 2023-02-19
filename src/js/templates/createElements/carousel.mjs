@@ -1,4 +1,4 @@
-import { carouselTemplate, createSlide } from "../carouselTemplate.mjs";
+import { postCarousel } from "../carousel.mjs";
 
 export function carousel(data, parent) {
   renderSlide(data, parent, 0);
@@ -32,6 +32,5 @@ function renderSlide(data, parent, index) {
   parent.clearHTML();
   const currentMedia = data.media[index];
   const altTxt = data.title;
-  const slide = carouselTemplate(currentMedia, altTxt);
-  parent.innerHTML = slide;
+  postCarousel(currentMedia, altTxt, parent);
 }

@@ -1,7 +1,7 @@
+import { renderCards } from "../../renders/renderCards.mjs";
 import { load } from "../../storage/session.mjs";
-import { renderCard } from "../../renders/renderCard.mjs";
 import { searchFilter } from "../../tools/filters/searchFilter.mjs";
-// import { clearHTML } from "../../utils/clear.mjs";
+import { clearHTML } from "../../utils/clear.mjs";
 
 export function onSearch(event, listings, container) {
   event.preventDefault();
@@ -12,11 +12,9 @@ export function onSearch(event, listings, container) {
   const searchTerm = form.value.trim().toLowerCase();
 
   if (!searchTerm.length) {
-    container.innerHTML = "";
+    container.clearHTML();
+    renderCards(listings, container);
 
-    listings.forEach((listing) => {
-      renderCard(container, listing, ".card");
-    });
     return;
   } else {
     if (searchTerm.length < 3) {
@@ -28,10 +26,12 @@ export function onSearch(event, listings, container) {
     );
 
     if (filteredListings.length) {
-      container.innerHTML = "";
-      filteredListings.forEach((listing) => {
-        renderCard(container, listing, ".card");
-      });
+      container.clearHTML();
+
+      renderCards(filteredListings, container);
+      // filteredListings.forEach((listing) => {
+      //   renderCard(container, listing, ".card");
+      // });
     } else {
       container.innerHTML = "no result";
     }
