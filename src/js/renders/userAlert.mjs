@@ -1,5 +1,5 @@
 // import UserFeedback from "../Classes/UserFeedback.mjs";
-import { clearHTML } from "../utils/clear.mjs";
+import { clearHTML } from "../tools/clear.mjs";
 export function userAlert(
   container = body,
   message = "An error occurred.",

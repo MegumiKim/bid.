@@ -1,10 +1,10 @@
 import { fetchSingleEntry } from "../API/listings/singleEntry.mjs";
-import { getParam } from "../utils/getParam.mjs";
+import { getParam } from "../tools/getParam.mjs";
 import { carousel } from "../templates/createElements/carousel.mjs";
 import { showEditBtn } from "../tools/showEditBtn.mjs";
 import { editForm } from "../querySelectors/listings/editForm.mjs";
 import { deleteBtn } from "../querySelectors/listings/deleteBtn.mjs";
-import { clearHTML } from "../utils/clear.mjs";
+import { clearHTML } from "../tools/clear.mjs";
 import { userAlert } from "./userAlert.mjs";
 import { postBidForm } from "../templates/bidForm.mjs";
 import { postProductCTASection } from "../templates/productCTASection.mjs";
@@ -30,7 +30,6 @@ export const singleEntry = async () => {
   try {
     const data = await fetchSingleEntry(id);
     carousel(data, carouselContainer);
-
     postProductCTASection(data, container);
     postProductDescription(data, descriptionContainer);
     postSeller(data, sellerContainer);

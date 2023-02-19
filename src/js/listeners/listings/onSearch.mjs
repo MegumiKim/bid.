@@ -1,7 +1,7 @@
 import { renderCards } from "../../renders/renderCards.mjs";
 import { load } from "../../storage/session.mjs";
 import { searchFilter } from "../../tools/filters/searchFilter.mjs";
-import { clearHTML } from "../../utils/clear.mjs";
+import { clearHTML } from "../../tools/clear.mjs";
 
 export function onSearch(event, listings, container) {
   event.preventDefault();

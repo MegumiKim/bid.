@@ -1,4 +1,4 @@
-import { clearHTML } from "../../utils/clear.mjs";
+import { clearHTML } from "../clear.mjs";
 import { load } from "../../storage/session.mjs";
 import { searchFilter } from "../filters/searchFilter.mjs";
 import { renderCards } from "../../renders/renderCards.mjs";

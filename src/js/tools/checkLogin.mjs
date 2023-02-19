@@ -1,5 +1,5 @@
 import { load } from "../storage/local.mjs";
-import { clearHTML } from "../utils/clear.mjs";
+import { clearHTML } from "./clear.mjs";
 
 export function checkLogin() {
   const navLink = document.querySelector("#nav-link");

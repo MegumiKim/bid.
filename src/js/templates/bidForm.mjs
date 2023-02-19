@@ -1,5 +1,5 @@
 import { load } from "../storage/local.mjs";
-import { remainingTime } from "../utils/remainingTime.mjs";
+import { remainingTime } from "../tools/remainingTime.mjs";
 import { cloneTemplate } from "./cloneTemplate.mjs";
 
 export const postBidForm = (data, parent) => {

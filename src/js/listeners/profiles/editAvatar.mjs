@@ -2,7 +2,7 @@ import { editAvatar } from "../../API/user/editAvatar.mjs";
 import { myPage } from "../../renders/myPage.mjs";
 import { userAlert } from "../../renders/userAlert.mjs";
 // import { closeModal } from "../../tools/modal.mjs";
-import { getParam } from "../../utils/getParam.mjs";
+import { getParam } from "../../tools/getParam.mjs";
 
 export async function editAvatarListener(event) {
   event.preventDefault();

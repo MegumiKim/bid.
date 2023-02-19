@@ -1,5 +1,5 @@
 import { load } from "../../storage/local.mjs";
-import { clearHTML } from "../../utils/clear.mjs";
+import { clearHTML } from "../../tools/clear.mjs";
 
 export function createSingleEntry(data, containerOne, containerTwo) {
   const parser = new DOMParser();

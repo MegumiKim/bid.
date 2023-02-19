@@ -2,8 +2,8 @@ import { makeBid } from "../../API/listings/bid.mjs";
 import { singleEntry } from "../../renders/singleEntry.mjs";
 import { userAlert } from "../../renders/userAlert.mjs";
 import { save } from "../../storage/local.mjs";
-import { getMyCredits } from "../../utils/getMyCredits.mjs";
-import { getParam } from "../../utils/getParam.mjs";
+import { getMyCredits } from "../../tools/getMyCredits.mjs";
+import { getParam } from "../../tools/getParam.mjs";
 
 export async function makeBidListener(event) {
   event.preventDefault();

@@ -5,29 +5,9 @@ export function showEditBtn(data) {
   const myEmail = load("userDetails").email
     ? load("userDetails").email
     : "Unauthorized user";
-  const bidBtnContainer = document.querySelector("#bidBtn-container");
+  const editBtn = document.querySelector("button#editBtn");
 
   if (seller === myEmail) {
-    bidBtnContainer.innerHTML = `
-      <button
-        type="button"
-        class="w-100 btn btn-lg btn-outline-secondary"
-        data-bs-toggle="modal"
-        data-bs-target="#edit-modal"
-        id="editBtn"
-      >
-        Edit listing
-      </button>
-      <button
-        type="button"
-        class="mt-2 w-100 btn btn-lg btn-outline-main"
-        data-bs-toggle="modal"
-        data-bs-target="#delete-modal"
-        id="deleteBtn"
-      >
-        Delete listing
-      </button>
-    `;
   } else {
     console.log("not me");
   }

@@ -1,9 +1,9 @@
 import { fetchSingleUser } from "../API/user/singleUser.mjs";
-import { getParam } from "../utils/getParam.mjs";
+import { getParam } from "../tools/getParam.mjs";
 // import { fetchMyBids } from "../API/listings/fetchMybids.mjs";
 // import User from "../Classes/User.mjs";
 import { userAlert } from "./userAlert.mjs";
-import { clearHTML } from "../utils/clear.mjs";
+import { clearHTML } from "../tools/clear.mjs";
 import { postMyPage } from "../templates/myPage.mjs";
 import { postListingCard } from "../templates/listingCard.mjs";
 

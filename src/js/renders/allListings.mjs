@@ -3,7 +3,7 @@ import { save } from "../storage/session.mjs";
 import { debounce } from "../tools/filters/debounce.mjs";
 import { onSearch } from "../listeners/listings/onSearch.mjs";
 import { onChangeSortSelect } from "../tools/sort/sort.mjs";
-import { clearHTML } from "../utils/clear.mjs";
+import { clearHTML } from "../tools/clear.mjs";
 import { userAlert } from "./userAlert.mjs";
 import { postListingCard } from "../templates/listingCard.mjs";
 import { renderCards } from "./renderCards.mjs";
