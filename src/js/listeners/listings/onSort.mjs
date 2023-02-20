@@ -1,11 +1,17 @@
-import { renderAllListings } from "../../renders/allListings.mjs";
+let currentOrder = "created&sortOrder=desc";
 
 export const onSort = (event) => {
   event.preventDefault();
   const selectedOption = event.target.value;
 
   if (selectedOption === "created") {
-    renderAllListings(0);
+    currentOrder = "created&sortOrder=desc";
+    return "created&sortOrder=desc";
+    // renderAllListings(0, "created&sortOrder=desc");
   }
-  console.log("ending soon");
+  if (selectedOption === "endsAt") {
+    currentOrder = "endsAt&sortOrder=asc";
+    return "endsAt&sortOrder=asc";
+    // renderAllListings(0, "endsAt&sortOrder=asc");
+  }
 };

@@ -2,21 +2,22 @@ import { clearHTML } from "../clear.mjs";
 import { load } from "../../storage/session.mjs";
 import { searchFilter } from "../filters/searchFilter.mjs";
 import { renderCards } from "../../renders/renderCards.mjs";
+import { renderListings } from "../../renders/renderListings.mjs";
 
-export function onChangeSortSelect(event, container) {
+export function onChangeSortSelect(event) {
   const selectedOption = event.target.value;
   const listings = load("cached-listings");
   const sortedListings = sort(listings, selectedOption);
 
-  container.clearHTML();
-  renderCards(sortedListings, container);
+  renderListings(sortedListings, 0);
+  // renderCards(sortedListings, container);
 }
 
 function sort(listings, selectedOption) {
-  if (selectedOption === "Most Popular") {
+  if (selectedOption === "most-popular") {
     return mostPopular(listings);
   }
-  if (selectedOption === "Ending Soon") {
+  if (selectedOption === "endsAt") {
     return endingSoon(listings);
   }
   if (selectedOption === "no test") {
@@ -40,7 +41,9 @@ export const endingSoon = (listings) => {
 };
 
 const mostPopular = (listings) => {
-  listings.sort((a, b) => new Date(a.bids.length < b.bids.length).getTime());
+  // listings.sort((a, b) =>
+  //   new Date(a.count("bids") < b.count("bids")).getTime()
+  // );
   return listings;
 };
 
