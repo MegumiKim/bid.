@@ -8,7 +8,7 @@ export const postSeller = (data, parent) => {
 
     parent.append(doc);
   } catch (e) {
-    userAlert(parent, "Could not fetch data");
+    userAlert(parent, "Could not fetch data", "danger");
     throw new Error(e);
   }
 };

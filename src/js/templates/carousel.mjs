@@ -1,3 +1,4 @@
+import { userAlert } from "../renders/userAlert.mjs";
 import { cloneTemplate } from "./cloneTemplate.mjs";
 
 export const postCarousel = (media, altTxt, parent) => {
@@ -17,7 +18,7 @@ export const postCarousel = (media, altTxt, parent) => {
 
     parent.append(doc);
   } catch (e) {
-    userAlert(parent, "Failed to fetch data");
+    // userAlert(parent, "Failed to fetch data", "danger");
     throw new Error(e);
   }
 };

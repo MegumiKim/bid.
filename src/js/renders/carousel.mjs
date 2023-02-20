@@ -1,5 +1,5 @@
-import { userAlert } from "../../renders/userAlert.mjs";
-import { postCarousel } from "../carousel.mjs";
+import { userAlert } from "./userAlert.mjs";
+import { postCarousel } from "../templates/carousel.mjs";
 
 export function carousel(data, parent) {
   try {
@@ -29,7 +29,8 @@ export function carousel(data, parent) {
       renderSlide(data, parent, index);
     }
   } catch (e) {
-    userAlert(container, "error occurred");
+    userAlert(parent, "error occurred");
+    throw new Error(e);
   }
 }
 

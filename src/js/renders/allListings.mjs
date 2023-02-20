@@ -7,7 +7,7 @@ import { clearHTML } from "../tools/clear.mjs";
 import { userAlert } from "./userAlert.mjs";
 import { postListingCard } from "../templates/listingCard.mjs";
 import { renderCards } from "./renderCards.mjs";
-
+import { onSort } from "../listeners/listings/onSort.mjs";
 // document.querySelector("#prevBtn").addEventListener("click", prevPage);
 // document.querySelector("#nextBtn").addEventListener("click", nextPage);
 
@@ -24,7 +24,8 @@ export async function renderAllListings(offset) {
     const select = document.querySelector("select#sort");
 
     select.addEventListener("change", (event) =>
-      onChangeSortSelect(event, container)
+      // onChangeSortSelect(event, container)
+      onSort(event)
     );
 
     search.addEventListener(

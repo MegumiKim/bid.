@@ -14,7 +14,7 @@ export const postProductCTASection = (data, parent) => {
 
     parent.append(doc);
   } catch (e) {
-    userAlert(parent, "Failed to fetch data");
+    userAlert(parent, "Failed to fetch data", "danger");
     throw new Error(e);
   }
 };

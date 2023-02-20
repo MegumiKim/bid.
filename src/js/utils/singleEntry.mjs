@@ -1,18 +1,13 @@
 import { fetchSingleEntry } from "../API/listings/singleEntry.mjs";
-import { getParam } from "../tools/getParam.mjs";
-import { carousel } from "../templates/createElements/carousel.mjs";
-// import { showEditBtn } from "../tools/showEditBtn.mjs";
-import { editForm } from "../querySelectors/listings/editForm.mjs";
-import { deleteBtn } from "../querySelectors/listings/deleteBtn.mjs";
-import { clearHTML } from "../tools/clear.mjs";
-import { userAlert } from "../renders/userAlert.mjs";
-import { postBidForm } from "../templates/bidForm.mjs";
-import { postProductCTASection } from "../templates/productCTASection.mjs";
-import { postProductDescription } from "../templates/productDescription.mjs";
-import { postSeller } from "../templates/seller.mjs";
-// import { createBidInfo } from "../Classes/classFunctions/createBidInfo.mjs";
+import { editForm } from "../ui/listings/editForm.mjs";
+import { deleteBtn } from "../ui/listings/deleteBtn.mjs";
 import { renderBidHistory } from "../renders/bidHistory.mjs";
+import { clearHTML } from "../tools/clear.mjs";
+import { getParam } from "../tools/getParam.mjs";
 import { toggleCTABtn } from "../tools/toggleCTABtn.mjs";
+import * as templates from "../templates/index.mjs";
+import { carousel } from "../renders/carousel.mjs";
+// import { userAlert } from "../renders/userAlert.mjs";
 
 export const singleEntry = async () => {
   const container = document.querySelector("#product-container");
@@ -30,19 +25,14 @@ export const singleEntry = async () => {
 
   const id = getParam("id");
 
-  try {
-    const data = await fetchSingleEntry(id);
-    carousel(data, carouselContainer);
-    postProductCTASection(data, container);
-    postProductDescription(data, descriptionContainer);
-    postSeller(data, sellerContainer);
-    postBidForm(data, bidContainer);
-    renderBidHistory(data, bidHistoryContainer);
-    toggleCTABtn(data);
-    editForm(id);
-    deleteBtn(id);
-  } catch (e) {
-    // userAlert(bidHistoryContainer, e.message, "secondary");
-    throw new Error(e);
-  }
+  const data = await fetchSingleEntry(id);
+  templates.postProductCTASection(data, container);
+  templates.postProductDescription(data, descriptionContainer);
+  templates.postSeller(data, sellerContainer);
+  templates.postBidForm(data, bidContainer);
+  carousel(data, carouselContainer);
+  renderBidHistory(data, bidHistoryContainer);
+  toggleCTABtn(data);
+  editForm(id);
+  deleteBtn(id);
 };

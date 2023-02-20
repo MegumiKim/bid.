@@ -1,4 +1,4 @@
-import * as qs from "../querySelectors/index.mjs";
+import * as ui from "../ui/index.mjs";
 import * as render from "../renders/index.mjs";
 import * as listeners from "../listeners/index.mjs";
 
@@ -9,28 +9,28 @@ const path = location.pathname;
 export function router() {
   if (path === "/index.html" || path === "/") {
     checkLogin();
-    qs.NextBtn();
-    qs.prevBtn();
+    ui.NextBtn();
+    ui.prevBtn();
     render.renderAllListings(0);
-    qs.myPageBtn();
+    ui.myPageBtn();
     listeners.logout();
-    qs.endingSoonItem();
-    // qs.searchInput();
+    // ui.endingSoonItem();
+    // ui.searchInput();
   } else if (path === "/signup/") {
-    qs.signupForm();
+    ui.signupForm();
   } else if (path === "/login/") {
-    qs.loginForm();
+    ui.loginForm();
   } else if (path === "/product/") {
     render.singleEntry();
-    qs.myPageBtn();
+    ui.myPageBtn();
     listeners.logout();
-    qs.bidForm();
+    ui.bidForm();
     checkLogin();
   } else if (path === "/profile/") {
     render.myPage();
     render.myBids();
-    qs.createListingForm();
+    ui.createListingForm();
     listeners.logout();
-    qs.editAvatarBtn();
+    ui.editAvatarBtn();
   }
 }

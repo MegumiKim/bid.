@@ -20,7 +20,7 @@ export const postProductDescription = (data, parent) => {
 
     parent.append(doc);
   } catch (e) {
-    userAlert(parent, "Could not fetch descriptions");
+    userAlert(parent, "Could not fetch descriptions", "danger");
     throw new Error(e);
   }
 };
