@@ -455,9 +455,18 @@
                 <li class="endTime"> Ends in: ${data.remainingTime} </li>
               </ul>
               <div id="bidBtn-container">
+
+              <a
+              href="../login/"
+              type="button"
+              class="w-100 btn btn-lg btn-outline-main d-none"
+              id="loginToBidBtn"
+              >
+              Login to make a bid
+              </a>
               <button
                 type="button"
-                class="w-100 btn btn-lg btn-outline-main"
+                class="w-100 btn btn-lg btn-outline-main d-none"
                 data-bs-toggle="modal"
                 data-bs-target="#bidModal"
                 id="bidBtn"
@@ -467,7 +476,7 @@
 
               <button
               type="button"
-              class="w-100 btn btn-lg btn-outline-secondary"
+              class="w-100 btn btn-lg btn-outline-secondary d-none"
               data-bs-toggle="modal"
               data-bs-target="#edit-modal"
               id="editBtn"
@@ -476,7 +485,7 @@
             </button>
             <button
               type="button"
-              class="mt-2 w-100 btn btn-lg btn-outline-main"
+              class="w-100 btn btn-lg btn-outline-main d-none mt-2"
               data-bs-toggle="modal"
               data-bs-target="#delete-modal"
               id="deleteBtn"
@@ -487,8 +496,6 @@
             </div>
           </div>
         </div>
-        
-
        </template>
 
     </div>

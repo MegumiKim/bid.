@@ -6,9 +6,7 @@ import { postListingCard } from "../templates/listingCard.mjs";
 
 export const myBids = async () => {
   const container = document.querySelector("#my-bids-container");
-
   container.clearHTML();
-
   const name = getParam("name");
 
   try {
