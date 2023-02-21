@@ -1,23 +1,19 @@
 import { load } from "../storage/local.mjs";
-
+import { show } from "./toggleDisplay.mjs";
 export const toggleCTABtn = (data) => {
   if (!load("accessToken")) {
-    showBtn("a#loginToBidBtn");
-  }
-
-  const seller = data.seller.email;
-  const myEmail = load("userDetails").email
-    ? load("userDetails").email
-    : "Unauthorized user";
-
-  if (seller === myEmail) {
-    showBtn("button#editBtn");
-    showBtn("button#deleteBtn");
+    show("a#loginToBidBtn");
   } else {
-    showBtn("button#bidBtn");
-  }
-};
+    const seller = data.seller.email;
+    const myEmail = load("userDetails").email
+      ? load("userDetails").email
+      : "Unauthorized user";
 
-const showBtn = (target) => {
-  document.querySelector(target).classList.remove("d-none");
+    if (seller === myEmail) {
+      show("button#editBtn");
+      show("button#deleteBtn");
+    } else {
+      show("button#bidBtn");
+    }
+  }
 };
