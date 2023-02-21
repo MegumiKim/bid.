@@ -2,7 +2,7 @@ import { load } from "../../storage/local.mjs";
 import { API_BASE_URL } from "../constants.mjs";
 
 export async function fetchMyBids(name) {
-  const URL = `${API_BASE_URL}profiles/${name}/bids?_listings=true`;
+  const URL = `${API_BASE_URL}profiles/${name}/bids?_listings=true&_bids=true`;
   const options = makeOptions();
   const response = await fetch(URL, options);
   const result = await response.json();

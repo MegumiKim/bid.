@@ -30,6 +30,7 @@ export function router() {
   } else if (path === "/profile/") {
     render.myPage();
     render.myBids();
+    render.myListings();
     ui.createListingForm();
     listeners.logout();
     ui.editAvatarBtn();

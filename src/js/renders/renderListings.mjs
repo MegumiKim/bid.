@@ -5,7 +5,6 @@ import { userAlert } from "./userAlert.mjs";
 export async function renderListings(listings, offset) {
   const container = document.querySelector("#listings-container");
   try {
-    console.log(listings);
     const limit = offset + 12;
     const offsetListing = listings.slice(offset, limit);
 

@@ -364,21 +364,31 @@
 
       <template id="card-template">
         <div class='col'>
-          <a class="card">      
-        <div class="m-auto p-3 p-md-3" style="overflow:hidden; max-width:300px; height:300px;">
+          <a class="card ">      
+        <div class="m-auto  card-img-top">
+
           <img
           width="100%" class="h-100 w-100" >
           </img>
         </div>
           <div class="card-body">
-            <h4 class="card-title "></h4>
+            <h4 class="card-title"></h4>
+            <p class="card-text"></p>
             <div
-              class="justify-content-between align-items-center"
+              class="card-footer justify-content-between align-items-center"
             >
-              <div class="col created"></div>
-              <div class="col endsAt"></div>
+
+            <div class="row row-cols-2">
+              <div class="col">Created: </div>
+              <div class="col created">Column</div>
+              <div class="col">Ends: </div>
+              <div class="col endsAt">Column</div>
+              <div class="col">Bids: </div>
+              <div class="col bids">Column</div>
             </div>
-            <div class="tags text-light">
+            </div>
+            <hr>
+            <div class="tags text-muted small d-flex">
             </div>
           </div>
         </a>

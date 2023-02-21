@@ -10900,13 +10900,25 @@ textarea.form-control {
   color: #f2b441;
 }
 
-.card-title {
+.card-title,
+.card-footer > div {
   color: white;
 }
 
 .card {
   background-color: #2b2d34;
   border-radius: 0;
+}
+
+.card-text,
+.card-title,
+.tags {
+  display: block;
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-height: 1.5rem;
 }
 
 .card:hover {
@@ -10922,6 +10934,12 @@ textarea.form-control {
 
 .card-specific:hover {
   background-color: #2b2d34;
+}
+
+.card-img-top {
+  overflow: hidden;
+  height: 300px;
+  border-radius: 0;
 }
 
 img {

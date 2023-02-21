@@ -10,7 +10,7 @@ export const postProductCTASection = (data, parent) => {
 
     doc.querySelector("h1").innerText = data.title;
     doc.querySelector("li.endTime").innerText = `Ends in: ${expiry}`;
-    doc.querySelector("li.currentBid").innerText = `Highest bid: ${highest} pt`;
+    doc.querySelector("li.currentBid").innerText = `Highest bid: ${highest} `;
 
     parent.append(doc);
   } catch (e) {

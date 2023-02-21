@@ -1,4 +1,5 @@
-.card-title {
+.card-title,
+.card-footer > div {
   color: white;
 }
 
@@ -8,6 +9,16 @@
   border-radius: 0;
 }
 
+.card-text,
+.card-title,
+.tags {
+  display: block;
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-height: 1.5rem;
+}
 .card:hover {
   background-color: rgb(56, 56, 56);
   text-decoration: none;
@@ -23,6 +34,11 @@
   background-color: $myDark;
 }
 
+.card-img-top {
+  overflow: hidden;
+  height: 300px;
+  border-radius: 0;
+}
 img {
   object-position: center center;
   object-fit: cover;

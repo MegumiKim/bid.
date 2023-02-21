@@ -1,21 +1,16 @@
-// import { getParam } from "../utils/getParam.mjs";
-// import { fetchMyBids } from "../API/listings/fetchMybids.mjs";
-// import { userAlert } from "./userAlert.mjs";
-// import { clearHTML } from "../utils/clear.mjs";
-// import { postListingCard } from "../templates/listingCard.mjs";
+import { getParam } from "../tools/getParam.mjs";
+import { userAlert } from "./userAlert.mjs";
+import { fetchListingsForSingleProfile } from "../API/listings/listingsForProfile.mjs";
+import { renderCards } from "./renderCards.mjs";
 
-// export const myListings = async () => {
-//   const myListingsContainer = document.querySelector("#my-listings-container");
+export const myListings = async () => {
+  const container = document.querySelector("#my-listings-container");
+  const name = getParam("name");
 
-//   myListingsContainer.clearHTML();
-//   const name = getParam("name");
-
-//   try {
-//     const myListings = await fetchSingleUser(name);
-//     myBids.forEach((bid) => {
-//       postListingCard(bid.listing, myBidsContainer);
-//     });
-//   } catch (e) {
-//     userAlert(myListingsContainer, e.message, "secondary");
-//   }
-// };
+  try {
+    const myListings = await fetchListingsForSingleProfile(name);
+    renderCards(myListings, container);
+  } catch (e) {
+    userAlert(container, e.message, "secondary");
+  }
+};
