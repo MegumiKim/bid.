@@ -1,4 +1,4 @@
-import { renderListings } from "../../renders/renderListings.mjs";
+import { renderLimitedListings } from "../../renders/limitedListings.mjs";
 import { load } from "../../storage/session.mjs";
 
 let perPage = 12;
@@ -13,12 +13,12 @@ export function prevPage() {
   } else {
     offset = 0;
   }
-  renderListings(listings, offset);
+  renderLimitedListings(listings, offset);
 }
 
 export function nextPage() {
   // / if (currentPage * pageSize < listings.length) {
   offset = currentPage * perPage;
   currentPage++;
-  renderListings(listings, offset);
+  renderLimitedListings(listings, offset);
 }

@@ -5,10 +5,9 @@ export async function deleteListing(id) {
   const URL = `${API_BASE_URL}listings/${id}`;
   const options = makeOptions();
   const response = await fetch(URL, options);
-  const result = await response.json();
 
   if (response.ok) {
-    return;
+    return response;
   }
   const errorText = result.errors[0].message
     ? result.errors[0].message

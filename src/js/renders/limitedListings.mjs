@@ -1,8 +1,7 @@
-import { fetchListings } from "../API/listings/allListings.mjs";
 import { renderCards } from "./renderCards.mjs";
 import { userAlert } from "./userAlert.mjs";
 
-export async function renderListings(listings, offset) {
+export async function renderLimitedListings(listings, offset) {
   const container = document.querySelector("#listings-container");
   try {
     const limit = offset + 12;
@@ -15,7 +14,7 @@ export async function renderListings(listings, offset) {
     throw new Error(e);
   }
 }
-// export async function renderListings(offset, order, container) {
+// export async function renderLimitedListings(offset, order, container) {
 //   try {
 //     container.clearHTML();
 //     const listings = await fetchListings(offset, order);

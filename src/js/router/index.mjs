@@ -10,7 +10,6 @@ const path = location.pathname;
 export function router() {
   if (path === "/index.html" || path === "/") {
     checkLogin();
-
     ui.myPageBtn();
     ui.sortBtn();
     listeners.logout();
@@ -33,6 +32,7 @@ export function router() {
     render.myListings();
     ui.createListingForm();
     listeners.logout();
-    ui.editAvatarBtn();
+    ui.editAvatar();
+    checkLogin();
   }
 }

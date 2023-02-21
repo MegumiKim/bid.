@@ -17,16 +17,21 @@
     <header class="p-3 mb-3">
       <div>
         <div class="d-flex justify-content-between">
-          <a href="/" class="logo fs-1 mb-2 mb-lg-0"> bid. </a>
+          <a href="/" class="logo fs-1 mb-2 mb-lg-0">bid. </a>
 
-          <div class="align-items-center text-center">
-            <div id="nav-link">
-              <a id="my-page-link" href="./profile/" class="me-3">My Page</a>
+          <div class="d-flex align-items-center text-center">
+
+            <div class="d-flex welcome-stranger">
+              <p class="me-2">Welcome stranger: </p>
+              <a href="./login">Login</a>
+            </div>
+            <div class="welcome-user">
+              <p class="mb-0 user-name"> </p>
+              <div id="points-display" class="mt-1"></div>
             </div>
 
-            <div class="dropstart">
+            <div class=" ms-3 dropstart">
               <a
-                href="./login/"
                 class="d-block link-dark text-decoration-none dropdown-toggle"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -56,8 +61,8 @@
                   </button>
                 </li>
               </ul>
+
             </div>
-            <div id="points-display"></div>
           </div>
         </div>
       </div>
@@ -76,6 +81,7 @@
                 href="./login/"
                 type="button"
                 class="btn btn-secondary btn-md px-4 me-sm-2"
+                id="login-CTA"
               >
                 Log-in
               </a>
@@ -83,9 +89,16 @@
                 href="./signup/"
                 type="button"
                 class="btn btn-outline-secondary btn-md px-4"
+                id="signup-CTA"
               >
                 Sign-up
               </a>
+              <a
+              id="btn-CTA"
+                href="#search-section"
+                type="button"
+                class="btn btn-outline-secondary btn-md px-4 me-sm-2"
+              >Let's dive</a>
             </div>
           </div>
           <div class="mx-auto col-12 col-sm-8 col-md-6 position-relative">
@@ -123,7 +136,7 @@
       <section class="album mt-5">
         <div
           id="listings-container"
-          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 my-1"
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 my-1"
         >
           <img
             class="loader-icon m-auto"
@@ -132,7 +145,7 @@
           />
         </div>
         <nav aria-label="Page navigation">
-          <ul class="pagination justify-content-center my-3">
+          <ul class="pagination justify-content-center my-4">
             <li class="page-item">
               <button id="prevBtn" class="page-link" aria-label="Previous">
                 <span aria-hidden="true">&laquo;</span>
@@ -236,8 +249,8 @@
               <div class="col created">Column</div>
               <div class="col">Ends: </div>
               <div class="col endsAt">Column</div>
-              <div class="col">Highest Bid: </div>
-              <div class="col bids">Column</div>
+              <div class="col highest">Highest Bid: </div>
+              <div class="col bids highest">Column</div>
             </div>
             </div>
             <hr>

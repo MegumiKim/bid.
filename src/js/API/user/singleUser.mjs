@@ -7,7 +7,6 @@ export async function fetchSingleUser(name) {
   const response = await fetch(singleProfileURL, options);
   const result = await response.json();
   if (response.ok) {
-    console.log(result);
     return result;
   }
   const errorText = result.errors[0].message

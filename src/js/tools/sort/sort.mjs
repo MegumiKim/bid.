@@ -2,14 +2,14 @@ import { clearHTML } from "../clear.mjs";
 import { load } from "../../storage/session.mjs";
 import { searchFilter } from "../filters/searchFilter.mjs";
 import { renderCards } from "../../renders/renderCards.mjs";
-import { renderListings } from "../../renders/renderListings.mjs";
+import { renderLimitedListings } from "../../renders/limitedListings.mjs";
 
 export function onChangeSortSelect(event) {
   const selectedOption = event.target.value;
   const listings = load("cached-listings");
   const sortedListings = sort(listings, selectedOption);
 
-  renderListings(sortedListings, 0);
+  renderLimitedListings(sortedListings, 0);
   // renderCards(sortedListings, container);
 }
 

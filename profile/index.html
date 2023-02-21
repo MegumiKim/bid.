@@ -18,43 +18,49 @@
       <div class="d-flex justify-content-between align-items-center">
         <a href="/" class="logo fs-1"> bid. </a>
 
-        <div class="d-flex align-items-center">
-          <a
-            href="./login/"
-            class="add-btn rounded-circle me-3"
-            data-bs-toggle="modal"
-            data-bs-target="#add-new-item-modal"
-            >+</a
-          >
-          <div class="dropdown text-end">
-            <a
-              href="#"
-              class="d-block link-dark text-decoration-none dropdown-toggle"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <img
-                src="../asset/img/avatar-placeholder.png"
-                alt="mdo"
-                width="32"
-                height="32"
-                class="rounded-circle"
-              />
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark text-small">
-              <li><a class="dropdown-item" href="../">Listings | Home</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li>
-                <a
-                  class="dropdown-item"
-                  href="/"
-                  data-bs-toggle="modal"
-                  data-bs-target="#confirm-logout"
-                  >Log out</a
-                >
-              </li>
-            </ul>
+        <div class=" d-flex align-items-center text-center">
+          <!-- <div id="nav-link">
+            <a id="my-page-link" href="./profile/" class="me-3">My Page</a>
+          </div> -->
+          <div class="d-flex welcome-stranger">
+            <p class="me-2">Welcome stranger: </p>
+            <a href="./login">Login</a>
           </div>
+          <div class="welcome-user">
+            <p class="mb-0 user-name"> </p>
+            <div id="points-display" class="mt-1"></div>
+          </div>
+            <div class="ms-3 dropstart">
+              <a
+                href="#"
+                class="d-block link-dark text-decoration-none dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+              <img
+              onerror="this.onerror=null;this.src='../asset/img/avatar-placeholder.png'"
+              alt="profile avatar"
+              width="40"
+              height="40"
+              class="rounded-circle"
+              id="navBtn"
+            />
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark text-small">
+                <li><a class="dropdown-item" href="../">Listings | Home</a></li>
+                <li><a class="dropdown-item" id="my-page">My Page</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/"
+                    data-bs-toggle="modal"
+                    data-bs-target="#confirm-logout"
+                    >Log out</a
+                  >
+                </li>
+              </ul>
+            </div>
         </div>
       </div>
     </header>
@@ -265,12 +271,13 @@
             <div class="modal-footer">
               <div id="user-alert-avatar"></div>
               <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                Close
+                Cancel
               </button>
               <button
                 type="submit"
                 class="btn btn-secondary"
                 id="edit-avatar-confirm"
+           
               >
                 Change
               </button>

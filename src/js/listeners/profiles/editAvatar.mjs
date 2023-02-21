@@ -6,9 +6,10 @@ import { getParam } from "../../tools/getParam.mjs";
 
 export async function editAvatarListener(event) {
   event.preventDefault();
-
   const error = document.querySelector("#user-alert-avatar");
-  const modal = document.querySelector("#edit-avatar-modal");
+
+  // const myModal = new bootstrap.Modal("#edit-avatar-modal");
+
   const name = getParam("name");
   const form = event.target;
   const formData = new FormData(form);
@@ -16,10 +17,13 @@ export async function editAvatarListener(event) {
 
   try {
     await editAvatar(name, payload);
+
+    error.clearHTML();
     form.reset();
     myPage();
-    // closeModal(modal);
+    // myModal.hide();
   } catch (e) {
+    console.log(e);
     userAlert(error, e.message, "secondary");
   }
 }

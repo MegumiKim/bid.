@@ -19,45 +19,49 @@
         <div class="d-flex justify-content-between">
           <a href="/" class="logo fs-1 mb-2 mb-lg-0"> bid. </a>
 
-          <div class="align-items-center text-center">
-            <div id="nav-link">
+          <div class=" d-flex align-items-center text-center">
+            <!-- <div id="nav-link">
               <a id="my-page-link" href="./profile/" class="me-3">My Page</a>
+            </div> -->
+            <div class="d-flex welcome-stranger">
+              <p class="me-2">Welcome stranger: </p>
+              <a href="./login">Login</a>
             </div>
-
-            <div class="dropstart">
-              <a
-                href="./login/"
-                class="d-block link-dark text-decoration-none dropdown-toggle"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
+            <div class="welcome-user">
+              <p class="mb-0 user-name"> </p>
+              <div id="points-display" class="mt-1"></div>
+            </div>
+              <div class="ms-3 dropstart">
+                <a
+                  href="#"
+                  class="d-block link-dark text-decoration-none dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                 <img
-                  onerror="this.onerror=null;this.src='./asset/img/avatar-placeholder.png'"
-                  alt="profile avatar"
-                  width="40"
-                  height="40"
-                  class="rounded-circle"
-                  id="navBtn"
-                />
-              </a>
-              <ul
-                class="dropdown-menu dropdown-menu-dark text-small me-2"
-                id="nav-dropdown"
-              >
-                <li><a class="dropdown-item" id="my-page">My Page</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <button
-                    class="dropdown-item"
-                    data-bs-toggle="modal"
-                    data-bs-target="#confirm-logout"
-                  >
-                    Logout
-                  </button>
-                </li>
-              </ul>
-            </div>
-            <div id="points-display"></div>
+                onerror="this.onerror=null;this.src='../asset/img/avatar-placeholder.png'"
+                alt="profile avatar"
+                width="40"
+                height="40"
+                class="rounded-circle"
+                id="navBtn"
+              />
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small">
+                  <li><a class="dropdown-item" href="../">Listings | Home</a></li>
+                  <li><a class="dropdown-item" id="my-page">My Page</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/"
+                      data-bs-toggle="modal"
+                      data-bs-target="#confirm-logout"
+                      >Log out</a
+                    >
+                  </li>
+                </ul>
+              </div>
           </div>
         </div>
       </div>
@@ -115,15 +119,15 @@
           id="product-container"
           class="my-1 col col-md-4 d-flex"
         >
-        <img class="loader-icon m-auto m-100" src="/asset/icons/spinner.svg" alt="loader">
-        </section>
-      </div>
-      <section
-      id="" class="row g-3 mt-3"
-      >
-
-      <div id="description-container" class="row row-cols-1 row-cols-md-3 d-flex ">
-
+      </section>
+    </div>
+    <section
+    id="" class="row g-3 mt-3"
+    >
+    
+    <div id="description-container" class="row row-cols-1 row-cols-md-3 d-flex ">
+    <img class="loader-icon m-auto m-100" src="/asset/icons/spinner.svg" alt="loader">
+  </div>
       
       </section>
 

@@ -1,26 +1,29 @@
+.card {
+  background-color: $myDark;
+  border-radius: 0;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
 .card-title,
 .card-footer > div {
   color: white;
 }
 
-.card {
-  background-color: $myDark;
-  // background-color: rgb(239, 237, 237);
-  border-radius: 0;
+.card-text-small {
+  font-size: 0.9rem;
 }
 
-.card-text-small {
-  font-size: 0.8rem;
-}
 .card-text,
 .card-title,
 .tags {
-  display: block;
-  width: 90%;
+  // display: block;
+  // width: 90%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  min-height: 1.5rem;
+  height: 1.5rem;
 }
 .card:hover {
   background-color: rgb(56, 56, 56);
@@ -54,4 +57,8 @@ img {
 
 #product-summary:hover {
   background-color: none;
+}
+
+.highest {
+  color: $myYellow;
 }

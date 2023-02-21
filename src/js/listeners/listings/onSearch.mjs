@@ -2,7 +2,7 @@ import { renderCards } from "../../renders/renderCards.mjs";
 import { save, load } from "../../storage/session.mjs";
 import { searchFilter } from "../../tools/filters/searchFilter.mjs";
 import { clearHTML } from "../../tools/clear.mjs";
-import { renderListings } from "../../renders/renderListings.mjs";
+import { renderLimitedListings } from "../../renders/limitedListings.mjs";
 
 export function onSearch(event) {
   event.preventDefault();
@@ -15,7 +15,7 @@ export function onSearch(event) {
   if (!searchTerm.length) {
     container.clearHTML();
     // renderCards(listings, container);
-    renderListings(listings, 0, container);
+    renderLimitedListings(listings, 0, container);
     return;
   } else {
     if (searchTerm.length < 3) {
@@ -30,8 +30,8 @@ export function onSearch(event) {
 
     if (filteredListings.length) {
       container.clearHTML();
-      console.log(filteredListings);
-      renderListings(filteredListings, 0, container);
+      renderCards(filteredListings, container);
+      // renderLimitedListings(filteredListings, 0, container);
     } else {
       container.innerHTML = "no result";
     }

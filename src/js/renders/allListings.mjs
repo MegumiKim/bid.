@@ -9,7 +9,7 @@ import { onChangeSortSelect } from "../tools/sort/sort.mjs";
 import { postListingCard } from "../templates/listingCard.mjs";
 import { save } from "../storage/session.mjs";
 import { sortBtn } from "../ui/index.mjs";
-import { renderListings } from "./renderListings.mjs";
+import { renderLimitedListings } from "./limitedListings.mjs";
 
 import { prevPage, nextPage } from "../listeners/listings/pagination.mjs";
 import { fetchAllListings } from "../API/listings/fetchAllListings.mjs";
@@ -22,7 +22,7 @@ export async function listings() {
   const allListings = await fetchAllListings();
   save("cached-listings", allListings);
 
-  renderListings(allListings, 0);
+  renderLimitedListings(allListings, 0);
 
   document.querySelector("#prevBtn").addEventListener("click", prevPage);
   document.querySelector("#nextBtn").addEventListener("click", nextPage);

@@ -9,11 +9,13 @@ export async function editAvatar(name, body) {
 
   if (response.ok) {
     return result;
+  } else {
+    const errorText = result.errors[0].message
+      ? result.errors[0].message
+      : "Server error";
+
+    throw new Error(errorText);
   }
-  const errorText = result.errors[0].message
-    ? result.errors[0].message
-    : "Server error";
-  throw new Error(errorText);
 }
 
 /** returns fetch options with body/auth */

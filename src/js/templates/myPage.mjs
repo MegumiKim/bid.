@@ -5,9 +5,7 @@ export const postMyPage = (data, parent) => {
   const h1 = doc.querySelector("h1");
   h1.innerText = `Hello ${data.name}!`;
 
-  doc.querySelector(
-    "h3"
-  ).innerHTML = `Current Cash Point: ${data.credits} pt </img>`;
+  doc.querySelector("h3").innerText = `Current Cash Point:💰${data.credits} pt`;
 
   const img = doc.querySelector("img.rounded-circle");
   img.alt = data.name;

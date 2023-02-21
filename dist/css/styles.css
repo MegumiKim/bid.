@@ -4440,8 +4440,8 @@ textarea.form-control-lg {
   --bs-pagination-padding-x: 0.75rem;
   --bs-pagination-padding-y: 0.375rem;
   --bs-pagination-font-size: 1rem;
-  --bs-pagination-color: var(--bs-link-color);
-  --bs-pagination-bg: #fff;
+  --bs-pagination-color: rgb(35, 189, 168);
+  --bs-pagination-bg: #2b2d34;
   --bs-pagination-border-width: 1px;
   --bs-pagination-border-color: #dee2e6;
   --bs-pagination-border-radius: 0.375rem;
@@ -10829,6 +10829,10 @@ a:hover {
   text-decoration: underline;
 }
 
+.dropdown-toggle:hover {
+  opacity: 0.7;
+}
+
 .form-control {
   border: none;
   border-bottom: 2px white solid;
@@ -10900,29 +10904,31 @@ textarea.form-control {
   color: #f2b441;
 }
 
-.card-title,
-.card-footer > div {
-  color: white;
-}
-
 .card {
   background-color: #2b2d34;
   border-radius: 0;
 }
 
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title,
+.card-footer > div {
+  color: white;
+}
+
 .card-text-small {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .card-text,
 .card-title,
 .tags {
-  display: block;
-  width: 90%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  min-height: 1.5rem;
+  height: 1.5rem;
 }
 
 .card:hover {
@@ -10958,6 +10964,10 @@ img {
 
 #product-summary:hover {
   background-color: none;
+}
+
+.highest {
+  color: #f2b441;
 }
 
 .lead {

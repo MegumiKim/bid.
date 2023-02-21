@@ -12,6 +12,7 @@ export function myWins(data) {
 
       postListingCard(item, container);
     });
+  } else {
+    container.innerHTML = "You have not won any item yet.";
   }
-  container.innerHTML = "You have not won any item yet.";
 }
