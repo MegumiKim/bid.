@@ -1,11 +1,12 @@
+import { formatDate } from "../tools/changeDateFormat.mjs";
 import { highestBid } from "../tools/sort/highestBid.mjs";
 import { cloneTemplate } from "./cloneTemplate.mjs";
 import { renderTags } from "./tags.mjs";
 
 export const postListingCard = (data, parent) => {
   const doc = cloneTemplate("card-template");
-  const created = new Date(data.created).toLocaleDateString("en-GB");
-  const endsAt = new Date(data.endsAt).toLocaleDateString("en-GB");
+  const created = formatDate(data.created);
+  const endsAt = formatDate(data.endsAt);
   const bids = highestBid(data);
   const tagContainer = doc.querySelector("div.tags");
   renderTags(data, tagContainer);

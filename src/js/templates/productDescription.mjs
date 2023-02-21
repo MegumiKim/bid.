@@ -1,26 +1,21 @@
 import { userAlert } from "../renders/userAlert.mjs";
 import { cloneTemplate } from "./cloneTemplate.mjs";
+import { renderBidHistory } from "../renders/bidHistory.mjs";
 
 export const postProductDescription = (data, parent) => {
   try {
     const doc = cloneTemplate("description-template");
+    const bidHistoryContainer = doc.querySelector("#bid-history-container");
+
+    renderBidHistory(data, bidHistoryContainer);
+
     doc.querySelector("p.description").innerText = data.description;
-
-    const tags = doc.querySelector("ul.tags-container");
-
-    // Tags
-    if (!data.tags.length) {
-      tags.innerText = "No tag";
-    }
-    data.tags.forEach((item) => {
-      const tag = document.createElement("li");
-      tag.innerText = `#${item}`;
-      tags.append(tag);
-    });
+    doc.querySelector(".seller-name").innerText = data.seller.name;
+    doc.querySelector(".email").innerText = data.seller.email;
 
     parent.append(doc);
   } catch (e) {
-    userAlert(parent, "Could not fetch descriptions", "danger");
+    userAlert(parent, "Could not fetch data", "secondary");
     throw new Error(e);
   }
 };

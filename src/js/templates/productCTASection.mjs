@@ -1,16 +1,21 @@
 import { remainingTime } from "../tools/remainingTime.mjs";
 import { cloneTemplate } from "./cloneTemplate.mjs";
 import { highestBid } from "../tools/sort/highestBid.mjs";
-
+import { userAlert } from "../renders/userAlert.mjs";
+import { renderTags } from "./tags.mjs";
+import { formatDate } from "../tools/changeDateFormat.mjs";
 export const postProductCTASection = (data, parent) => {
   try {
     const doc = cloneTemplate("product-CTA-section");
     const expiry = remainingTime(new Date(data.endsAt));
+    const created = formatDate(data.created);
     const highest = highestBid(data);
-
+    const tagContainer = doc.querySelector("div.tags");
+    renderTags(data, tagContainer);
     doc.querySelector("h1").innerText = data.title;
-    doc.querySelector("li.endTime").innerText = `Ends in: ${expiry}`;
-    doc.querySelector("li.currentBid").innerText = `Highest bid: ${highest} `;
+    doc.querySelector("div.endsAt").innerText = expiry;
+    doc.querySelector("div.bids").innerText = highest;
+    doc.querySelector("div.created").innerText = created;
 
     parent.append(doc);
   } catch (e) {

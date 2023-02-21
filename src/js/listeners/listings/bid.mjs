@@ -1,5 +1,5 @@
 import { makeBid } from "../../API/listings/bid.mjs";
-import { singleEntry } from "../../utils/singleEntry.mjs";
+import { singleEntry } from "../../renders/singleEntry.mjs";
 import { userAlert } from "../../renders/userAlert.mjs";
 import { save } from "../../storage/local.mjs";
 import { getMyCredits } from "../../tools/getMyCredits.mjs";
