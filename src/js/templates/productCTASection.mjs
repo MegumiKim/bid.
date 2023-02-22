@@ -7,15 +7,17 @@ import { formatDate } from "../tools/changeDateFormat.mjs";
 export const postProductCTASection = (data, parent) => {
   try {
     const doc = cloneTemplate("product-CTA-section");
-    const expiry = remainingTime(new Date(data.endsAt));
+    const timeLeft = remainingTime(new Date(data.endsAt));
+    const endsAt = formatDate(data.endsAt);
     const created = formatDate(data.created);
     const highest = highestBid(data);
     const tagContainer = doc.querySelector("div.tags");
     renderTags(data, tagContainer);
     doc.querySelector("h1").innerText = data.title;
-    doc.querySelector("div.endsAt").innerText = expiry;
+    doc.querySelector("div.endsAt").innerText = endsAt;
     doc.querySelector("div.bids").innerText = highest;
     doc.querySelector("div.created").innerText = created;
+    doc.querySelector("div.timeLeft").innerText = timeLeft;
 
     parent.append(doc);
   } catch (e) {

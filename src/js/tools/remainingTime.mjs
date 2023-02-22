@@ -4,11 +4,14 @@ export const remainingTime = (endsAt) => {
 
   if (difference < 0) {
     return "Expired";
-  } else if (difference < 86400000) {
+  } else if (difference < 60 * 60 * 1000) {
+    const inMinutes = Math.floor(difference / (1000 * 60));
+    return `${inMinutes} minutes left`;
+  } else if (difference < 60 * 60 * 24 * 1000) {
     const inHours = Math.floor(difference / (1000 * 60 * 60));
-    return `${inHours} hours`;
+    return `${inHours} hours left`;
   }
 
   const inDays = Math.floor(difference / (1000 * 60 * 60 * 24));
-  return `${inDays} days`;
+  return `${inDays} days left`;
 };

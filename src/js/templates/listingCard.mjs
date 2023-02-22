@@ -1,4 +1,5 @@
 import { formatDate } from "../tools/changeDateFormat.mjs";
+import { remainingTime } from "../tools/remainingTime.mjs";
 import { highestBid } from "../tools/sort/highestBid.mjs";
 import { cloneTemplate } from "./cloneTemplate.mjs";
 import { renderTags } from "./tags.mjs";
@@ -7,6 +8,7 @@ export const postListingCard = (data, parent) => {
   const doc = cloneTemplate("card-template");
   const created = formatDate(data.created);
   const endsAt = formatDate(data.endsAt);
+  const timeLeft = remainingTime(new Date(data.endsAt));
   const bids = highestBid(data);
   const tagContainer = doc.querySelector("div.tags");
   renderTags(data, tagContainer);
@@ -17,6 +19,7 @@ export const postListingCard = (data, parent) => {
   doc.querySelector("div.created").innerText = created;
   doc.querySelector("div.endsAt").innerText = endsAt;
   doc.querySelector("div.bids").innerText = bids;
+  doc.querySelector("div.timeLeft").innerText = timeLeft;
   const img = doc.querySelector("img");
 
   img.src = data.media[0];

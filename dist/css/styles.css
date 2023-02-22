@@ -10974,6 +10974,15 @@ img {
   color: #f2b441;
 }
 
+.timeLeft {
+  top: 0;
+  right: 0;
+  background-color: rgb(250, 96, 122);
+  padding: 5px 10px;
+  color: white;
+  border-radius: 0 0 0 10px;
+}
+
 .lead {
   color: rgb(35, 189, 168);
 }

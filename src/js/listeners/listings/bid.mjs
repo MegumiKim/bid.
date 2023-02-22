@@ -12,6 +12,7 @@ export async function makeBidListener(event) {
   const formData = new FormData(form);
   const error = document.querySelector("#user-alert");
 
+  // const myModal = new bootstrap.Modal("#bidModal");
   let payload = Object.fromEntries(formData.entries());
   payload.amount = parseInt(payload.amount);
 
@@ -20,6 +21,8 @@ export async function makeBidListener(event) {
     const myCredits = await getMyCredits();
     save("credits", myCredits);
     singleEntry();
+    form.reset();
+    // myModal.hide();
   } catch (e) {
     userAlert(error, e.message, "secondary");
   }
