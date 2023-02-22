@@ -10803,6 +10803,7 @@ textarea.form-control-lg {
 .logo {
   font-family: "Comfortaa", cursive;
   padding: 0 1rem 0 1rem;
+  font-size: 4rem;
 }
 
 .logo-large {
@@ -10932,7 +10933,7 @@ textarea.form-control {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  height: 1.5rem;
+  height: 1.8rem;
 }
 
 .card:hover {
@@ -10952,7 +10953,7 @@ textarea.form-control {
 
 .card-img-top {
   overflow: hidden;
-  height: 300px;
+  height: 200px;
   border-radius: 0;
 }
 
@@ -10985,11 +10986,6 @@ img {
 
 .lead {
   color: rgb(35, 189, 168);
-}
-
-.badge {
-  top: -10px;
-  right: 0px;
 }
 
 .accordion-collapse {

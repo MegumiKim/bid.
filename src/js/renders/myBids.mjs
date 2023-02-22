@@ -1,5 +1,5 @@
 import { fetchMyBids } from "../API/listings/fetchMyBids.mjs";
-import { postMyBidCards } from "../templates/myBidCards.mjs";
+import { postListingCard } from "../templates/listingCard.mjs";
 import { getParam } from "../tools/getParam.mjs";
 import { userAlert } from "./userAlert.mjs";
 
@@ -14,7 +14,7 @@ export const myBids = async () => {
     myBidsBtn.innerText = `My Bids (${myBids.length})`;
 
     myBids.forEach((bid) => {
-      postMyBidCards(bid.listing, bid.amount, container);
+      postListingCard(bid.listing, container, bid.amount);
     });
   } catch (e) {
     userAlert(container, e.message, "secondary");

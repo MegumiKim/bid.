@@ -4,21 +4,26 @@ import { highestBid } from "../tools/sort/highestBid.mjs";
 import { cloneTemplate } from "./cloneTemplate.mjs";
 import { renderTags } from "./tags.mjs";
 
-export const postListingCard = (data, parent) => {
+export const postListingCard = (data, parent, amount = 0) => {
   const doc = cloneTemplate("card-template");
   const created = formatDate(data.created);
-  const endsAt = formatDate(data.endsAt);
+  // const endsAt = formatDate(data.endsAt);
   const timeLeft = remainingTime(new Date(data.endsAt));
   const bids = highestBid(data);
   const tagContainer = doc.querySelector("div.tags");
   renderTags(data, tagContainer);
 
+  if (!bids) {
+    doc.querySelector("div.bids").innerText = `${amount} pt`;
+  } else {
+    doc.querySelector("div.bids").innerText = bids;
+  }
   doc.querySelector("a.card").href = `/product/?id=${data.id}`;
   doc.querySelector("h4").innerText = data.title;
   doc.querySelector("p.card-text").innerText = data.description;
   doc.querySelector("div.created").innerText = created;
-  doc.querySelector("div.endsAt").innerText = endsAt;
-  doc.querySelector("div.bids").innerText = bids;
+
+  // doc.querySelector("div.endsAt").innerText = endsAt;
   doc.querySelector("div.timeLeft").innerText = timeLeft;
   const img = doc.querySelector("img");
 

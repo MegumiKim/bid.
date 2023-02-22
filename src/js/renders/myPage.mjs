@@ -15,7 +15,6 @@ export const myPage = async () => {
 
   try {
     const data = await fetchSingleUser(name);
-    console.log(data);
     postMyPage(data, container);
     myWins(data);
     navBtn.src = data.avatar;

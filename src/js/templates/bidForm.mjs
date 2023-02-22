@@ -11,7 +11,7 @@ export const postBidForm = (data, parent) => {
   doc.querySelector("h6.end-time").innerText = `Ends in: ${endsIn} `;
   doc.querySelector(
     "h6.my-points"
-  ).innerText = `Available points: ${myPoints} pt `;
+  ).innerText = `Your available points: ${myPoints} pt `;
 
   parent.append(doc);
 };

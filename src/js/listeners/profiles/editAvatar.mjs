@@ -3,7 +3,6 @@ import { myListings } from "../../renders/myListings.mjs";
 import { myPage } from "../../renders/myPage.mjs";
 import { userAlert } from "../../renders/userAlert.mjs";
 import { save, load } from "../../storage/local.mjs";
-// import { closeModal } from "../../tools/modal.mjs";
 import { getParam } from "../../tools/getParam.mjs";
 export async function editAvatarListener(event) {
   event.preventDefault();

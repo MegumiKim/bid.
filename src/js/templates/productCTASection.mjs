@@ -17,7 +17,7 @@ export const postProductCTASection = (data, parent) => {
     doc.querySelector("div.endsAt").innerText = endsAt;
     doc.querySelector("div.bids").innerText = highest;
     doc.querySelector("div.created").innerText = created;
-    doc.querySelector("div.timeLeft").innerText = timeLeft;
+    doc.querySelector("div.time-remain").innerText = timeLeft;
 
     parent.append(doc);
   } catch (e) {
