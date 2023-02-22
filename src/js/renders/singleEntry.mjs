@@ -15,7 +15,6 @@ export const singleEntry = async () => {
   container.clearHTML();
   carouselContainer.clearHTML();
   descriptionContainer.clearHTML();
-
   bidContainer.clearHTML();
 
   const id = getParam("id");

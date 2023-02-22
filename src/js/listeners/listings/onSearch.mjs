@@ -1,8 +1,9 @@
 import { renderCards } from "../../renders/renderCards.mjs";
-import { save, load } from "../../storage/session.mjs";
+import { renderOffsetListings } from "../../renders/limitedListings.mjs";
+import { load } from "../../storage/session.mjs";
 import { searchFilter } from "../../tools/filters/searchFilter.mjs";
 import { clearHTML } from "../../tools/clear.mjs";
-import { renderLimitedListings } from "../../renders/limitedListings.mjs";
+import { hide } from "../../tools/toggleDisplay.mjs";
 
 export function onSearch(event) {
   event.preventDefault();
@@ -14,8 +15,7 @@ export function onSearch(event) {
 
   if (!searchTerm.length) {
     container.clearHTML();
-    // renderCards(listings, container);
-    renderLimitedListings(listings, 0, container);
+    renderOffsetListings(listings, 0, container);
     return;
   } else {
     if (searchTerm.length < 3) {
@@ -26,12 +26,13 @@ export function onSearch(event) {
       searchFilter(listing, searchTerm)
     );
 
-    save("searched-listings", filteredListings);
-
     if (filteredListings.length) {
       container.clearHTML();
       renderCards(filteredListings, container);
-      // renderLimitedListings(filteredListings, 0, container);
+
+      hide("#prevBtn");
+      hide("#nextBtn");
+      // renderOffsetListings(filteredListings, 0, container);
     } else {
       container.innerHTML = "no result";
     }

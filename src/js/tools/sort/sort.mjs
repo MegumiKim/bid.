@@ -1,16 +1,13 @@
-import { clearHTML } from "../clear.mjs";
-import { load } from "../../storage/session.mjs";
 import { searchFilter } from "../filters/searchFilter.mjs";
-import { renderCards } from "../../renders/renderCards.mjs";
-import { renderLimitedListings } from "../../renders/limitedListings.mjs";
+import { renderOffsetListings } from "../../renders/limitedListings.mjs";
+import { save } from "../../storage/session.mjs";
 
-export function onChangeSortSelect(event) {
+export function onChangeSortSelect(event, listings) {
   const selectedOption = event.target.value;
-  const listings = load("cached-listings");
   const sortedListings = sort(listings, selectedOption);
 
-  renderLimitedListings(sortedListings, 0);
-  // renderCards(sortedListings, container);
+  renderOffsetListings(sortedListings, 0);
+  save("cached-listings", sortedListings);
 }
 
 function sort(listings, selectedOption) {

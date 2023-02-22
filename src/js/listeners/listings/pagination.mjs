@@ -1,24 +1,28 @@
-import { renderLimitedListings } from "../../renders/limitedListings.mjs";
-import { load } from "../../storage/session.mjs";
+import { renderOffsetListings } from "../../renders/limitedListings.mjs";
 
 let perPage = 12;
 let currentPage = 1;
 let offset = 0;
-let listings = load("cached-listings");
 
-export function prevPage() {
+export function prevPage(event, listings) {
+  console.log(currentPage);
   if (currentPage > 1) {
     offset = (currentPage - 1) * perPage;
     currentPage--;
   } else {
+    event.target.classList.add("disabled");
     offset = 0;
   }
-  renderLimitedListings(listings, offset);
+  renderOffsetListings(listings, offset);
 }
 
-export function nextPage() {
-  // / if (currentPage * pageSize < listings.length) {
-  offset = currentPage * perPage;
-  currentPage++;
-  renderLimitedListings(listings, offset);
+export function nextPage(event, listings) {
+  if (currentPage * perPage < listings.length) {
+    offset = currentPage * perPage;
+    currentPage++;
+    renderOffsetListings(listings, offset);
+    document.querySelector("#prevBtn").classList.remove("disabled");
+  } else {
+    event.target.classList.add("disabled");
+  }
 }

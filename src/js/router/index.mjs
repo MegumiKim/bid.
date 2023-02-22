@@ -3,19 +3,16 @@ import * as render from "../renders/index.mjs";
 import * as listeners from "../listeners/index.mjs";
 
 import { checkLogin } from "../tools/checkLogin.mjs";
-import { listings } from "../renders/index.mjs";
 
 const path = location.pathname;
 
 export function router() {
   if (path === "/index.html" || path === "/") {
-    checkLogin();
+    render.listings();
     ui.myPageBtn();
-    ui.sortBtn();
     listeners.logout();
-    listings();
+    checkLogin();
     ui.endingSoonItem();
-    ui.searchInput();
   } else if (path === "/signup/") {
     ui.signupForm();
   } else if (path === "/login/") {
