@@ -1,4 +1,4 @@
-import { fetchMyBids } from "../API/listings/fetchMybids.mjs";
+import { fetchMyBids } from "../API/listings/fetchMyBids.mjs";
 import { postMyBidCards } from "../templates/myBidCards.mjs";
 import { getParam } from "../tools/getParam.mjs";
 import { userAlert } from "./userAlert.mjs";

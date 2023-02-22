@@ -8,8 +8,7 @@ import { getParam } from "../../tools/getParam.mjs";
 export async function editAvatarListener(event) {
   event.preventDefault();
   const error = document.querySelector("#user-alert-avatar");
-
-  // const myModal = new bootstrap.Modal("#edit-avatar-modal");
+  const closeBtn = document.querySelector("#close-modal-btn");
 
   const name = getParam("name");
   const form = event.target;
@@ -26,7 +25,7 @@ export async function editAvatarListener(event) {
     form.reset();
     myPage();
     myListings();
-    // myModal.hide();
+    closeBtn.click();
   } catch (e) {
     console.log(e);
     userAlert(error, e.message, "secondary");
