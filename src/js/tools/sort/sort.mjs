@@ -1,5 +1,5 @@
 import { searchFilter } from "../filters/searchFilter.mjs";
-import { renderOffsetListings } from "../../renders/limitedListings.mjs";
+import { renderOffsetListings } from "../../renders/offsetListings.mjs";
 import { save } from "../../storage/session.mjs";
 
 export function onChangeSortSelect(event, listings) {

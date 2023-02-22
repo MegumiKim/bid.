@@ -1,4 +1,4 @@
-import { renderOffsetListings } from "../../renders/limitedListings.mjs";
+import { renderOffsetListings } from "../../renders/offsetListings.mjs";
 
 let perPage = 12;
 let currentPage = 1;

@@ -10,8 +10,9 @@ export const myBids = async () => {
   try {
     container.clearHTML();
     const myBids = await fetchMyBids(name);
+    const myBidsBtn = document.querySelector("#myBidsBtn");
+    myBidsBtn.innerText = `My Bids (${myBids.length})`;
 
-    console.log(myBids);
     myBids.forEach((bid) => {
       postMyBidCards(bid.listing, bid.amount, container);
     });

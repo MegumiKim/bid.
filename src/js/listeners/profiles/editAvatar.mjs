@@ -1,9 +1,10 @@
 import { editAvatar } from "../../API/user/editAvatar.mjs";
+import { myListings } from "../../renders/myListings.mjs";
 import { myPage } from "../../renders/myPage.mjs";
 import { userAlert } from "../../renders/userAlert.mjs";
+import { save, load } from "../../storage/local.mjs";
 // import { closeModal } from "../../tools/modal.mjs";
 import { getParam } from "../../tools/getParam.mjs";
-
 export async function editAvatarListener(event) {
   event.preventDefault();
   const error = document.querySelector("#user-alert-avatar");
@@ -16,11 +17,15 @@ export async function editAvatarListener(event) {
   let payload = Object.fromEntries(formData.entries());
 
   try {
-    await editAvatar(name, payload);
+    const response = await editAvatar(name, payload);
+    const userDetails = load("userDetails");
+    userDetails.avatar = response.avatar;
 
+    save("userDetails", userDetails);
     error.clearHTML();
     form.reset();
     myPage();
+    myListings();
     // myModal.hide();
   } catch (e) {
     console.log(e);

@@ -5,22 +5,19 @@ export function checkLogin() {
   // const navLink = document.querySelector("#nav-link");
   // navLink.clearHTML();
   const mainCTA = document.querySelector("#btn-CTA");
-  const loginCTA = document.querySelector("#login-CTA");
-  const signupCTA = document.querySelector("#signup-CTA");
   const navBtn = document.querySelector("#navBtn");
-  const welcomeStranger = document.querySelector(".welcome-stranger");
   const nameContainer = document.querySelector(".user-name");
+  // const loginCTA = document.querySelector("#login-CTA");
+  // const signupCTA = document.querySelector("#signup-CTA");
+  // const welcomeStranger = document.querySelector(".welcome-stranger");
 
   if (load("accessToken")) {
     const username = load("userDetails").name;
     if (mainCTA) {
-      // hide(loginCTA);
-      // hide(signupCTA);
-      loginCTA.classList.add("d-none");
-      signupCTA.classList.add("d-none");
+      hide("#login-CTA");
+      hide("#signup-CTA");
     }
-    // hide(welcomeStranger);
-    welcomeStranger.classList.add("d-none");
+    hide(".welcome-stranger");
     nameContainer.innerText = `Hi ${username}!`;
     const avatar = load("userDetails").avatar;
     navBtn.src = avatar;
@@ -29,8 +26,7 @@ export function checkLogin() {
     pointsContainer.innerHTML = `<small>💰 ${myPoint} pt</small>`;
   } else {
     if (mainCTA) {
-      mainCTA.classList.add("d-none");
-      // hide(mainCTA);
+      hide("#btn-CTA");
     }
     navBtn.style.display = "none";
   }

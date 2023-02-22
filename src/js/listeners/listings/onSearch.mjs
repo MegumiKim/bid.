@@ -1,5 +1,5 @@
 import { renderCards } from "../../renders/renderCards.mjs";
-import { renderOffsetListings } from "../../renders/limitedListings.mjs";
+import { renderOffsetListings } from "../../renders/offsetListings.mjs";
 import { load } from "../../storage/session.mjs";
 import { searchFilter } from "../../tools/filters/searchFilter.mjs";
 import { clearHTML } from "../../tools/clear.mjs";

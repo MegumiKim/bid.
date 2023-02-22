@@ -9,6 +9,8 @@ export const myListings = async () => {
 
   try {
     const myListings = await fetchListingsForSingleProfile(name);
+    const accordionBtn = document.querySelector("#myListingsBtn");
+    accordionBtn.innerText = `My Listings (${myListings.length})`;
     renderCards(myListings, container);
   } catch (e) {
     userAlert(container, e.message, "secondary");

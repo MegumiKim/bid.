@@ -1,5 +1,5 @@
 import { load, save } from "../storage/session.mjs";
-import { renderOffsetListings } from "./limitedListings.mjs";
+import { renderOffsetListings } from "./offsetListings.mjs";
 import { fetchAllListings } from "../API/listings/fetchAllListings.mjs";
 import * as ui from "../ui/index.mjs";
 

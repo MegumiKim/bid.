@@ -2,10 +2,11 @@ import { load } from "../../storage/local.mjs";
 import { API_BASE_URL } from "../constants.mjs";
 
 export async function fetchSingleUser(name) {
-  const singleProfileURL = `${API_BASE_URL}profiles/${name}?_listings=true&_bids=true`;
+  const singleProfileURL = `${API_BASE_URL}profiles/${name}`;
   const options = makeOptions();
   const response = await fetch(singleProfileURL, options);
   const result = await response.json();
+
   if (response.ok) {
     return result;
   }

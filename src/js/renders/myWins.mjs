@@ -1,12 +1,13 @@
 import { fetchSingleEntry } from "../API/listings/singleEntry.mjs";
 import { postListingCard } from "../templates/listingCard.mjs";
-import { userAlert } from "./userAlert.mjs";
 
 export function myWins(data) {
   const container = document.querySelector("#my-wins-container");
 
   const wins = data.wins;
   if (wins.length) {
+    const accordionBtn = document.querySelector("#myWinsBtn");
+    accordionBtn.innerText = `My Wins (${myWins.length})`;
     data.wins.forEach(async (win) => {
       const item = await fetchSingleEntry(win);
 
