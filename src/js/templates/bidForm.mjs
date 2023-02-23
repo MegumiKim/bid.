@@ -1,17 +1,15 @@
 import { load } from "../storage/local.mjs";
-import { remainingTime } from "../tools/remainingTime.mjs";
 import { cloneTemplate } from "./cloneTemplate.mjs";
+import { highestBid } from "../sort/sort/highestBid.mjs";
 
 export const postBidForm = (data, parent) => {
   const doc = cloneTemplate("bid-form-temp");
-  const endsIn = remainingTime(new Date(data.endsAt));
   const myPoints = load("credits");
+  const bid = highestBid(data);
 
   doc.querySelector("h4").innerText = `Product: ${data.title} `;
-  doc.querySelector("h6.end-time").innerText = `Ends in: ${endsIn} `;
-  doc.querySelector(
-    "h6.my-points"
-  ).innerText = `Your available points: ${myPoints} pt `;
+  doc.querySelector("div.bids").innerText = bid;
+  doc.querySelector("div.my-points").innerText = `${myPoints} pt `;
 
   parent.append(doc);
 };

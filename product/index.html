@@ -70,28 +70,6 @@
       <a type='button' onclick="history.back()">&#8592 Back</a>
       <div class="row row-cols-1 row-cols-md-2">
         <section id="myCarousel" class="carousel slide col col-md-7 m-auto">
-          <!-- <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#myCarousel"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#myCarousel"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#myCarousel"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-          </div> -->
           <div class="carousel-inner" id="carousel-container">
 
           </div>
@@ -142,7 +120,7 @@
       aria-hidden="true"
     >
       <div class="modal-dialog m-4 mx-sm-auto" id="bid-container">
-        <div class="modal-content">
+        <div class="modal-content px-4">
           <div class="modal-header">
             <h3 class="modal-title fs-5 h1" id="bidModal">Make a bid</h3>
             <button
@@ -161,10 +139,10 @@
               </div>
             </div>
             <form class="gx-1" id="bid-form">
-              <div class="form-group mb-3">
+              <div class="form-group my-3">
                 <label for="">Your bid </label>
                 <input type="number" class="ms-2" name="amount" required  />
-                <button class="btn btn-sm border-secondary small px-1 py-0 ms-2 text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#user-help" aria-expanded="false" aria-controls="#user-help">
+                <button class="btn btn-sm border-secondary small rounded-circle py-0 ms-2 text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#user-help" aria-expanded="false" aria-controls="#user-help">
                   ?
                 </button>
               </div>
@@ -391,12 +369,19 @@
 
       <template id="bid-form-temp">
         <div id="bid-info">
-          <h4></h4>
-          <ul>
+          <h4 class="h5"></h4>
+          <!-- <ul>
             <h6 class="min-bid"></h6>
             <h6 class="end-time"></h6>
             <h6 class="my-points"></h6>
-          </ul>
+          </ul> -->
+        </div>
+
+        <div  id="bid-info" class="row row-cols-2 my-3">
+          <div class="col ">Current bid: </div>
+          <div class="col bids ">Column</div>
+          <div class="col pints">Your available points: </div>
+          <div class="col my-points">Column</div>
         </div>
       </template>
 
