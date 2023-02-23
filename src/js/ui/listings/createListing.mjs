@@ -1,7 +1,7 @@
-import { createListingListener } from "../../listeners/listings/createListing.mjs";
-
+// import { createListingListener } from "../../listeners/listings/onCreate.mjs";
+import * as listeners from "../../listeners/index.mjs";
 export const createListingForm = () => {
   document
     .querySelector("#create-listing")
-    .addEventListener("submit", createListingListener);
+    .addEventListener("submit", listeners.createListingListener);
 };

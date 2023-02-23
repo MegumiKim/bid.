@@ -1,7 +1,7 @@
-import { makeBidListener } from "../../listeners/listings/bid.mjs";
-
+// import { makeBidListener } from "../../listeners/listings/onBid.mjs";
+import * as listeners from "../../listeners/index.mjs";
 export const bidForm = () => {
   document
     .querySelector("#bid-form")
-    .addEventListener("submit", makeBidListener);
+    .addEventListener("submit", listeners.makeBidListener);
 };

@@ -1,6 +1,6 @@
 import { remainingTime } from "../tools/remainingTime.mjs";
 import { cloneTemplate } from "./cloneTemplate.mjs";
-import { highestBid } from "../tools/sort/highestBid.mjs";
+import { highestBid } from "../sort/sort/highestBid.mjs";
 import { userAlert } from "../renders/userAlert.mjs";
 import { renderTags } from "./tags.mjs";
 import { formatDate } from "../tools/changeDateFormat.mjs";

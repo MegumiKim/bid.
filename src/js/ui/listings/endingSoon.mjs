@@ -1,6 +1,4 @@
-import { renderEndingSoonest } from "../../tools/sort/findEndingSoonest.mjs";
-import { endingSoon } from "../../tools/sort/sort.mjs";
-
+import { renderEndingSoonest } from "../../sort/sort/findEndingSoonest.mjs";
 export const endingSoonItem = () => {
   const container = document.querySelector("#ending-soon");
   renderEndingSoonest(container);

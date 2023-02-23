@@ -1,6 +1,6 @@
 import { fetchSingleEntry } from "../../API/listings/singleEntry.mjs";
-import { editListingListener } from "../../listeners/listings/onEdit.mjs";
-
+// import { editListingListener } from "../../listeners/listings/onEdit.mjs";
+import * as listeners from "../../listeners/index.mjs";
 export async function editForm(id) {
   const editForm = document.querySelector("#edit-form");
   const listing = await fetchSingleEntry(id);
@@ -11,6 +11,6 @@ export async function editForm(id) {
   editForm.media.value = listing.media;
 
   editForm.addEventListener("submit", (event) =>
-    editListingListener(event, id)
+    listeners.editListingListener(event, id)
   );
 }

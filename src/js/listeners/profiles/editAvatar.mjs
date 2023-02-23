@@ -4,6 +4,7 @@ import { myPage } from "../../renders/myPage.mjs";
 import { userAlert } from "../../renders/userAlert.mjs";
 import { save, load } from "../../storage/local.mjs";
 import { getParam } from "../../tools/getParam.mjs";
+
 export async function editAvatarListener(event) {
   event.preventDefault();
   const error = document.querySelector("#user-alert-avatar");
