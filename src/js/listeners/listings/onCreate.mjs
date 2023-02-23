@@ -2,6 +2,7 @@ import { createListing } from "../../API/listings/create.mjs";
 import { load } from "../../storage/local.mjs";
 import { userAlert } from "../../renders/userAlert.mjs";
 import { myPage } from "../../renders/myPage.mjs";
+import { validateDate } from "../../tools/dateValidation.mjs";
 
 export async function createListingListener(event) {
   event.preventDefault();
@@ -13,6 +14,10 @@ export async function createListingListener(event) {
   let payload = Object.fromEntries(formData.entries());
   payload.tags = payload.tags.split(",");
   payload.media = payload.media.split(",");
+
+  if (!validateDate(payload.endsAt)) {
+    throw new Error("past date selected");
+  }
   payload.endsAt = new Date(payload.endsAt);
 
   const name = load("userDetails").name;

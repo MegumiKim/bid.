@@ -29,11 +29,7 @@ export function onSearch(event, listings) {
     if (filteredListings.length) {
       container.clearHTML();
       renderCards(filteredListings, container);
-
       hide("#pagination");
-      // hide("#prevBtn");
-      // hide("#nextBtn");
-      // renderOffsetListings(filteredListings, 0, container);
     } else {
       container.innerHTML = "no result";
     }

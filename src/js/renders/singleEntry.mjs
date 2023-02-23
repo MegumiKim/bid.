@@ -20,6 +20,8 @@ export const singleEntry = async () => {
   const id = getParam("id");
 
   const data = await fetchSingleEntry(id);
+
+  document.title = `bid. | ${data.title}`;
   templates.postProductCTASection(data, container);
   templates.postProductDescription(data, descriptionContainer);
   templates.postBidForm(data, bidContainer);
