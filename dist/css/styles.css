@@ -10834,6 +10834,16 @@ a:hover {
   opacity: 0.7;
 }
 
+.gold-coin-lg {
+  height: 40px;
+  width: 40px;
+}
+
+.gold-coin-sm {
+  height: 20px;
+  width: 20px;
+}
+
 .form-control {
   border: none;
   border-bottom: 2px white solid;
@@ -10863,10 +10873,6 @@ a:hover {
   color: #dcdcdd;
   opacity: 1;
   margin-left: 0;
-}
-
-textarea.form-control {
-  border: none;
 }
 
 .btn-sort {
@@ -10988,6 +10994,22 @@ img {
   color: rgb(35, 189, 168);
 }
 
+.logo-img-wrapper {
+  background-image: url("../../../asset/icons/auction_1.png");
+  background-size: contain;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+.modal-header {
+  border-bottom: rgb(104, 104, 104) solid 1px;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
 .accordion-collapse {
   background-color: #2b2d34;
 }
@@ -10999,7 +11021,7 @@ img {
 
 .accordion-button:not(.collapsed) {
   background-color: #2b2d34;
-  color: #f2b441;
+  color: rgb(35, 189, 168);
 }
 
 .carousel-item {

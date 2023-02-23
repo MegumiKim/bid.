@@ -12,23 +12,22 @@ export function router() {
     ui.myPageBtn();
     listeners.logout();
     checkLogin();
-    ui.endingSoonItem();
   } else if (path === "/signup/") {
     ui.signupForm();
   } else if (path === "/login/") {
     ui.loginForm();
   } else if (path === "/product/") {
     render.singleEntry();
-    ui.myPageBtn();
     listeners.logout();
+    ui.myPageBtn();
     ui.bidForm();
     checkLogin();
   } else if (path === "/profile/") {
     render.myPage();
     render.myBids();
     render.myListings();
-    ui.createListingForm();
     listeners.logout();
+    ui.createListingForm();
     ui.editAvatar();
     checkLogin();
   }

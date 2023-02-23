@@ -15,7 +15,7 @@ export async function listings() {
   sortSelect.addEventListener("change", (event) => {
     onChangeSortSelect(event, allListings);
   });
-
+  ui.endingSoonItem(allListings);
   ui.searchInput(allListings);
   ui.prevBtn(listings);
   ui.nextBtn(listings);

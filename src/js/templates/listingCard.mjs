@@ -8,7 +8,7 @@ export const postListingCard = (data, parent, amount = 0) => {
   const doc = cloneTemplate("card-template");
   const created = formatDate(data.created);
   // const endsAt = formatDate(data.endsAt);
-  const timeLeft = remainingTime(new Date(data.endsAt));
+  const timeLeft = remainingTime(data.endsAt);
   const bids = highestBid(data);
   const tagContainer = doc.querySelector("div.tags");
   renderTags(data, tagContainer);

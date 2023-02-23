@@ -7,7 +7,7 @@ import { formatDate } from "../tools/changeDateFormat.mjs";
 export const postProductCTASection = (data, parent) => {
   try {
     const doc = cloneTemplate("product-CTA-section");
-    const timeLeft = remainingTime(new Date(data.endsAt));
+    const timeLeft = remainingTime(data.endsAt);
     const endsAt = formatDate(data.endsAt);
     const created = formatDate(data.created);
     const highest = highestBid(data);

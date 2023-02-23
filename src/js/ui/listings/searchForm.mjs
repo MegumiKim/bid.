@@ -1,5 +1,5 @@
 // import { onSearch } from "../../listeners/listings/onSearch.mjs";
-import { debounce } from "../../sort/filters/debounce.mjs";
+import { debounce } from "../../tools/debounce.mjs";
 import * as listeners from "../../listeners/index.mjs";
 
 export const searchInput = (listings) => {

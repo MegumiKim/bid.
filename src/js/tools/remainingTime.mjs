@@ -1,6 +1,6 @@
-export const remainingTime = (endsAt) => {
+export const remainingTime = (rawData) => {
   const now = new Date();
-  const difference = endsAt - now;
+  const difference = new Date(rawData) - now;
 
   if (difference < 0) {
     return "Expired";

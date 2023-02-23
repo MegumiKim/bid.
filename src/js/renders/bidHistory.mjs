@@ -11,8 +11,9 @@ export const renderBidHistory = (data, container) => {
 const renderBidItem = (items, container) => {
   items.forEach((item) => {
     const date = formatDate(item.created);
-    const bid = document.createElement("li");
-    bid.innerText = `${item.amount}pt by ${item.bidderName} on ${date}`;
+    const bid = document.createElement("div");
+    bid.classList.add("col");
+    bid.innerText = `${date} : ${item.amount}pt  ${item.bidderName} on `;
 
     container.append(bid);
   });

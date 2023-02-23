@@ -1,3 +1,11 @@
 .lead {
   color: $myGreen;
 }
+
+.logo-img-wrapper {
+  background-image: url("../../../asset/icons/auction_1.png");
+  background-size: contain;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  height: 500px;
+}

@@ -1,15 +1,11 @@
 import { load } from "../storage/local.mjs";
-import { clearHTML } from "./clear.mjs";
 import { hide } from "./toggleDisplay.mjs";
+import { clearHTML } from "./clear.mjs";
+
 export function checkLogin() {
-  // const navLink = document.querySelector("#nav-link");
-  // navLink.clearHTML();
-  const mainCTA = document.querySelector("#btn-CTA");
+  const mainCTA = document.querySelector("#create-btn");
   const navBtn = document.querySelector("#navBtn");
   const nameContainer = document.querySelector(".user-name");
-  // const loginCTA = document.querySelector("#login-CTA");
-  // const signupCTA = document.querySelector("#signup-CTA");
-  // const welcomeStranger = document.querySelector(".welcome-stranger");
 
   if (load("accessToken")) {
     const username = load("userDetails").name;
@@ -23,7 +19,7 @@ export function checkLogin() {
     navBtn.src = avatar;
     const myPoint = load("credits");
     const pointsContainer = document.querySelector("#points-display");
-    pointsContainer.innerHTML = `<small>💰 ${myPoint} pt</small>`;
+    pointsContainer.innerHTML = `<small><img src="../../../asset/img/goldCoin.png" class="gold-coin-sm"></img> ${myPoint} pt</small>`;
   } else {
     if (mainCTA) {
       hide("#btn-CTA");
