@@ -5,10 +5,10 @@ import { searchFilter } from "../../sort/filters/searchFilter.mjs";
 import { clearHTML } from "../../tools/clear.mjs";
 import { hide } from "../../tools/toggleDisplay.mjs";
 
-export function onSearch(event) {
+export function onSearch(event, listings) {
   event.preventDefault();
 
-  const listings = load("cached-listings");
+  // const listings = load("cached-listings");
   const container = document.querySelector("#listings-container");
   const form = event.target;
   const searchTerm = form.value.trim().toLowerCase();
@@ -30,8 +30,9 @@ export function onSearch(event) {
       container.clearHTML();
       renderCards(filteredListings, container);
 
-      hide("#prevBtn");
-      hide("#nextBtn");
+      hide("#pagination");
+      // hide("#prevBtn");
+      // hide("#nextBtn");
       // renderOffsetListings(filteredListings, 0, container);
     } else {
       container.innerHTML = "no result";
