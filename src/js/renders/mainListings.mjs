@@ -3,6 +3,7 @@ import { renderOffsetListings } from "./offsetListings.mjs";
 import { fetchAllListings } from "../API/listings/fetchAllListings.mjs";
 import * as ui from "../ui/index.mjs";
 import { renderSortedItems, onChangeSortSelect } from "../sort/sort/sort.mjs";
+import { highestBid } from "../sort/sort/highestBid.mjs";
 
 export async function listings() {
   const allListings = await fetchAllListings();
@@ -21,6 +22,7 @@ export async function listings() {
   ui.prevBtn(listings);
   ui.nextBtn(listings);
   renderSortedItems(sortOption, allListings);
+
   // renderSortedItems(sortOption, allListings);
   // renderOffsetListings(listings, 0);
 }

@@ -1,6 +1,8 @@
 .card {
   background-color: $myDark;
   border-radius: 0;
+  max-width: 400px;
+  margin: auto;
 }
 
 .card-body {
@@ -60,7 +62,8 @@ img {
 }
 
 .highest {
-  color: $myYellow;
+  color: $myPink;
+  // color: $myYellow;
 }
 
 .timeLeft {

@@ -44,11 +44,11 @@ $myGreen: rgb(35, 189, 168);
 // $myPurple: rgb(213, 86, 252);
 // scss-docs-start theme-color-variables
 $primary: $myBlue;
-$secondary: $myYellow;
+$secondary: $myPink;
 $success: $green;
 $info: $cyan;
 $warning: $myBlue;
-$danger: $red;
+$danger: $myPink;
 $light: $gray-100;
 $dark: $gray-900;
 $main: $myGreen;
@@ -87,7 +87,6 @@ $border-radius-pill: 50rem;
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-caret: false;
-
 $nav-link-color: $myGreen;
 $nav-link-hover-color: white;
 $btn-close-color: white;

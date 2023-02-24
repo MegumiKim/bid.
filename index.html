@@ -68,7 +68,7 @@
     </header>
     <main class="mx-md-4 px-4">
       <section id="welcome" class="my-5 mx-auto row align-items-center g-5 pb-5 ">
-          <div class="logo-img-wrapper col-12 col-md-6 mx-auto "><img src="asset/icons/auction-g3672ab248_640.png" alt=""></div>
+          <div class="logo-img-wrapper col-12 col-sm-8 col-md-6 mx-auto "><img src="asset/icons/auction-g3672ab248_640.png" alt="bid brand image" class="shadow-sm"></div>
           <div class="col col-md-6 text-center ">
             <h1 class="logo logo-large display-1 fw-bold lh-3">bid.</h1>
             <p class="lead">Auction platform for Noroffers</p>
@@ -96,12 +96,12 @@
               id="create-btn"
               data-bs-toggle="modal"
               data-bs-target="#add-new-item-modal"
-              class="btn btn-lg btn-outline-secondary mt-3">Create new listing</button>
+              class="btn btn-lg btn-outline-danger mt-3">Create new listing</button>
             </div>
           </div>
       </section>
 
-      <section id='featured-items' class="mx-auto row g-5 my-4 p-5 pt-0">
+      <section id='featured-items' class="mx-auto row g-5 my-5 p-5 pt-0">
         <div class="mx-auto col-12 col-sm-8 col-md-5 position-relative">
           <h2 class="last-minute-h4 my-3">Last Minute Deal</h2>
           <div class="" id="ending-soon"></div>
@@ -116,7 +116,7 @@
         id="search-section"
         class="d-flex flex-wrap justify-content-between align-items-end my-5"
       >
-        <select id="sort" class="btn btn-outline-main btn-md px-4 mt-5" name="sort">
+        <select id="sort" class="btn btn-outline-secondary btn-lg px-4 mt-5" name="sort">
           <option value="created" selected>Sort by latest items</option>
           <option value="endsAt">Ending Soon</option>
           <option value="most-popular">Most Popular</option>
@@ -128,7 +128,7 @@
           <input
             id="search"
             type="search"
-            class="form-control"
+            class="form-control fs-4"
             placeholder="Search..."
             aria-label="Search"
             onfocus="this.value=''"
@@ -138,7 +138,7 @@
       <section class="album mt-5">
         <div
           id="listings-container"
-          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 my-1"
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 my-1"
         >
           <img
             class="loader-icon m-auto"
