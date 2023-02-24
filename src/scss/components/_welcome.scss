@@ -3,9 +3,14 @@
 }
 
 .logo-img-wrapper {
-  background-image: url("../../../asset/icons/auction_1.png");
-  background-size: contain;
-  background-position-y: center;
-  background-repeat: no-repeat;
-  height: 500px;
+}
+
+.logo-img-wrapper > img {
+  max-width: 100%;
+  // height: 100%;
+  // border-radius: 50%;
+}
+
+#featured-items {
+  border: 5px solid $myGreen;
 }

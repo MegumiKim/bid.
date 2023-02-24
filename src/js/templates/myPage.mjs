@@ -7,7 +7,7 @@ export const postMyPage = (data, parent) => {
 
   doc.querySelector(
     "h3"
-  ).innerHTML = `Current Cash Point <image class="gold-coin-lg" alt="dollar-sign" src="../../../asset/img/goldCoin.png"></image> ${data.credits} pt`;
+  ).innerHTML = `Current Cash Point <image class="gold-coin-lg mb-1" alt="dollar-sign" src="../../../asset/img/coin.png"></image> ${data.credits} pt`;
 
   const img = doc.querySelector("img.rounded-circle");
   img.alt = data.name;

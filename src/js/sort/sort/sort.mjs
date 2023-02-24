@@ -45,7 +45,7 @@ export const endingSoon = (listings) => {
   return listings;
 };
 
-const mostPopular = (listings) => {
+export const mostPopular = (listings) => {
   listings.sort((a, b) => b.bids.length > a.bids.length);
   return listings;
 };

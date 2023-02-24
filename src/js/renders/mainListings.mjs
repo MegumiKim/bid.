@@ -16,9 +16,11 @@ export async function listings() {
     onChangeSortSelect(event, allListings);
   });
   ui.endingSoonItem(allListings);
+  ui.mostPopularItem(allListings);
   ui.searchInput(allListings);
   ui.prevBtn(listings);
   ui.nextBtn(listings);
   renderSortedItems(sortOption, allListings);
+  // renderSortedItems(sortOption, allListings);
   // renderOffsetListings(listings, 0);
 }

@@ -19,11 +19,11 @@ export function checkLogin() {
     navBtn.src = avatar;
     const myPoint = load("credits");
     const pointsContainer = document.querySelector("#points-display");
-    pointsContainer.innerHTML = `<small><img src="../../../asset/img/goldCoin.png" class="gold-coin-sm"></img> ${myPoint} pt</small>`;
+    pointsContainer.innerHTML = `<small><img src="../../../asset/img/coin.png" class="gold-coin-sm mb-1"></img> ${myPoint} pt</small>`;
   } else {
     if (mainCTA) {
-      hide("#btn-CTA");
+      hide("#create-btn");
     }
-    navBtn.style.display = "none";
+    hide("#navBtn");
   }
 }

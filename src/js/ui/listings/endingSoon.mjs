@@ -1,5 +1,5 @@
-import { renderEndingSoonest } from "../../sort/sort/findEndingSoonest.mjs";
+import * as sort from "../../sort/sort/index.mjs";
 export const endingSoonItem = (listings) => {
   const container = document.querySelector("#ending-soon");
-  renderEndingSoonest(container, listings);
+  sort.renderExpiring(container, listings);
 };
