@@ -50,18 +50,20 @@ export const mostPopular = (listings) => {
   return listings;
 };
 
-function highest(listings) {
-  // listings.sort((a, b) =>
-  //   new Date(a.bids[0].amount > b.bids[0].amount).getTime()
-  // );
+export function highest(listings) {
+  listings = listings.filter((listing) => listing.bids.length);
 
-  // listings = listings.map((listing) => {
-  //   listing.bids.sort((a, b) => {
-  //     listing.bids ? listing.bids.amount : 0;
-  //     return a.amount - b.amount;
-  //   });
-  //   return listing;
-  // });
+  listings = listings.map((listing) => {
+    listing.bids.sort((a, b) => {
+      return b.amount - a.amount;
+    });
+    return listing;
+  });
+  listings = listings.sort((a, b) => {
+    return b.bids[0].amount - a.bids[0].amount;
+  });
+  console.log(listings);
+
   return listings;
 }
 
