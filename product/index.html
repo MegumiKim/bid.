@@ -68,7 +68,7 @@
     </header>
     <main class="mx-4 mx-md-5">
       <a type='button' onclick="history.back()">&#8592 Back</a>
-      <div class="row row-cols-1 row-cols-md-2">
+      <div class="row row-cols-1 row-cols-md-2 mt-3">
         <section id="myCarousel" class="carousel slide col col-md-7 m-auto">
           <div class="carousel-inner" id="carousel-container">
 
@@ -119,51 +119,9 @@
       aria-labelledby="postModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog m-4 mx-sm-auto" id="bid-container">
-        <div class="modal-content px-4">
-          <div class="modal-header">
-            <h3 class="modal-title h3 text-muted" id="bidModal">Make a bid</h3>
-            <button
-            id="close-modal-btn"
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
+      <div class="modal-dialog m-4 mx-sm-auto" id="bid-form-container">
 
-          <div class="modal-body">
-            <div>
-              <div id="bid-info-container">
-              </div>
-            </div>
-            <form class="gx-1" id="bid-form">
-              <div class="form-group my-3">
-                <label for="">Your bid </label>
-                <input type="number" class="ms-2" name="amount" required  />
-                <button class="btn btn-sm border-main small rounded-circle py-0 ms-2 text-main" type="button" data-bs-toggle="collapse" data-bs-target="#user-help" aria-expanded="false" aria-controls="#user-help">
-                  ?
-                </button>
-              </div>
-              <div class="collapse dark" id="user-help">
-                <div class="card card-body">
-                  <small class="text-muted">When the listing ends, the winning bid amount will be transferred to the seller's account. All losing bids will be refunded to the original bidder's account balance.</small>
-                </div>
-              </div>
-              <div id="user-alert"></div>
-              <div class="modal-footer">
-                <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                  Close
-                </button>
-                <button
-                  type="submit"
-                  class="btn btn-secondary"
-                >
-                  Bid now
-                </button>
-              </div>
-            </form>
-          </div>
+
         </div>
       </div>
     </div>
@@ -331,7 +289,7 @@
 
         </div>
         <div class="card-body">
-        <p class="description">${data.description}</p>
+        <p class="description"></p>
         </div>
               
       </div>
@@ -345,8 +303,8 @@
         
           <div class="d-flex w-100 justify-content-between small lh-sm text-muted">
             <div>
-              <strong class="text-gray-dark seller-name">${data.seller.name}</strong>
-              <p class="mb-0 opacity-75 email">${data.seller.email}</p>
+              <strong class="text-gray-dark seller-name"></strong>
+              <p class="mb-0 opacity-75 email"></p>
             </div>
           </div>
         </div>
@@ -365,16 +323,51 @@
       </template>
 
       <template id="bid-form-temp">
-        <div id="bid-info">
-          <h4 class="h5"></h4>
-
-        </div>
-
-        <div  id="bid-info" class="row row-cols-2 my-3">
-          <div class="col ">Current bid: </div>
-          <div class="col bids ">Column</div>
-          <div class="col pints">Your available points: </div>
-          <div class="col my-points">Column</div>
+        <div class="modal-content px-4">
+          <div class="modal-header">
+            <h3 class="modal-title h4 " id="bidModal">Make a bid</h3>
+            <button
+            id="close-modal-btn"
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+        <div class="modal-body">
+              <div  id="bid-info" class="row row-cols-2 mb-3">
+                <div class="col-md-5 ">Current bid: </div>
+                <div class="col-md-7 bids ">Column</div>
+                <div class="col-md-5 pints">Your available points: </div>
+                <div class="col-md-7 my-points">Column</div>
+              </div>
+    <hr>
+          <form class="gx-1" id="bid-form">
+            <div class="form-group my-3">
+              <label class="col-5" for="">Your bid: </label>
+              <input type="number" class="col-5" name="amount" required  />
+              <button class="btn btn-sm border-main small rounded-circle py-0 ms-2 text-main" type="button" data-bs-toggle="collapse" data-bs-target="#user-help" aria-expanded="false" aria-controls="#user-help">
+                ?
+              </button>
+            </div>
+            <div class="collapse dark" id="user-help">
+              <div class="card card-body">
+                <small class="text-muted">When the listing ends, the winning bid amount will be transferred to the seller's account. All losing bids will be refunded to the original bidder's account balance.</small>
+              </div>
+            </div>
+            <div id="user-alert"></div>
+            <div class="modal-footer">
+              <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                Close
+              </button>
+              <button
+                type="submit"
+                class="btn btn-secondary"
+              >
+                Bid now
+              </button>
+            </div>
+          </form>
         </div>
       </template>
 

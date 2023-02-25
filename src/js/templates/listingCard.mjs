@@ -13,10 +13,10 @@ export const postListingCard = (data, parent, amount = 0) => {
   const tagContainer = doc.querySelector("div.tags");
   renderTags(data, tagContainer);
 
-  if (!bids) {
-    doc.querySelector("div.bids").innerText = `${amount} pt`;
+  if (bids === 0) {
+    doc.querySelector("div.bids").innerText = `No bid`;
   } else {
-    doc.querySelector("div.bids").innerText = bids;
+    doc.querySelector("div.bids").innerText = `${bids} pt`;
   }
   doc.querySelector("a.card").href = `/product/?id=${data.id}`;
   doc.querySelector("h4").innerText = data.title;

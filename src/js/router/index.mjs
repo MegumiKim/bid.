@@ -22,7 +22,7 @@ export function router() {
     render.singleEntry();
     listeners.logout();
     ui.myPageBtn();
-    ui.bidForm();
+    // ui.bidForm();
     checkLogin();
   } else if (path === "/profile/") {
     render.myPage();

@@ -15,7 +15,7 @@ export const postProductCTASection = (data, parent) => {
     renderTags(data, tagContainer);
     doc.querySelector("h1").innerText = data.title;
     doc.querySelector("div.endsAt").innerText = endsAt;
-    doc.querySelector("div.bids").innerText = highest;
+    doc.querySelector("div.bids").innerText = `${highest} pt`;
     doc.querySelector("div.created").innerText = created;
     doc.querySelector("div.time-remain").innerText = timeLeft;
 

@@ -11,7 +11,7 @@ export const singleEntry = async () => {
   const container = document.querySelector("#product-container");
   const carouselContainer = document.querySelector("#carousel-container");
   const descriptionContainer = document.querySelector("#description-container");
-  const bidContainer = document.querySelector("#bid-info-container");
+  const bidContainer = document.querySelector("#bid-form-container");
   container.clearHTML();
   carouselContainer.clearHTML();
   descriptionContainer.clearHTML();
