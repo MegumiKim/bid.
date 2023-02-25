@@ -10,8 +10,6 @@ import {
 
 export async function listings() {
   const allListings = await fetchAllListings();
-  save("cached-listings", allListings);
-  let listings = load("cached-listings");
 
   const sortSelect = document.querySelector("#sort");
   const sortOption = sortSelect.value;
@@ -21,11 +19,8 @@ export async function listings() {
   });
   ui.endingSoonItem(allListings);
   ui.mostPopularItem(allListings);
+  ui.highestBid(allListings);
   ui.searchInput(allListings);
-  ui.prevBtn(listings);
-  ui.nextBtn(listings);
+  highest(allListings);
   renderSortedItems(sortOption, allListings);
-  highest(listings);
-  // renderSortedItems(sortOption, allListings);
-  // renderOffsetListings(listings, 0);
 }

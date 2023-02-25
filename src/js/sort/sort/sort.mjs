@@ -14,8 +14,8 @@ export function onChangeSortSelect(event, listings) {
 
 export function renderSortedItems(selectedOption, listings) {
   const sortedListings = sort(listings, selectedOption);
-  renderOffsetListings(sortedListings, 0);
   save("cached-listings", sortedListings);
+  renderOffsetListings(sortedListings, 0);
 }
 
 function sort(listings, selectedOption) {
@@ -51,18 +51,20 @@ export const mostPopular = (listings) => {
 };
 
 export function highest(listings) {
+  // step 1. filter out listings without bids
   listings = listings.filter((listing) => listing.bids.length);
 
+  // step 2. Rearrange each listing's bid by amount
   listings = listings.map((listing) => {
     listing.bids.sort((a, b) => {
       return b.amount - a.amount;
     });
     return listing;
   });
+  // Step 3. Finally sort listings by the last (highest) amount
   listings = listings.sort((a, b) => {
     return b.bids[0].amount - a.bids[0].amount;
   });
-  console.log(listings);
 
   return listings;
 }

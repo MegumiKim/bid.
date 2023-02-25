@@ -3,7 +3,7 @@ import { renderOffsetListings } from "../../renders/offsetListings.mjs";
 import { load } from "../../storage/session.mjs";
 import { searchFilter } from "../../sort/filters/searchFilter.mjs";
 import { clearHTML } from "../../tools/clear.mjs";
-import { hide } from "../../tools/toggleDisplay.mjs";
+import { hide, show } from "../../tools/toggleDisplay.mjs";
 
 export function onSearch(event, listings) {
   event.preventDefault();
@@ -16,6 +16,7 @@ export function onSearch(event, listings) {
   if (!searchTerm.length) {
     container.clearHTML();
     renderOffsetListings(listings, 0, container);
+    show("#pagination");
     return;
   } else {
     if (searchTerm.length < 3) {

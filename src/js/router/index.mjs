@@ -8,6 +8,8 @@ const path = location.pathname;
 
 export function router() {
   if (path === "/index.html" || path === "/") {
+    ui.prevBtn();
+    ui.nextBtn();
     render.listings();
     ui.myPageBtn();
     listeners.logout();
