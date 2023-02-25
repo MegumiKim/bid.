@@ -1,44 +1,9 @@
-import { searchFilter } from "../filters/searchFilter.mjs";
-import { renderOffsetListings } from "../../renders/offsetListings.mjs";
-import { save } from "../../storage/session.mjs";
-import { show } from "../../tools/toggleDisplay.mjs";
+import { negativeFilter } from "../filters/searchFilter.mjs";
 
-export function onChangeSortSelect(event, listings) {
-  const selectedOption = event.target.value;
-  const sortedListings = sort(listings, selectedOption);
-
-  renderOffsetListings(sortedListings, 0);
-  save("cached-listings", sortedListings);
-  show("#pagination");
-}
-
-export function renderSortedItems(selectedOption, listings) {
-  const sortedListings = sort(listings, selectedOption);
-  save("cached-listings", sortedListings);
-  renderOffsetListings(sortedListings, 0);
-}
-
-function sort(listings, selectedOption) {
-  if (selectedOption === "most-popular") {
-    return mostPopular(listings);
-  }
-  if (selectedOption === "endsAt") {
-    return endingSoon(listings);
-  }
-  if (selectedOption === "no test") {
-    return noTests(listings);
-  }
-  if (selectedOption === "Highest") {
-    return highest(listings);
-  } else {
-    return latest(listings);
-  }
-}
-
-function latest(listings) {
+export const latest = (listings) => {
   listings.sort((a, b) => new Date(a.created < b.created).getTime());
   return listings;
-}
+};
 
 export const endingSoon = (listings) => {
   listings.sort((a, b) => new Date(a.endsAt > b.endsAt).getTime());
@@ -69,7 +34,13 @@ export function highest(listings) {
   return listings;
 }
 
-const noTests = (listings) => {
-  listings.filter((listing) => searchFilter(listing, "test"));
+export const noTests = (listings) => {
+  listings = listings.filter((listing) => negativeFilter(listing, "test"));
+  console.log(listings);
+  return listings;
+};
+export const withImages = (listings) => {
+  listings = listings.filter((listing) => listing.media.length);
+  console.log(listings);
   return listings;
 };

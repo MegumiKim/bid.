@@ -101,7 +101,7 @@
           </div>
       </section>
 
-      <section id='featured-items' class="p-5 my-5">
+      <section id='featured-items' class="p-3 p-md-5 my-5">
         <h2 class="text-center text-main mb-3">Featured Items</h2>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           <div class="mx-auto col position-relative">
@@ -109,7 +109,7 @@
             <div class="" id="ending-soon"></div>
           </div>
           <div class="mx-auto col position-relative">
-            <h4 class="last-minute-h4 my-3">Most Popular Item </h4>
+            <h4 class="last-minute-h4 text-center my-3">Most Popular Item </h4>
             <div class="" id="most-popular"></div>
           </div>
           <div class="mx-auto col position-relative">
@@ -124,11 +124,12 @@
         class="d-flex flex-wrap justify-content-between align-items-end my-5"
       >
         <select id="sort" class="btn btn-outline-secondary btn-lg px-4 mt-5" name="sort">
-          <option value="created" selected>Sort by latest items</option>
+          <option value="latest" selected>Sort by latest items</option>
           <option value="endsAt">Ending Soon</option>
-          <option value="most-popular">Most Popular</option>
-<option value="Highest">Highest Bid</option>
-          <!-- <option value="no test">Exclude test</option> -->
+          <option value="mostPopular">Most Popular</option>
+          <option value="highestBid">Highest Bid</option>
+          <option value="noTest">Exclude test</option>
+          <option value="images">With images</option>
         </select>
 
         <form class="col-12 col-md-4 mb-2 mb-lg-0 mt-3" role="search">
