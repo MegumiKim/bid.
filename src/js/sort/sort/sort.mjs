@@ -36,11 +36,11 @@ export function highest(listings) {
 
 export const noTests = (listings) => {
   listings = listings.filter((listing) => negativeFilter(listing, "test"));
-  console.log(listings);
+
   return listings;
 };
 export const withImages = (listings) => {
   listings = listings.filter((listing) => listing.media.length);
-  console.log(listings);
+
   return listings;
 };

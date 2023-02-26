@@ -10913,6 +10913,10 @@ a:hover {
   opacity: 0.7;
 }
 
+#page-indication {
+  background: none;
+}
+
 .card {
   background-color: #2b2d34;
   border-radius: 0;

@@ -5,17 +5,16 @@ import * as sort from "../../sort/sort/index.mjs";
 
 export function onChangeSortSelect(event, listings) {
   const selectedOption = event.target.value;
-  const sortedListings = sortSelect(listings, selectedOption);
-
-  renderOffsetListings(sortedListings, 0);
-  save("cached-listings", sortedListings);
-  show("#pagination");
+  renderSortedItems(selectedOption, listings);
 }
 
 export function renderSortedItems(selectedOption, listings) {
   const sortedListings = sortSelect(listings, selectedOption);
+  const pageIndication = document.querySelector(".page-indication");
   save("cached-listings", sortedListings);
+  console.log(selectedOption);
   renderOffsetListings(sortedListings, 0);
+  pageIndication.innerText = `1 / ${Math.ceil(sortedListings.length / 12)}`;
 }
 
 function sortSelect(listings, selectedOption) {

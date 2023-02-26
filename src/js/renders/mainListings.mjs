@@ -14,6 +14,7 @@ export async function listings() {
   const sortOption = sortSelect.value;
 
   sortSelect.addEventListener("change", (event) => {
+    // renderSortedItems(allListings, event);
     onChangeSortSelect(event, allListings);
   });
   ui.endingSoonItem(allListings);

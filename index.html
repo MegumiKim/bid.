@@ -19,13 +19,13 @@
         <div class="d-flex justify-content-between">
           <a href="/" class="logo  mb-2 mb-lg-0">bid. </a>
 
-          <div class="d-md-flex align-items-center text-center">
+          <div class="d-sm-flex align-items-center text-center">
 
-            <div class="d-flex welcome-stranger">
-              <p class="me-2">Welcome Stranger: </p>
+            <div class="d-none welcome-stranger">
+              <p class="mb-0">Welcome Stranger ! </p>
               <a href="./login">Login</a>
             </div>
-            <div class="welcome-user">
+            <div class="welcome-user d-none">
               <p class="mb-0 user-name"> </p>
               <div id="points-display" class="mt-1"></div>
             </div>
@@ -76,27 +76,28 @@
               class="d-grid gap-2 d-sm-flex justify-content-center"
               id="welcome-btns"
             >
-              <a
-                href="./login/"
-                type="button"
-                class="btn btn-secondary btn-md px-4 me-sm-2"
-                id="login-CTA"
-              >
-                Log-in
-              </a>
-              <a
-                href="./signup/"
-                type="button"
-                class="btn btn-outline-secondary btn-md px-4"
-                id="signup-CTA"
-              >
-                Sign-up
-              </a>
-              <button 
-              id="create-btn"
-              data-bs-toggle="modal"
-              data-bs-target="#add-new-item-modal"
-              class="btn btn-lg btn-outline-danger mt-3">Create new listing</button>
+            <a
+            href="./login/"
+            type="button"
+            class="btn btn-secondary btn-md px-4 me-sm-2 d-none"
+            id="login-CTA"
+            >
+            Log-in
+            </a>
+            <a
+            href="./signup/"
+            type="button"
+            class="btn btn-outline-secondary btn-md px-4 d-none"
+            id="signup-CTA"
+            >
+            Sign-up
+            </a>
+            <button 
+            id="create-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#add-new-item-modal"
+            class="btn btn-lg btn-outline-danger mt-3 d-none">Create new listing</button>
+            
             </div>
           </div>
       </section>
@@ -161,6 +162,7 @@
                 Back
               </button>
             </li>
+            <li class="page-item page-indication page-link text-light disabled" id="page-indication">1/9</li>
             <li class="page-item">
               <button id="nextBtn" class="page-link" aria-label="Next">Next
               </button>
