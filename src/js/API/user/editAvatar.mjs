@@ -13,7 +13,6 @@ export async function editAvatar(name, body) {
     const errorText = result.errors[0].message
       ? result.errors[0].message
       : "Server error";
-
     throw new Error(errorText);
   }
 }

@@ -6,6 +6,7 @@ export async function makeBid(id, body) {
   const options = makeOptions(body);
   const response = await fetch(URL, options);
   const result = await response.json();
+
   if (response.ok) {
     return result;
   }

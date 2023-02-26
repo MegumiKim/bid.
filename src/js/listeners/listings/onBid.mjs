@@ -20,8 +20,8 @@ export async function makeBidListener(event) {
     await makeBid(id, payload);
     const myCredits = await getMyCredits();
     save("credits", myCredits);
-    singleEntry();
     form.reset();
+    singleEntry();
     closeBtn.click();
   } catch (e) {
     userAlert(error, e.message, "secondary");
