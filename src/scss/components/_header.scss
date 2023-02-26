@@ -1,0 +1,44 @@
+.logo {
+  font-family: "Comfortaa", cursive;
+  // border: #fff solid 3px;
+  padding: 0 1rem 0 1rem;
+  // color: $myGreen;
+  font-size: 4rem;
+}
+
+.logo-large {
+  font-size: 6em;
+}
+.add-btn {
+  padding: 0;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.add-btn:hover {
+  color: grey;
+}
+
+a {
+  color: $myGreen;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(8, 133, 116);
+  text-decoration: underline;
+}
+
+.dropdown-toggle:hover {
+  opacity: 0.7;
+}
+
+.gold-coin-lg {
+  height: 40px;
+  width: 40px;
+}
+
+.gold-coin-sm {
+  height: 20px;
+  width: 20px;
+}

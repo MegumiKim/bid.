@@ -1,0 +1,13 @@
+.accordion-collapse {
+  background-color: $myDark;
+}
+
+.accordion-button {
+  background-color: $myDark;
+  color: white;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: $myDark;
+  color: $main;
+}

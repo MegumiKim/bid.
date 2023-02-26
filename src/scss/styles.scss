@@ -1,1 +1,28 @@
+// BS var overrides
+@import "variables";
+
+// BS styles
+// @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// custom styles
+@import "./components/header";
+@import "./components/formInput";
+@import "./components/button";
+@import "./components/card";
+@import "./components/welcome";
+@import "./components/modal";
+@import "./components/accordion";
+@import "./components/carousel";
+@import "./components/spinner";
+
+// global styling
+
+.container {
+  max-width: 1080px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #2b2d34;
+  color: #fff;
+}

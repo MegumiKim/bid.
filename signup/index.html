@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to bid. Popular auction platform among Noroff students community"
+    />
+    <title>bid. | Sign up</title>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <script src="../src/js/index.mjs" type="module"></script>
+    <script
+      defer
+      src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <main class="text-white">
+        <div class="pt-5 pb-3 mt-lg-5 text-center">
+          <a href="./index.html" class="h1 logo">bid.</a>
+          <p class="lead fs-6">Auction platform for Noroffers</p>
+        </div>
+        <div class="row mx-2">
+          <div
+            class="col-10 col-sm-8 col-md-6 col-lg-8 p-5 mx-auto border border-light rounded-4"
+          >
+            <h1 class="h4 mb-3 text-center">Welcome to bid.</h1>
+
+            <form
+              action=""
+              id="signup-form"
+              method="POST"
+              class="d-lg-flex g-5"
+            >
+              <div class="col-lg-6">
+                <div class="form-floating mb-3">
+                  <input
+                    required
+                    type="text"
+                    name="name"
+                    pattern="^[\w]+$"
+                    title="a-Z, 0-9, and _. Example: My_Name123"
+                    class="form-control"
+                    id="username"
+                    placeholder="user name"
+                  />
+                  <label for="username"
+                    >User Name
+                    <small class="text-muted"> (required)</small></label
+                  >
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    required
+                    type="email"
+                    name="email"
+                    title="Please enter valid email with noroff domain (@stud.noroff.no or @noroff.no). Example: my_email@noroff.no"
+                    class="form-control"
+                    id="email"
+                    placeholder="@stud.noroff.no or @noroff.no"
+                  />
+                  <label for="email"
+                    >Email <small class="text-muted"> (required)</small></label
+                  >
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    required
+                    class="form-control"
+                    title="minimum 8 characters"
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                    minlength="8"
+                  />
+                  <label for="password"
+                    >Password
+                    <small class="text-muted"> (required)</small></label
+                  >
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    type="url"
+                    name="avatar"
+                    id="avatar"
+                    placeholder="Avatar URL"
+                  />
+                  <label for="avatar">Avatar URL</label>
+                </div>
+              </div>
+
+              <div class="col-lg-6 ps-lg-5 mt-lg-5">
+                <p class="text-center mt-4">
+                  You will receive 1,000 cash points upon registration.
+                </p>
+                <div id="user-alert" class="alert mt-3" role="alert"></div>
+                <button
+                  class="w-100 btn btn-outline-main btn-lg"
+                  type="submit"
+                  id="btn-submit"
+                >
+                  Sign up
+                </button>
+                <!-- <hr class="my-4" /> -->
+                <p class="w-100 text-center mt-3">
+                  Already have an account?
+                  <a class="text-decoration-underline" href="/login/">Login</a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer class="mt-auto py-3 my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2023 auction platform - bid.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

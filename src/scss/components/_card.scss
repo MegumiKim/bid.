@@ -1,0 +1,76 @@
+.card {
+  background-color: $myDark;
+  border-radius: 0;
+  max-width: 400px;
+  margin: auto;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+.card-title,
+.card-footer > div {
+  color: white;
+}
+
+.card-text-small {
+  font-size: 0.9rem;
+}
+
+.card-text,
+.card-title,
+.tags {
+  // display: block;
+  // width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 1.8rem;
+}
+.card:hover {
+  background-color: rgb(56, 56, 56);
+  text-decoration: none;
+}
+
+.card-specific {
+  color: #fff;
+  background: $myDark;
+  border: none;
+}
+
+.card-specific:hover {
+  background-color: $myDark;
+}
+
+.card-img-top {
+  overflow: hidden;
+  height: 200px;
+  border-radius: 0;
+}
+img {
+  object-position: center center;
+  object-fit: cover;
+}
+
+#user-help .card {
+  background-color: $myDark;
+  color: #fff;
+}
+
+#product-summary:hover {
+  background-color: none;
+}
+
+.highest {
+  color: $myPink;
+  // color: $myYellow;
+}
+
+.timeLeft {
+  top: 0;
+  right: 0;
+  background-color: rgb(250, 96, 122);
+  padding: 5px 10px;
+  color: white;
+  border-radius: 0 0 0 10px;
+}

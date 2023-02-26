@@ -1,0 +1,41 @@
+.btn-sort {
+  background: none;
+  // border: solid 2px $myGreen;
+  // color: $myGreen;
+  font-weight: bold;
+}
+.btn-sort:hover {
+  background: $myGreen;
+  color: $myDark;
+}
+
+.add-btn {
+  font-size: 40px;
+  color: $myGreen;
+  font-weight: normal;
+}
+
+.add-btn:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.bi-backspace:hover {
+  opacity: 0.4;
+}
+.btn {
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: $myDark;
+  color: $myPink;
+}
+
+.disabled {
+  opacity: 0.7;
+}
+
+#page-indication {
+  background: none;
+}
