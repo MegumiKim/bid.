@@ -1,21 +1,25 @@
-import { postListingCard } from "../templates/listingCard.mjs";
-import { getParam } from "../tools/getParam.mjs";
-import { userAlert } from "./userAlert.mjs";
-import * as listingAPI from "../API/listings/index.mjs";
+import * as API from "../API/index.mjs";
+import * as template from "../templates/index.mjs";
+import * as tool from "../tools/index.mjs";
+import * as render from "./index.mjs";
+import { clearHTML } from "../tools/clear.mjs";
+
 export const myBids = async () => {
   const container = document.querySelector("#my-bids-container");
-  const name = getParam("name");
+  const name = tool.getParam("name");
 
   try {
     container.clearHTML();
-    const myBids = await listingAPI.fetchMyBids(name);
+    const myBids = await API.fetchMyBids(name);
+    console.log(myBids);
     const myBidsBtn = document.querySelector("#myBidsBtn");
     myBidsBtn.innerText = `My Bids (${myBids.length})`;
 
     myBids.forEach((bid) => {
-      postListingCard(bid.listing, container, bid.amount);
+      console.log(bid.amount);
+      template.postListingCard(bid.listing, container, bid.amount);
     });
   } catch (e) {
-    userAlert(container, e.message, "secondary");
+    render.userAlert(container, e.message, "secondary");
   }
 };

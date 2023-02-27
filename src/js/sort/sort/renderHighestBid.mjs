@@ -1,10 +1,10 @@
-import { postListingCard } from "../../templates/listingCard.mjs";
-import { clearHTML } from "../../tools/clear.mjs";
 import * as sort from "../sort/sort.mjs";
+import * as template from "../../templates/index.mjs";
+import { clearHTML } from "../../tools/clear.mjs";
 
 export function renderHighestBid(container, listings) {
   const item = sort.highest(listings)[0];
 
   container.clearHTML();
-  postListingCard(item, container);
+  template.postListingCard(item, container);
 }

@@ -1,9 +1,9 @@
-import { fetchSingleEntry } from "../../API/listings/singleEntry.mjs";
-// import { editListingListener } from "../../listeners/listings/onEdit.mjs";
 import * as listeners from "../../listeners/index.mjs";
+import * as API from "../../API/index.mjs";
+
 export async function editForm(id) {
   const editForm = document.querySelector("#edit-form");
-  const listing = await fetchSingleEntry(id);
+  const listing = await API.fetchSingleEntry(id);
 
   editForm.title.value = listing.title;
   editForm.description.value = listing.description;

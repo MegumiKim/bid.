@@ -1,9 +1,8 @@
-import { fetchSingleUser } from "../API/user/singleUser.mjs";
-import { getParam } from "../tools/getParam.mjs";
-import { userAlert } from "./userAlert.mjs";
+import * as API from "../API/index.mjs";
+import * as template from "../templates/index.mjs";
+import * as tool from "../tools/index.mjs";
+import * as render from "./index.mjs";
 import { clearHTML } from "../tools/clear.mjs";
-import { postMyPage } from "../templates/myPage.mjs";
-import { myWins } from "./myWins.mjs";
 
 export const myPage = async () => {
   const container = document.querySelector("#profile-container");
@@ -11,14 +10,14 @@ export const myPage = async () => {
 
   container.clearHTML();
 
-  const name = getParam("name");
+  const name = tool.getParam("name");
 
   try {
-    const data = await fetchSingleUser(name);
-    postMyPage(data, container);
-    myWins(data);
+    const data = await API.fetchSingleUser(name);
+    template.postMyPage(data, container);
+    render.myWins(data);
     navBtn.src = data.avatar;
   } catch (e) {
-    userAlert(container, e.message, "secondary");
+    render.userAlert(container, e.message, "secondary");
   }
 };

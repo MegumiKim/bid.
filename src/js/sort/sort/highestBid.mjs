@@ -1,4 +1,4 @@
-export const highestBid = (data) => {
+export const highestBid = (data, bidAmount = 0) => {
   if (data.bids) {
     if (data.bids.length) {
       const myBids = data.bids.map((item) => item.amount);
@@ -7,5 +7,7 @@ export const highestBid = (data) => {
     } else {
       return 0;
     }
+  } else {
+    return bidAmount;
   }
 };

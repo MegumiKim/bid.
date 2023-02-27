@@ -7,9 +7,9 @@ import { renderTags } from "./tags.mjs";
 export const postListingCard = (data, parent, amount = 0) => {
   const doc = cloneTemplate("card-template");
   const created = formatDate(data.created);
-  // const endsAt = formatDate(data.endsAt);
   const timeLeft = remainingTime(data.endsAt);
-  const bids = highestBid(data);
+  const bids = highestBid(data, amount);
+
   const tagContainer = doc.querySelector("div.tags");
   renderTags(data, tagContainer);
 
@@ -23,7 +23,6 @@ export const postListingCard = (data, parent, amount = 0) => {
   doc.querySelector("p.card-text").innerText = data.description;
   doc.querySelector("div.created").innerText = created;
 
-  // doc.querySelector("div.endsAt").innerText = endsAt;
   doc.querySelector("div.timeLeft").innerText = timeLeft;
   const img = doc.querySelector("img");
 

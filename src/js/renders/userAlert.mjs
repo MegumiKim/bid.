@@ -1,4 +1,3 @@
-// import UserFeedback from "../Classes/UserFeedback.mjs";
 import { clearHTML } from "../tools/clear.mjs";
 export function userAlert(
   container,

@@ -1,11 +1,12 @@
-import { renderOffsetListings } from "../../renders/offsetListings.mjs";
 import { load } from "../../storage/session.mjs";
+import * as render from "../../renders/index.mjs";
 
 let perPage = 12;
 let currentPage = 1;
 let offset = 0;
 let totalPages = 0;
 const pageIndication = document.querySelector(".page-indication");
+
 export function prevPage(event) {
   const listings = load("cached-listings");
 
@@ -19,7 +20,7 @@ export function prevPage(event) {
   }
   totalPages = Math.ceil(listings.length / perPage);
   pageIndication.innerText = `${currentPage} / ${totalPages}`;
-  renderOffsetListings(listings, offset);
+  render.renderOffsetListings(listings, offset);
 }
 
 export function nextPage(event) {
@@ -30,7 +31,7 @@ export function nextPage(event) {
     currentPage++;
     totalPages = Math.ceil(listings.length / perPage);
     pageIndication.innerText = `${currentPage} / ${totalPages}`;
-    renderOffsetListings(listings, offset);
+    render.renderOffsetListings(listings, offset);
     document.querySelector("#prevBtn").classList.remove("disabled");
   } else {
     event.target.classList.add("disabled");

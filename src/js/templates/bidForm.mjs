@@ -1,12 +1,12 @@
 import { load } from "../storage/local.mjs";
 import { cloneTemplate } from "./cloneTemplate.mjs";
-import { highestBid } from "../sort/sort/highestBid.mjs";
 import * as listeners from "../listeners/index.mjs";
+import * as sort from "../sort/sort/index.mjs";
 
 export const postBidForm = (data, parent) => {
   const doc = cloneTemplate("bid-form-temp");
   const myPoints = load("credits");
-  const bid = highestBid(data);
+  const bid = sort.highestBid(data);
 
   doc.querySelector(
     "h3.modal-title"

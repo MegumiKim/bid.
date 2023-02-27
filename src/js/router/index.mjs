@@ -33,3 +33,5 @@ export function router() {
     checkLogin();
   }
 }
+
+console.log("router working");

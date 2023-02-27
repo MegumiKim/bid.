@@ -1,33 +1,31 @@
-import { editAvatar } from "../../API/user/editAvatar.mjs";
-import { myListings } from "../../renders/myListings.mjs";
-import { myPage } from "../../renders/myPage.mjs";
-import { userAlert } from "../../renders/userAlert.mjs";
-import { save, load } from "../../storage/local.mjs";
-import { getParam } from "../../tools/getParam.mjs";
+import * as API from "../../API/index.mjs";
+import * as tool from "../../tools/index.mjs";
+import * as render from "../../renders/index.mjs";
+import * as storage from "../../storage/local.mjs";
 
 export async function editAvatarListener(event) {
   event.preventDefault();
   const error = document.querySelector("#user-alert-avatar");
   const closeBtn = document.querySelector("#close-modal-btn");
 
-  const name = getParam("name");
+  const name = tool.getParam("name");
   const form = event.target;
   const formData = new FormData(form);
   let payload = Object.fromEntries(formData.entries());
 
   try {
-    const response = await editAvatar(name, payload);
-    const userDetails = load("userDetails");
+    const response = await API.editAvatar(name, payload);
+    const userDetails = storage.load("userDetails");
     userDetails.avatar = response.avatar;
 
-    save("userDetails", userDetails);
+    storage.save("userDetails", userDetails);
     error.clearHTML();
     form.reset();
-    myPage();
-    myListings();
+    render.myPage();
+    render.myListings();
     closeBtn.click();
   } catch (e) {
     console.log(e);
-    userAlert(error, e.message, "secondary");
+    render.userAlert(error, e.message, "secondary");
   }
 }

@@ -1,5 +1,5 @@
-import { userAlert } from "./userAlert.mjs";
-import { postCarousel } from "../templates/carousel.mjs";
+import * as render from "../renders/index.mjs";
+import * as template from "../templates/index.mjs";
 
 export function carousel(data, parent) {
   try {
@@ -29,7 +29,7 @@ export function carousel(data, parent) {
       renderSlide(data, parent, index);
     }
   } catch (e) {
-    userAlert(parent, "error occurred");
+    render.userAlert(parent, "error occurred");
     throw new Error(e);
   }
 }
@@ -38,5 +38,5 @@ function renderSlide(data, parent, index) {
   parent.clearHTML();
   const currentMedia = data.media[index];
   const altTxt = data.title;
-  postCarousel(currentMedia, altTxt, parent);
+  template.postCarousel(currentMedia, altTxt, parent);
 }

@@ -1,11 +1,9 @@
-import { fetchSingleEntry } from "../API/listings/singleEntry.mjs";
-import { editForm } from "../ui/listings/editForm.mjs";
-import { deleteBtn } from "../ui/listings/deleteBtn.mjs";
-import { clearHTML } from "../tools/clear.mjs";
-import { getParam } from "../tools/getParam.mjs";
-import { toggleCTABtn } from "../tools/toggleCTABtn.mjs";
+import * as API from "../API/index.mjs";
 import * as templates from "../templates/index.mjs";
-import { carousel } from "./carousel.mjs";
+import * as ui from "../ui/index.mjs";
+import * as tool from "../tools/index.mjs";
+import * as render from "./index.mjs";
+import { clearHTML } from "../tools/clear.mjs";
 
 export const singleEntry = async () => {
   const container = document.querySelector("#product-container");
@@ -17,16 +15,16 @@ export const singleEntry = async () => {
   descriptionContainer.clearHTML();
   bidContainer.clearHTML();
 
-  const id = getParam("id");
+  const id = tool.getParam("id");
 
-  const data = await fetchSingleEntry(id);
+  const data = await API.fetchSingleEntry(id);
 
   document.title = `bid. | ${data.title}`;
   templates.postProductCTASection(data, container);
   templates.postProductDescription(data, descriptionContainer);
   templates.postBidForm(data, bidContainer);
-  carousel(data, carouselContainer);
-  toggleCTABtn(data);
-  editForm(id);
-  deleteBtn(id);
+  render.carousel(data, carouselContainer);
+  tool.toggleCTABtn(data);
+  ui.editForm(id);
+  ui.deleteBtn(id);
 };
