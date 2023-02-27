@@ -1,17 +1,15 @@
-import { formatDate } from "../tools/formatDate.mjs";
-import { remainingTime } from "../tools/remainingTime.mjs";
-import { highestBid } from "../sort/sort/highestBid.mjs";
-import { cloneTemplate } from "./cloneTemplate.mjs";
-import { renderTags } from "./tags.mjs";
+import * as tool from "../tools/index.mjs";
+import * as sort from "../sort/sort/index.mjs";
+import * as template from "./index.mjs";
 
 export const postListingCard = (data, parent, amount = 0) => {
-  const doc = cloneTemplate("card-template");
-  const created = formatDate(data.created);
-  const timeLeft = remainingTime(data.endsAt);
-  const bids = highestBid(data, amount);
+  const doc = template.cloneTemplate("card-template");
+  const created = tool.formatDate(data.created);
+  const timeLeft = tool.remainingTime(data.endsAt);
+  const bids = sort.highestBid(data, amount);
 
   const tagContainer = doc.querySelector("div.tags");
-  renderTags(data, tagContainer);
+  template.renderTags(data, tagContainer);
 
   if (bids === 0) {
     doc.querySelector("div.bids").innerText = `No bid`;

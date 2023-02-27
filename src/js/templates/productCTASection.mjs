@@ -1,18 +1,17 @@
-import { remainingTime } from "../tools/remainingTime.mjs";
-import { cloneTemplate } from "./cloneTemplate.mjs";
-import { highestBid } from "../sort/sort/highestBid.mjs";
-import { userAlert } from "../renders/userAlert.mjs";
-import { renderTags } from "./tags.mjs";
-import { formatDate } from "../tools/formatDate.mjs";
+import * as tool from "../tools/index.mjs";
+import * as sort from "../sort/sort/index.mjs";
+import * as template from "./index.mjs";
+import * as render from "../renders/index.mjs";
+
 export const postProductCTASection = (data, parent) => {
   try {
-    const doc = cloneTemplate("product-CTA-section");
-    const timeLeft = remainingTime(data.endsAt);
-    const endsAt = formatDate(data.endsAt);
-    const created = formatDate(data.created);
-    const highest = highestBid(data);
+    const doc = template.cloneTemplate("product-CTA-section");
+    const timeLeft = tool.remainingTime(data.endsAt);
+    const endsAt = tool.formatDate(data.endsAt);
+    const created = tool.formatDate(data.created);
+    const highest = sort.highestBid(data);
     const tagContainer = doc.querySelector("div.tags");
-    renderTags(data, tagContainer);
+    template.renderTags(data, tagContainer);
     doc.querySelector("h1").innerText = data.title;
     doc.querySelector("div.endsAt").innerText = endsAt;
     doc.querySelector("div.bids").innerText = `${highest} pt`;
@@ -21,7 +20,7 @@ export const postProductCTASection = (data, parent) => {
 
     parent.append(doc);
   } catch (e) {
-    userAlert(parent, "Failed to fetch data", "danger");
+    render.userAlert(parent, "Failed to fetch data", "danger");
     throw new Error(e);
   }
 };

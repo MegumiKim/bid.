@@ -6,3 +6,4 @@ export * from "./myPage.mjs";
 export * from "./productCTASection.mjs";
 export * from "./productDescription.mjs";
 export * from "./seller.mjs";
+export * from "./tags.mjs";
