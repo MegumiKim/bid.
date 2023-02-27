@@ -14,6 +14,7 @@ export const toggleCTABtn = (data) => {
       show("button#deleteBtn");
     } else {
       show("button#bidBtn");
+      show("button#favBtn");
     }
   }
 };

@@ -10,3 +10,4 @@ export * from "./myWins.mjs";
 export * from "./renderCards.mjs";
 export * from "./carousel.mjs";
 export * from "./bidHistory.mjs";
+export * from "./myFavorites.mjs";

@@ -27,4 +27,5 @@ export const singleEntry = async () => {
   tool.toggleCTABtn(data);
   ui.editForm(id);
   ui.deleteBtn(id);
+  ui.favBtn(data);
 };

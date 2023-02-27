@@ -16,6 +16,7 @@ export const myPage = async () => {
     const data = await API.fetchSingleUser(name);
     template.postMyPage(data, container);
     render.myWins(data);
+    render.myFavorites();
     navBtn.src = data.avatar;
   } catch (e) {
     render.userAlert(container, e.message, "secondary");

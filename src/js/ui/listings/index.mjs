@@ -7,3 +7,4 @@ export * from "./prevBtn.mjs";
 export * from "./nextBtn.mjs";
 export * from "./editForm.mjs";
 export * from "./deleteBtn.mjs";
+export * from "./favBtn.mjs";
