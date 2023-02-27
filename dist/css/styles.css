@@ -10921,6 +10921,12 @@ a:hover {
   border-bottom: 0;
 }
 
+#edit-avatar {
+  position: absolute;
+  top: 0;
+  right: 5%;
+}
+
 .card {
   background-color: #2b2d34;
   border-radius: 0;
@@ -11037,6 +11043,7 @@ img {
   height: 300px;
   margin: auto;
   overflow-y: hidden;
+  cursor: pointer;
 }
 
 .carousel-item > * {

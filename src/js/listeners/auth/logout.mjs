@@ -1,4 +1,4 @@
-import * as storage from "../../storage/index.mjs";
+import * as storage from "../../storage/local.mjs";
 /**
  * remove the access token from local storage and redirect the user to log in page
  */

@@ -30,7 +30,7 @@
             <p class="mb-0 user-name"> </p>
             <div id="points-display" class="mt-1"></div>
           </div>
-            <div class="ms-3 dropstart">
+            <div class="ms-3 dropdown">
               <a
                 href="#"
                 class="link-dark text-decoration-none dropdown-toggle"
@@ -245,53 +245,50 @@
     </div>
 
     <!-- Modal edit avatar -->
-
     <div
-      class="modal fade"
-      id="edit-avatar-modal"
-      tabindex="-1"
-      aria-labelledby="postModalLabel"
-      aria-hidden="true"
+    class="modal fade"
+    id="edit-avatar-modal"
+    tabindex="-1"
+    aria-labelledby="postModalLabel"
+    aria-hidden="true"
     >
-      <div class="modal-dialog m-4 mx-sm-auto">
-        <div class="modal-content p-3 p-sm-5">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="postModalLabel">
-              Change Profile Picture
-            </h1>
-            <button
-            id="close-modal-btn"
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <form class="modal-body gx-1" id="edit-avatar">
-            <div class="form-group mb-3">
-              <label for="">Media URL (required)</label>
-              <input type="URL" class="form-control" name="avatar" />
-            </div>
-
-            <div class="modal-footer">
-              <div id="user-alert-avatar"></div>
-              <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                Cancel
-              </button>
-              <button
-                type="submit"
-                class="btn btn-secondary"
-                id="edit-avatar-confirm"
-           
-              >
-                Change
-              </button>
-            </div>
-          </form>
+    <div class="modal-dialog m-4 mx-sm-auto">
+      <div class="modal-content p-3 p-sm-5">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="postModalLabel">
+            Change Profile Picture
+          </h1>
+          <button
+          id="close-modal-btn"
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
         </div>
+        <form class="modal-body gx-1" id="edit-avatar-form">
+          <div class="form-group mb-3">
+            <label for="">Media URL (required)</label>
+            <input type="URL" class="form-control" name="avatar" />
+          </div>
+    
+          <div class="modal-footer">
+            <div id="user-alert-avatar"></div>
+            <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+              Cancel
+            </button>
+            <button
+              type="submit"
+              class="btn btn-secondary"
+              id="edit-avatar-confirm"
+            >
+              Confirm
+            </button>
+          </div>
+        </form>
       </div>
     </div>
-
+    </div>
     <!-- Modal Confirm Logout-->
     <div
       class="modal fade"
@@ -360,7 +357,7 @@
                 <img class="rounded-circle" 
                  width="200" height="200" style="object-position: center center; object-fit: cover">
 
-                <div class="position-absolute top-0 start-100" id="edit-avatar"                 
+                <div class="" id="edit-avatar"                 
                 data-bs-toggle="modal"
                 data-bs-target="#edit-avatar-modal">
               
@@ -398,7 +395,7 @@
               <div class="col bids highest">Column</div>
             </div>
             </div>
-            <hr>
+            <hr class="mt-0">
             <div class="tags text-muted small d-flex mx-3">
             </div>
           </div>
