@@ -1,5 +1,5 @@
 import { load } from "../storage/local.mjs";
-import { hide, show } from "./toggleDisplay.mjs";
+import { show, hide } from "../tools/toggleDisplay.mjs";
 import { clearHTML } from "./clear.mjs";
 
 export function checkLogin() {
@@ -29,5 +29,6 @@ export function checkLogin() {
     }
     // hide("#navBtn");
     show(".welcome-stranger");
+    hide("#navBtn");
   }
 }

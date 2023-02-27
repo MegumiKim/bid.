@@ -1,7 +1,6 @@
-import { signup } from "../../API/auth/signup.mjs";
-import { login } from "../../API/auth/login.mjs";
+import * as API from "../../API/index.mjs";
+import * as render from "../../renders/index.mjs";
 import { save } from "../../storage/local.mjs";
-import { userAlert } from "../../renders/userAlert.mjs";
 
 export async function signUpListener(event) {
   event.preventDefault();
@@ -14,8 +13,8 @@ export async function signUpListener(event) {
   const error = document.querySelector("#user-alert");
 
   try {
-    await signup(signupInputs);
-    const { accessToken, credits, ...userDetails } = await login({
+    await API.signup(signupInputs);
+    const { accessToken, credits, ...userDetails } = await API.login({
       email,
       password,
     });
@@ -26,6 +25,6 @@ export async function signUpListener(event) {
 
     window.location.assign("/");
   } catch (e) {
-    userAlert(error, e.message, "secondary");
+    render.userAlert(error, e.message, "secondary");
   }
 }

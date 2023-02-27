@@ -1,7 +1,6 @@
 import * as ui from "../ui/index.mjs";
 import * as render from "../renders/index.mjs";
 import * as listeners from "../listeners/index.mjs";
-
 import { checkLogin } from "../tools/checkLogin.mjs";
 
 const path = location.pathname;

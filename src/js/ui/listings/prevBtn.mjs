@@ -1,4 +1,3 @@
-// import { prevPage } from "../../listeners/listings/pagination.mjs";
 import * as listeners from "../../listeners/index.mjs";
 export const prevBtn = (listings) => {
   document

@@ -1,8 +1,7 @@
-import { fetchSingleUser } from "../API/user/singleUser.mjs";
-import { load } from "../storage/local.mjs";
-
+import * as API from "../API/index.mjs";
+import * as storage from "../storage/index.mjs";
 export async function getMyCredits() {
-  const name = load("userDetails").name;
-  const { credits } = await fetchSingleUser(name);
+  const name = storage.load("userDetails").name;
+  const { credits } = await API.fetchSingleUser(name);
   return credits;
 }

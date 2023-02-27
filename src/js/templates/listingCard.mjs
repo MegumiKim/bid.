@@ -1,4 +1,4 @@
-import { formatDate } from "../tools/changeDateFormat.mjs";
+import { formatDate } from "../tools/formatDate.mjs";
 import { remainingTime } from "../tools/remainingTime.mjs";
 import { highestBid } from "../sort/sort/highestBid.mjs";
 import { cloneTemplate } from "./cloneTemplate.mjs";

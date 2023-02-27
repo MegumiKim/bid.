@@ -1,8 +1,7 @@
-import { createListing } from "../../API/listings/create.mjs";
-import { load } from "../../storage/local.mjs";
-import { userAlert } from "../../renders/userAlert.mjs";
-import { myPage } from "../../renders/myPage.mjs";
-import { validateDate } from "../../tools/dateValidation.mjs";
+import * as API from "../../API/index.mjs";
+import * as tool from "../../tools/index.mjs";
+import * as render from "../../renders/index.mjs";
+import * as storage from "../../storage/local.mjs";
 
 export async function createListingListener(event) {
   event.preventDefault();
@@ -15,19 +14,19 @@ export async function createListingListener(event) {
   payload.tags = payload.tags.split(",");
   payload.media = payload.media.split(",");
 
-  if (!validateDate(payload.endsAt)) {
+  if (!tool.validateDate(payload.endsAt)) {
     throw new Error("past date selected");
   }
   payload.endsAt = new Date(payload.endsAt);
 
-  const name = load("userDetails").name;
+  const name = storage.load("userDetails").name;
 
   try {
-    await createListing(payload);
+    await API.createListing(payload);
     form.reset();
-    // myPage();
+    myPage();
     window.location.assign(`/profile/?name=${name}`);
   } catch (e) {
-    userAlert(error, e.message, "secondary");
+    render.userAlert(error, e.message, "secondary");
   }
 }

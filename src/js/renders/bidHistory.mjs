@@ -1,4 +1,4 @@
-import { formatDate } from "../tools/changeDateFormat.mjs";
+import { formatDate } from "../tools/formatDate.mjs";
 
 export const renderBidHistory = (data, container) => {
   if (!data.bids.length) {

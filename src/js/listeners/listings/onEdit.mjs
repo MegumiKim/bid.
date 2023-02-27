@@ -1,11 +1,9 @@
-import { editListing } from "../../API/listings/edit.mjs";
-import { load } from "../../storage/local.mjs";
-import { userAlert } from "../../renders/userAlert.mjs";
-import { singleEntry } from "../../renders/singleEntry.mjs";
+import * as API from "../../API/index.mjs";
+import * as render from "../../renders/index.mjs";
 
 export async function editListingListener(event, id) {
   event.preventDefault();
-  const closeBtn = document.querySelector("#close-modal-btn");
+  const closeBtn = document.querySelector("#my-close-modal-btn");
 
   const form = event.target;
   const formData = new FormData(form);
@@ -14,16 +12,13 @@ export async function editListingListener(event, id) {
   payload.tags = payload.tags ? payload.tags.split(",") : [];
   payload.media = payload.media ? payload.media.split(",") : [];
 
-  const name = load("userDetails").name;
   const error = document.querySelector("#user-alert-edit");
   try {
-    await editListing(payload, id);
+    await API.editListing(payload, id);
     form.reset();
-    singleEntry();
-
+    render.singleEntry();
     closeBtn.click();
-    window.location.assign(`/profile/?name=${name}`);
   } catch (e) {
-    userAlert(error, e.message, "secondary");
+    render.userAlert(error, e.message, "secondary");
   }
 }

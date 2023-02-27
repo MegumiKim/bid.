@@ -1,13 +1,11 @@
-import { makeBid } from "../../API/listings/bid.mjs";
-import { singleEntry } from "../../renders/singleEntry.mjs";
-import { userAlert } from "../../renders/userAlert.mjs";
-import { save } from "../../storage/local.mjs";
-import { getMyCredits } from "../../tools/getMyCredits.mjs";
-import { getParam } from "../../tools/getParam.mjs";
+import * as API from "../../API/index.mjs";
+import * as render from "../../renders/index.mjs";
+import * as tool from "../../tools/index.mjs";
+import * as storage from "../../storage/local.mjs";
 
 export async function makeBidListener(event) {
   event.preventDefault();
-  const id = getParam("id");
+  const id = tool.getParam("id");
   const form = event.target;
   const formData = new FormData(form);
   const error = document.querySelector("#user-alert");
@@ -17,13 +15,13 @@ export async function makeBidListener(event) {
   payload.amount = parseInt(payload.amount);
 
   try {
-    await makeBid(id, payload);
-    const myCredits = await getMyCredits();
-    save("credits", myCredits);
+    await API.makeBid(id, payload);
+    const myCredits = await tool.getMyCredits();
+    storage.save("credits", myCredits);
     form.reset();
-    singleEntry();
+    render.singleEntry();
     closeBtn.click();
   } catch (e) {
-    userAlert(error, e.message, "secondary");
+    render.userAlert(error, e.message, "secondary");
   }
 }

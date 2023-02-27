@@ -7,7 +7,7 @@
     <meta name="description" content="Find the items you like and bid!" />
     <title>bid. | Product Name</title>
     <link rel="stylesheet" href="/dist/css/styles.css" />
-    <script defer src="./src/js/index.mjs" type="module"></script>
+    <script defer src="../src/js/index.mjs" type="module"></script>
     <script
       defer
       src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
@@ -24,8 +24,8 @@
               <a id="my-page-link" href="./profile/" class="me-3">My Page</a>
             </div> -->
             <div class="d-none welcome-stranger">
-              <p class="me-2">Welcome stranger: </p>
-              <a href="./login">Login</a>
+              <p class="mb-0">Welcome stranger: </p>
+              <a href="../login">Login</a>
             </div>
             <div class="d-none welcome-user">
               <p class="mb-0 user-name"> </p>
@@ -119,9 +119,22 @@
       aria-labelledby="postModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog m-4 mx-sm-auto" id="bid-form-container">
+      <div class="modal-dialog m-4 mx-sm-auto" >
+
+        <div class="modal-content px-4">
+          <div class="modal-header mt-2" id="closeBtn-wrapper">
+            <button
+            id="close-modal-btn"
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+            ></button>
+
+          </div>
 
 
+          <div id="bid-form-container"></div>
         </div>
       </div>
     </div>
@@ -145,6 +158,7 @@
               class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
+              id="my-close-modal-btn"
             ></button>
           </div>
           <form class="modal-body gx-1" id="edit-form">
@@ -183,7 +197,6 @@
               <button
                 type="submit"
                 class="btn btn-secondary"
-         
               >
                 Confirm edit
               </button>
@@ -323,18 +336,10 @@
       </template>
 
       <template id="bid-form-temp">
-        <div class="modal-content px-4">
-          <div class="modal-header">
-            <h3 class="modal-title h4 " id="bidModal">Make a bid</h3>
-            <button
-            id="close-modal-btn"
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-        <div class="modal-body">
+        <div class="modal-header">
+          <h3 class="modal-title h4 " id="bidModal">Make a bid</h3>
+        </div>
+          <div class="modal-body">
               <div  id="bid-info" class="row row-cols-2 mb-3">
                 <div class="col-md-5 ">Current bid: </div>
                 <div class="col-md-7 bids ">Column</div>
@@ -368,7 +373,7 @@
               </button>
             </div>
           </form>
-        </div>
+
       </template>
 
       <template id="carousel-template">

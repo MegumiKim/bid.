@@ -1,22 +1,18 @@
-import { renderCards } from "../../renders/renderCards.mjs";
-import { renderOffsetListings } from "../../renders/offsetListings.mjs";
-import { load } from "../../storage/session.mjs";
-import { searchFilter } from "../../sort/filters/searchFilter.mjs";
-import { clearHTML } from "../../tools/clear.mjs";
-import { hide, show } from "../../tools/toggleDisplay.mjs";
+import * as render from "../../renders/index.mjs";
+import * as tool from "../../tools/index.mjs";
+import * as filter from "../../sort/filters/index.mjs";
 
 export function onSearch(event, listings) {
   event.preventDefault();
 
-  // const listings = load("cached-listings");
   const container = document.querySelector("#listings-container");
   const form = event.target;
   const searchTerm = form.value.trim().toLowerCase();
 
   if (!searchTerm.length) {
     container.clearHTML();
-    renderOffsetListings(listings, 0, container);
-    show("#pagination");
+    render.renderOffsetListings(listings, 0, container);
+    tool.show("#pagination");
     return;
   } else {
     if (searchTerm.length < 3) {
@@ -24,13 +20,13 @@ export function onSearch(event, listings) {
     }
 
     const filteredListings = listings.filter((listing) =>
-      searchFilter(listing, searchTerm)
+      filter.searchFilter(listing, searchTerm)
     );
 
     if (filteredListings.length) {
       container.clearHTML();
-      renderCards(filteredListings, container);
-      hide("#pagination");
+      render.renderCards(filteredListings, container);
+      tool.hide("#pagination");
     } else {
       container.innerHTML = "no result";
     }

@@ -1,5 +1,4 @@
-import { remove } from "../../storage/local.mjs";
-import { clear } from "../../storage/local.mjs";
+import * as storage from "../../storage/index.mjs";
 /**
  * remove the access token from local storage and redirect the user to log in page
  */
@@ -9,8 +8,7 @@ export function logout() {
   if (logoutBtn) {
     logoutBtn.addEventListener("click", (event) => {
       event.preventDefault();
-      // remove("accessToken");
-      clear();
+      storage.clear();
       window.location.replace("/");
     });
   }

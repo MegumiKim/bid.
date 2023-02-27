@@ -1,6 +1,6 @@
-import { login } from "../../API/auth/login.mjs";
-import { userAlert } from "../../renders/userAlert.mjs";
-import { save } from "../../storage/local.mjs";
+import * as API from "../../API/index.mjs";
+import * as render from "../../renders/index.mjs";
+import * as storage from "../../storage/local.mjs";
 
 export async function loginListener(event) {
   event.preventDefault();
@@ -10,14 +10,14 @@ export async function loginListener(event) {
   const payload = Object.fromEntries(formData.entries());
   const error = document.querySelector("#user-alert");
   try {
-    const { accessToken, credits, ...userDetails } = await login(payload);
+    const { accessToken, credits, ...userDetails } = await API.login(payload);
 
-    save("accessToken", accessToken);
-    save("credits", credits);
-    save("userDetails", userDetails);
+    storage.save("accessToken", accessToken);
+    storage.save("credits", credits);
+    storage.save("userDetails", userDetails);
 
     window.location.assign("/");
   } catch (e) {
-    userAlert(error, e.message, "secondary");
+    render.userAlert(error, e.message, "secondary");
   }
 }
