@@ -12,6 +12,17 @@
       defer
       src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
     ></script>
+    <!-- Hotjar Tracking Code for auction house -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:3386110,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
   </head>
   <body class="container">
     <header class="p-3 mb-3">
@@ -106,7 +117,7 @@
         <h2 class="text-center text-main mb-3">Featured Items</h2>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           <div class="mx-auto col position-relative">
-            <h4 class="last-minute-h4 my-3">Last Minute Deal</h4>
+            <h4 class="last-minute-h4 my-3 text-center">Last Minute Deal</h4>
             <div class="" id="ending-soon"></div>
           </div>
           <div class="mx-auto col position-relative">
@@ -114,7 +125,7 @@
             <div class="" id="most-popular"></div>
           </div>
           <div class="mx-auto col position-relative">
-            <h4 class="last-minute-h4 my-3">Highest Bid </h4>
+            <h4 class="last-minute-h4 my-3 text-center">Highest Bid </h4>
             <div class="" id="highest-bid"></div>
           </div>
         </div>
