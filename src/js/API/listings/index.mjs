@@ -4,4 +4,4 @@ export * from "./edit.mjs";
 export * from "./listingsForProfile.mjs";
 export * from "./singleEntry.mjs";
 export * from "./fetchAllListings.mjs";
-// export * from "./fetchmybids.mjs";
+export * from "./fetchMyBids.mjs";

@@ -1,18 +1,17 @@
-import { getParam } from "../tools/getParam.mjs";
-import { userAlert } from "./userAlert.mjs";
-import { fetchListingsForSingleProfile } from "../API/listings/listingsForProfile.mjs";
-import { renderCards } from "./renderCards.mjs";
+import * as API from "../API/index.mjs";
+import * as tool from "../tools/index.mjs";
+import * as render from "./index.mjs";
 
 export const myListings = async () => {
   const container = document.querySelector("#my-listings-container");
-  const name = getParam("name");
+  const name = tool.getParam("name");
 
   try {
-    const myListings = await fetchListingsForSingleProfile(name);
+    const myListings = await API.fetchListingsForSingleProfile(name);
     const accordionBtn = document.querySelector("#myListingsBtn");
     accordionBtn.innerText = `My Listings (${myListings.length})`;
-    renderCards(myListings, container);
+    render.renderCards(myListings, container);
   } catch (e) {
-    userAlert(container, e.message, "secondary");
+    render.userAlert(container, e.message, "secondary");
   }
 };
