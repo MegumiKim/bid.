@@ -10,7 +10,7 @@ export const myBids = async () => {
 
   try {
     container.clearHTML();
-    const myBids = await API.fetchMyBids(name);
+    const myBids = await API.bidRecords(name);
     const myBidsBtn = document.querySelector("#myBidsBtn");
     myBidsBtn.innerText = `My Bids (${myBids.length})`;
 
