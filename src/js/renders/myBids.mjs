@@ -14,9 +14,13 @@ export const myBids = async () => {
     const myBidsBtn = document.querySelector("#myBidsBtn");
     myBidsBtn.innerText = `My Bids (${myBids.length})`;
 
-    myBids.forEach((bid) => {
-      template.postListingCard(bid.listing, container, bid.amount);
-    });
+    if (myBids.length) {
+      myBids.forEach((bid) => {
+        template.postListingCard(bid.listing, container, bid.amount);
+      });
+    } else {
+      container.innerHTML = `<p class="text-light">You have no bids yet.</p>`;
+    }
   } catch (e) {
     render.userAlert(container, e.message, "secondary");
   }

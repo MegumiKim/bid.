@@ -10,10 +10,10 @@ export function myWins(data) {
     accordionBtn.innerText = `My Wins (${myWins.length})`;
     data.wins.forEach(async (win) => {
       const item = await fetchSingleEntry(win);
-
       postListingCard(item, container);
     });
   } else {
-    container.innerHTML = "You have not won any item yet.";
+    container.innerHTML =
+      "<p class='text-light'>You have not won any item yet.</p>";
   }
 }
