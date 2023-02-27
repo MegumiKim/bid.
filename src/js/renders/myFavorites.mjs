@@ -6,7 +6,7 @@ export const myFavorites = async () => {
   // const name = tool.getParam("name");
 
   try {
-    const listings = storage.load("favorites");
+    const listings = storage.load("favorite");
     const accordionBtn = document.querySelector("#myFavBtn");
     if (!listings) {
       accordionBtn.innerText = `My Favorites (0)`;

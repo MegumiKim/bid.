@@ -1,21 +1,23 @@
 import * as storage from "../../storage/local.mjs";
 
 export const addToFavListener = (data) => {
-  const btn = document.querySelector("#favBtn");
   const id = data.id;
   const currentList = getCurrentList();
   const itemExists = currentList.find(function (item) {
-    return (item.id = id);
+    return item.id === id;
   });
+  console.log(itemExists);
   if (!itemExists) {
-    const listing = { id: id, data: data };
-    currentList.push(listing);
+    const newItem = data;
+
+    currentList.push(newItem);
     storage.save("favorite", currentList);
     favBtn.innerText = "Remove from My Favorites";
   } else {
-    const newList = currentList.filter((listing) => listing.id != id);
+    const newList = currentList.filter((listing) => listing.id !== id);
+
     storage.save("favorite", newList);
-    favBtn.innerText = "Add To My Favorites";
+    favBtn.innerText = "Add To Favorites";
   }
 };
 

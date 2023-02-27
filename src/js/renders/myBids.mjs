@@ -15,7 +15,6 @@ export const myBids = async () => {
     myBidsBtn.innerText = `My Bids (${myBids.length})`;
 
     myBids.forEach((bid) => {
-      console.log(bid.amount);
       template.postListingCard(bid.listing, container, bid.amount);
     });
   } catch (e) {

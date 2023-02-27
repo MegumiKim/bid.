@@ -12,19 +12,20 @@ export async function createListingListener(event) {
 
   let payload = Object.fromEntries(formData.entries());
   payload.tags = payload.tags.split(",");
-  payload.media = payload.media.split(",");
+  if (payload.media) {
+    payload.media = payload.media.split(",");
+  }
 
   if (!tool.validateDate(payload.endsAt)) {
     throw new Error("past date selected");
   }
   payload.endsAt = new Date(payload.endsAt);
-
   const name = storage.load("userDetails").name;
 
   try {
     await API.createListing(payload);
     form.reset();
-    myPage();
+    render.myPage();
     window.location.assign(`/profile/?name=${name}`);
   } catch (e) {
     render.userAlert(error, e.message, "secondary");

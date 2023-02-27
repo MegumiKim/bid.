@@ -5,3 +5,5 @@ export * from "./listingsForProfile.mjs";
 export * from "./singleEntry.mjs";
 export * from "./bidRecords.mjs";
 export * from "./fetchAllListings.mjs";
+export * from "./bid.mjs";
+export * from "./delete.mjs";

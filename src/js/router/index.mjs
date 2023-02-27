@@ -13,6 +13,7 @@ export function router() {
     ui.myPageBtn();
     listeners.logout();
     checkLogin();
+    ui.createListingForm();
   } else if (path === "/signup/") {
     ui.signupForm();
   } else if (path === "/login/") {

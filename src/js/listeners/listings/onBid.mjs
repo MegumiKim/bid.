@@ -23,5 +23,6 @@ export async function makeBidListener(event) {
     closeBtn.click();
   } catch (e) {
     render.userAlert(error, e.message, "secondary");
+    console.log(e);
   }
 }

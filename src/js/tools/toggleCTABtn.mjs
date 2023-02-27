@@ -13,8 +13,36 @@ export const toggleCTABtn = (data) => {
       show("button#editBtn");
       show("button#deleteBtn");
     } else {
+      const favBtn = document.querySelector("#favBtn");
       show("button#bidBtn");
       show("button#favBtn");
+
+      if (isFavorite(data)) {
+        favBtn.innerText = "Remove From Favorite";
+      }
     }
   }
 };
+
+const isFavorite = (data) => {
+  const id = data.id;
+  const currentList = getCurrentList();
+  const itemExists = currentList.find(function (item) {
+    return item.id === id;
+  });
+  console.log(currentList);
+  if (itemExists) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+export function getCurrentList() {
+  const watchList = localStorage.getItem("favorite");
+  if (!watchList) {
+    return [];
+  } else {
+    return JSON.parse(watchList);
+  }
+}
