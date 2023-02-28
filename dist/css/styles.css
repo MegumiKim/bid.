@@ -11026,6 +11026,10 @@ img {
   border-radius: 10px;
 }
 
+#username-h1 {
+  font-size: 4rem;
+}
+
 .modal-header {
   border-bottom: rgb(104, 104, 104) solid 1px;
 }
