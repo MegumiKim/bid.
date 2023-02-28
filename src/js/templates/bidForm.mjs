@@ -7,14 +7,14 @@ export const postBidForm = (data, parent) => {
   const doc = cloneTemplate("bid-form-temp");
   const myPoints = load("credits");
   const bid = sort.highestBid(data);
-
+  const minimumBid = bid + 1;
   doc.querySelector(
     "h3.modal-title"
   ).innerHTML = `Bid on <strong> ${data.title}</strong> `;
   doc.querySelector("div.bids").innerText = `${bid} pt`;
   doc.querySelector("div.my-points").innerText = `${myPoints} pt `;
-  doc.querySelector("input").min = bid + 1;
-  doc.querySelector("input").placeholder = `minimum ${bid + 1} pt`;
+  doc.querySelector("input").min = minimumBid;
+  doc.querySelector("input").value = minimumBid;
 
   doc
     .querySelector("form#bid-form")
