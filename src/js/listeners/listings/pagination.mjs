@@ -6,13 +6,12 @@ let currentPage = 1;
 let offset = 0;
 let totalPages = 0;
 const pageIndication = document.querySelector(".page-indication");
+const listings = load("cached-listings");
 
 export function prevPage(event) {
-  const listings = load("cached-listings");
-
   if (currentPage > 1) {
-    offset = (currentPage - 1) * perPage;
     currentPage--;
+    offset = (currentPage - 1) * perPage;
     document.querySelector("#nextBtn").classList.remove("disabled");
   } else {
     event.target.classList.add("disabled");
@@ -24,11 +23,9 @@ export function prevPage(event) {
 }
 
 export function nextPage(event) {
-  const listings = load("cached-listings");
-
   if (currentPage * perPage < listings.length) {
-    offset = currentPage * perPage;
     currentPage++;
+    offset = currentPage * perPage;
     totalPages = Math.ceil(listings.length / perPage);
     pageIndication.innerText = `${currentPage} / ${totalPages}`;
     render.renderOffsetListings(listings, offset);

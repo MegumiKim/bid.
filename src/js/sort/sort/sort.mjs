@@ -2,13 +2,11 @@ import { negativeFilter } from "../filters/searchFilter.mjs";
 
 export const latest = (listings) => {
   listings.sort((a, b) => new Date(b.created) - new Date(a.created));
-  // listings.sort((a, b) => new Date(a.created < b.created).getTime());
   return listings;
 };
 
 export const endingSoon = (listings) => {
   listings.sort((a, b) => new Date(a.endsAt) - new Date(b.endsAt));
-  // listings.sort((a, b) => new Date(a.endsAt > b.endsAt).getTime());
   return listings;
 };
 
@@ -41,6 +39,7 @@ export const noTests = (listings) => {
 
   return listings;
 };
+
 // export const withImages = (listings) => {
 //   listings = listings.filter((listing) => listing.media.length);
 //   console.log(listings);
