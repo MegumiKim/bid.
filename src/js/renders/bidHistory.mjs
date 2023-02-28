@@ -4,7 +4,7 @@ export const renderBidHistory = (data, container) => {
   if (!data.bids.length) {
     container.innerText = "No bids yet";
   }
-  const sortedItems = data.bids.sort((a, b) => a.amount < b.amount);
+  const sortedItems = data.bids.sort((a, b) => b.amount - a.amount);
   renderBidItem(sortedItems, container);
 };
 

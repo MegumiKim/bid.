@@ -18,7 +18,11 @@ export function checkLogin() {
     show(".welcome-user");
 
     const avatar = load("userDetails").avatar;
-    navBtn.src = avatar;
+    if (!avatar) {
+      navBtn.src = "../../../asset/img/avatar-placeholder.png";
+    } else {
+      navBtn.src = avatar;
+    }
     const myPoint = load("credits");
     const pointsContainer = document.querySelector("#points-display");
     pointsContainer.innerHTML = `<small><img src="../../../asset/img/coin.png" class="gold-coin-sm mb-1"></img> ${myPoint} pt</small>`;

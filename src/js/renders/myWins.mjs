@@ -5,9 +5,10 @@ export function myWins(data) {
   const container = document.querySelector("#my-wins-container");
 
   const wins = data.wins;
+
+  const accordionBtn = document.querySelector("#myWinsBtn");
+  accordionBtn.innerText = `My Wins (${wins.length})`;
   if (wins.length) {
-    const accordionBtn = document.querySelector("#myWinsBtn");
-    accordionBtn.innerText = `My Wins (${myWins.length})`;
     data.wins.forEach(async (win) => {
       const item = await fetchSingleEntry(win);
       postListingCard(item, container);

@@ -41,8 +41,8 @@ export const noTests = (listings) => {
 
   return listings;
 };
-export const withImages = (listings) => {
-  listings = listings.filter((listing) => listing.media.length);
-
-  return listings;
-};
+// export const withImages = (listings) => {
+//   listings = listings.filter((listing) => listing.media.length);
+//   console.log(listings);
+//   return listings;
+// };

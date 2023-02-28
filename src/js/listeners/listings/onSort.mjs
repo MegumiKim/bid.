@@ -27,9 +27,6 @@ function sortSelect(listings, selectedOption) {
   }
   if (selectedOption === "highestBid") {
     return sort.highest(listings);
-  }
-  if (selectedOption === "images") {
-    return sort.withImages(listings);
   } else {
     return sort.latest(listings);
   }

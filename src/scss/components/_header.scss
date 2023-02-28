@@ -1,11 +1,11 @@
 .logo {
   font-family: "Comfortaa", cursive;
-  // border: #fff solid 3px;
   padding: 0 1rem 0 1rem;
-  // color: $myGreen;
   font-size: 4rem;
 }
-
+.logo:hover {
+  text-decoration: none;
+}
 .logo-large {
   font-size: 6em;
 }
