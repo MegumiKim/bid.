@@ -11,6 +11,7 @@ export const postProductDescription = (data, parent) => {
     doc.querySelector("p.description").innerText = data.description;
     doc.querySelector(".seller-name").innerText = data.seller.name;
     doc.querySelector(".email").innerText = data.seller.email;
+    doc.querySelector("#seller-img").src = data.seller.avatar;
 
     parent.append(doc);
   } catch (e) {
