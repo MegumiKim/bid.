@@ -11007,7 +11007,7 @@ img {
 .timeLeft {
   top: 0;
   right: 0;
-  background-color: rgb(250, 96, 122);
+  background-color: rgb(249, 74, 103);
   padding: 5px 10px;
   color: white;
   border-radius: 0 0 0 10px;
@@ -11081,6 +11081,13 @@ img {
     transform: rotate(360deg);
   }
 }
+.avatar-main {
+  width: 200px;
+  height: 200px;
+  object-position: center center;
+  object-fit: cover;
+}
+
 .container {
   max-width: 1080px;
 }

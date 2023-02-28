@@ -6,8 +6,8 @@ export const postMyPage = (data, parent) => {
   h1.innerText = `Hello ${data.name}!`;
 
   doc.querySelector(
-    "h3"
-  ).innerHTML = `Current Cash Point <image class="gold-coin-lg mb-1" alt="dollar-sign" src="../../../asset/img/coin.png"></image> ${data.credits} pt`;
+    "div.cash-point"
+  ).innerHTML = `<h2>Current Cash Point</h2> <h3><image class="gold-coin-lg mb-1" src="../../../asset/img/coin.png" alt="cash point icon"></image> ${data.credits} pt</h3>`;
 
   const img = doc.querySelector("img.rounded-circle");
   img.alt = data.name;
@@ -16,7 +16,7 @@ export const postMyPage = (data, parent) => {
     event.target.src = "../../../asset/img/avatar-placeholder.png";
   };
 
-  doc.querySelector("h2").innerText = data.name;
+  doc.querySelector("h3.username").innerText = data.name;
   doc.querySelector("p.email").innerText = data.email;
 
   parent.append(doc);
