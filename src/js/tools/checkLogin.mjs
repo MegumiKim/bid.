@@ -25,7 +25,7 @@ export function checkLogin() {
 
     const myPoint = load("credits");
     const pointsContainer = document.querySelector("#points-display");
-    pointsContainer.innerHTML = `<small><img src="../../../asset/img/coin.png" class="gold-coin-sm mb-1" alt="cash point icon"></img> ${myPoint} pt</small>`;
+    pointsContainer.innerHTML = `<small><img src="../../../asset/img/coin.png" class="gold-coin-sm mb-1" alt="bid point icon"></img> ${myPoint} pt</small>`;
   } else {
     if (container) {
       show("#login-CTA");

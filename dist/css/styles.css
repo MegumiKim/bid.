@@ -10896,7 +10896,6 @@ a:hover {
 }
 
 .add-btn:hover {
-  text-decoration: none;
   color: white;
 }
 
@@ -10904,7 +10903,9 @@ a:hover {
   opacity: 0.4;
 }
 
-.btn {
+.btn,
+.btn:hover,
+a:hover {
   text-decoration: none;
 }
 
@@ -11007,7 +11008,7 @@ img {
 .timeLeft {
   top: 0;
   right: 0;
-  background-color: rgb(249, 74, 103);
+  background-color: rgb(186, 43, 67);
   padding: 5px 10px;
   color: white;
   border-radius: 0 0 0 10px;
@@ -11050,6 +11051,11 @@ img {
 .accordion-button:not(.collapsed) {
   background-color: #2b2d34;
   color: rgb(35, 189, 168);
+}
+
+.accordion-button:hover {
+  color: rgb(35, 189, 168);
+  background-color: rgb(50, 48, 48);
 }
 
 .carousel-item {

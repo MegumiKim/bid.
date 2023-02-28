@@ -11,3 +11,8 @@
   background-color: $myDark;
   color: $main;
 }
+
+.accordion-button:hover {
+  color: $main;
+  background-color: rgb(50, 48, 48);
+}

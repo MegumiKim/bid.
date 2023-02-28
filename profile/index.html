@@ -74,6 +74,7 @@
     <main class="mx-1 mx-md-5 row">
       <section class="mb-3" id="profile-container"></section>
       <section id="my-items">
+        <h2 class="mb-3">My Collections</h2>
         <div class="accordion" id="accordionPanelsStayOpenExample">
           <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -347,21 +348,21 @@
       <!-- User Summary Template -->
       <template id="user-summary-temp">
         <div 
-            class="p-4 align-items-center d-sm-flex"
+            class="p-4 text-center align-items-center text-md-start d-md-flex "
           >
-            <div class="col-sm-6 p-3 p-lg-5 pt-lg-3 pe-lg-0">
+            <div class="col-sm-6 p-3 p-lg-5 pt-lg-3 pe-lg-0 m-auto mb-3">
               <h1 class="fw-bold mb-3" id="username-h1"></h1>
-              <div class="cash-point"></div>
+              <div class="cash-point d-md-flex"></div>
 
               <button 
               data-bs-toggle="modal"
               data-bs-target="#add-new-item-modal"
-              class="btn btn-lg btn-outline-secondary mt-3">Create new listing</button>
+              class="btn btn-lg btn-outline-secondary mt-3 order-3">Create new listing</button>
             </div>
-            <div class="col-sm-5">
+            <div class="col-sm-5 m-auto">
               <div class="mx-auto mb-3 col-md-10 col-lg-7 text-center position-relative">
 
-                <img class="rounded-circle avatar-main" 
+                <img class="m-auto rounded-circle avatar-main" 
                  >
 
                 <div class="" id="edit-avatar"                 
