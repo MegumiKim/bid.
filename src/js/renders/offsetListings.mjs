@@ -6,7 +6,6 @@ export async function renderOffsetListings(listings, offset) {
     container.clearHTML();
     const limit = offset + 12;
     const offsetListing = listings.slice(offset, limit);
-    console.log(offset);
     render.renderCards(offsetListing, container);
   } catch (e) {
     render.userAlert(container, "failed to fetch data");
