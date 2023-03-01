@@ -6,7 +6,7 @@ import * as tool from "../tools/index.mjs";
  * Check whether the user is logged-in or not,
  * and change the visibility of CTA/Nav Btns accordingly.
  */
-export function checkLogin() {
+export async function checkLogin() {
   const navBtn = document.querySelector("#navBtn");
   const nameContainer = document.querySelector(".user-name");
   const container = document.querySelector("#welcome-btns");
@@ -30,7 +30,7 @@ export function checkLogin() {
 
     const myPoint = load("credits");
     const pointsContainer = document.querySelector("#points-display");
-    pointsContainer.innerHTML = `<small><img src="../../../asset/img/coin.png" class="gold-coin-sm mb-1" alt="bid point icon"></img> ${myPoint} pt</small>`;
+    pointsContainer.innerHTML = pointsHTML(myPoint);
   } else {
     // For un-logged-in users
     if (container) {
@@ -41,3 +41,7 @@ export function checkLogin() {
     tool.hide("#navBtn");
   }
 }
+
+const pointsHTML = (myPoint) => {
+  return `<small><img src="../../../asset/img/coin.png" class="gold-coin-sm mb-1" alt="bid point icon"></img> ${myPoint} pt</small>`;
+};

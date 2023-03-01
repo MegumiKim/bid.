@@ -6,7 +6,6 @@ import * as storage from "../../storage/local.mjs";
 /**
  * Listen to form submit event and makes a payload.
  * After a successful submission, updates a new credit in local storage and reload the page.
- *
  * @param {*} event
  */
 export async function makeBidListener(event) {

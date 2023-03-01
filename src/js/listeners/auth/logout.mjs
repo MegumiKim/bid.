@@ -8,7 +8,8 @@ export function logout() {
   if (logoutBtn) {
     logoutBtn.addEventListener("click", (event) => {
       event.preventDefault();
-      storage.clear();
+      storage.remove("accessToken");
+      storage.remove("userDetails");
       window.location.replace("/");
     });
   }

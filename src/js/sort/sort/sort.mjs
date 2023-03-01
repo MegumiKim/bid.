@@ -30,7 +30,6 @@ export function highest(listings) {
   listings = listings.sort((a, b) => {
     return b.bids[0].amount - a.bids[0].amount;
   });
-  console.log(listings);
   return listings;
 }
 
