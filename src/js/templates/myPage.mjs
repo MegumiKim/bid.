@@ -1,5 +1,10 @@
 import { cloneTemplate } from "./cloneTemplate.mjs";
 
+/**
+ * Fills HTML template with data fetched by API and creates user profile HTML
+ * @param {object} data
+ * @param {*} parent
+ */
 export const postMyPage = (data, parent) => {
   const doc = cloneTemplate("user-summary-temp");
   const h1 = doc.querySelector("h1");

@@ -3,6 +3,11 @@ import { cloneTemplate } from "./cloneTemplate.mjs";
 import * as listeners from "../listeners/index.mjs";
 import * as sort from "../sort/sort/index.mjs";
 
+/**
+ * Fill HTML "Bid form template" with data fetched by API
+ * @param {object} data
+ * @param {*} parent
+ */
 export const postBidForm = (data, parent) => {
   const doc = cloneTemplate("bid-form-temp");
   const myPoints = load("credits");

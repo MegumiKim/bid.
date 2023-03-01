@@ -1,3 +1,8 @@
+/**
+ * creates HTML element for each tag if there are any
+ * @param {object} data
+ * @param {*} parent
+ */
 export const renderTags = (data, parent) => {
   if (!data.tags.length) {
     parent.innerText = "";

@@ -1,6 +1,12 @@
 import { userAlert } from "../renders/userAlert.mjs";
 import { cloneTemplate } from "./cloneTemplate.mjs";
 
+/**
+ * Fill HTML "carousel template" with data fetched by API
+ * @param {string} media
+ * @param {string} altTxt
+ * @param {*} parent
+ */
 export const postCarousel = (media, altTxt, parent) => {
   try {
     const doc = cloneTemplate("carousel-template");

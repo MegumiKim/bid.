@@ -2,6 +2,12 @@ import * as tool from "../tools/index.mjs";
 import * as sort from "../sort/sort/index.mjs";
 import * as template from "./index.mjs";
 
+/**
+ * Fills HTML template with data fetched by API and creates card element
+ * @param {object} data
+ * @param {*} parent
+ * @param {number} amount
+ */
 export const postListingCard = (data, parent, amount = 0) => {
   const doc = template.cloneTemplate("card-template");
   const created = tool.formatDate(data.created);

@@ -3,6 +3,11 @@ import * as sort from "../sort/sort/index.mjs";
 import * as template from "./index.mjs";
 import * as render from "../renders/index.mjs";
 
+/**
+ * Fills HTML template with data fetched by API and makes specific product HTML
+ * @param {object} data
+ * @param {*} parent
+ */
 export const postProductCTASection = (data, parent) => {
   try {
     const doc = template.cloneTemplate("product-CTA-section");
@@ -21,6 +26,6 @@ export const postProductCTASection = (data, parent) => {
     parent.append(doc);
   } catch (e) {
     render.userAlert(parent, "Failed to fetch data", "danger");
-    throw new Error(e);
+    // throw new Error(e);
   }
 };

@@ -2,6 +2,11 @@ import * as API from "../../API/index.mjs";
 import * as render from "../../renders/index.mjs";
 import { save } from "../../storage/local.mjs";
 
+/**
+ * Listens to form submission event and makes a payload.
+ * Saves the accessToken and user Details returned by API in the local storage as auto login process. After successful sign-up, redirects the user to main page.
+ * @param {*} event
+ */
 export async function signUpListener(event) {
   event.preventDefault();
 

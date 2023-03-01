@@ -2,11 +2,21 @@ import { save } from "../../storage/session.mjs";
 import * as sort from "../../sort/sort/index.mjs";
 import * as render from "../../renders/index.mjs";
 
+/**
+ * Listens to a change event and renders the listing according to the selected value.
+ * @param {*} event
+ * @param {Array} listings
+ */
 export function onChangeSortSelect(event, listings) {
   const selectedOption = event.target.value;
   renderSortedItems(selectedOption, listings);
 }
 
+/**
+ * Renders the listings and change the set the first page indications, according to the selected sort options.
+ * @param {*} selectedOption
+ * @param {Array} listings
+ */
 export function renderSortedItems(selectedOption, listings) {
   const sortedListings = sortSelect(listings, selectedOption);
   const pageIndication = document.querySelector(".page-indication");

@@ -1,6 +1,12 @@
 import * as API from "../../API/index.mjs";
 import * as render from "../../renders/index.mjs";
 
+/**
+ * Listens to form submit event and makes a payload.
+ * After successful form submission, re-renders the page.
+ * @param {*} event
+ * @param {string} id
+ */
 export async function editListingListener(event, id) {
   event.preventDefault();
   const closeBtn = document.querySelector("#my-close-modal-btn");

@@ -1,6 +1,6 @@
 import * as listeners from "../../listeners/index.mjs";
-export const prevBtn = (listings) => {
+export const prevBtn = () => {
   document
     .querySelector("#prevBtn")
-    .addEventListener("click", (event) => listeners.prevPage(event, listings));
+    .addEventListener("click", (event) => listeners.prevPage(event));
 };

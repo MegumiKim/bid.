@@ -5,6 +5,9 @@ import * as tool from "../tools/index.mjs";
 import * as render from "./index.mjs";
 import { clearHTML } from "../tools/clear.mjs";
 
+/**
+ * Fetches single entry data, renders product specific page and sets up functions.
+ */
 export const singleEntry = async () => {
   const container = document.querySelector("#product-container");
   const carouselContainer = document.querySelector("#carousel-container");
@@ -16,7 +19,6 @@ export const singleEntry = async () => {
   bidContainer.clearHTML();
 
   const id = tool.getParam("id");
-
   const data = await API.fetchSingleEntry(id);
 
   document.title = `bid. | ${data.title}`;

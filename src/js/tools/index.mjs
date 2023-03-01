@@ -8,3 +8,4 @@ export * from "./getParam.mjs";
 export * from "./toggleCTABtn.mjs";
 export * from "./toggleDisplay.mjs";
 export * from "./clear.mjs";
+export * from "./isFavorite.mjs";

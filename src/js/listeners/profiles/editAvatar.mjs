@@ -3,6 +3,11 @@ import * as tool from "../../tools/index.mjs";
 import * as render from "../../renders/index.mjs";
 import * as storage from "../../storage/local.mjs";
 
+/**
+ * Listens to form submit event and prepare a payload for API call.
+ * Updates and replace the old avatar image in local storage and reload the page.
+ * @param {*} event
+ */
 export async function editAvatarListener(event) {
   event.preventDefault();
   const error = document.querySelector("#user-alert-avatar");
@@ -25,7 +30,6 @@ export async function editAvatarListener(event) {
     render.myListings();
     closeBtn.click();
   } catch (e) {
-    console.log(e);
     render.userAlert(error, e.message, "secondary");
   }
 }

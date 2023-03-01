@@ -3,6 +3,12 @@ import * as render from "../../renders/index.mjs";
 import * as tool from "../../tools/index.mjs";
 import * as storage from "../../storage/local.mjs";
 
+/**
+ * Listen to form submit event and makes a payload.
+ * After a successful submission, updates a new credit in local storage and reload the page.
+ *
+ * @param {*} event
+ */
 export async function makeBidListener(event) {
   event.preventDefault();
   const id = tool.getParam("id");
@@ -23,6 +29,5 @@ export async function makeBidListener(event) {
     closeBtn.click();
   } catch (e) {
     render.userAlert(error, e.message, "secondary");
-    console.log(e);
   }
 }

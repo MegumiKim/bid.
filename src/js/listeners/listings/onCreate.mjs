@@ -1,8 +1,13 @@
 import * as API from "../../API/index.mjs";
 import * as tool from "../../tools/index.mjs";
 import * as render from "../../renders/index.mjs";
-import * as storage from "../../storage/local.mjs";
+import * as listener from "./index.mjs";
 
+/**
+ * Listens to form submit event and makes a payload.
+ * After successful form submission, redirects the user to main page.
+ * @param {*} event
+ */
 export async function createListingListener(event) {
   event.preventDefault();
 
@@ -20,13 +25,12 @@ export async function createListingListener(event) {
     throw new Error("past date selected");
   }
   payload.endsAt = new Date(payload.endsAt);
-  const name = storage.load("userDetails").name;
 
   try {
     await API.createListing(payload);
     form.reset();
     render.myPage();
-    window.location.assign(`/profile/?name=${name}`);
+    listener.myPageBtnListener();
   } catch (e) {
     render.userAlert(error, e.message, "secondary");
   }
