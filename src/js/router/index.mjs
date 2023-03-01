@@ -7,13 +7,11 @@ const path = location.pathname;
 
 export function router() {
   if (path === "/index.html" || path === "/") {
-    ui.prevBtn();
-    ui.nextBtn();
     render.listings();
     ui.myPageBtn();
     listeners.logout();
-    checkLogin();
     ui.createListingForm();
+    checkLogin();
   } else if (path === "/signup/") {
     ui.signupForm();
   } else if (path === "/login/") {

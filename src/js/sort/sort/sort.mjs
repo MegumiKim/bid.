@@ -1,4 +1,4 @@
-import { negativeFilter } from "../filters/searchFilter.mjs";
+import { searchFilter } from "../filters/searchFilter.mjs";
 
 export const latest = (listings) => {
   listings.sort((a, b) => new Date(b.created) - new Date(a.created));
@@ -30,18 +30,17 @@ export function highest(listings) {
   listings = listings.sort((a, b) => {
     return b.bids[0].amount - a.bids[0].amount;
   });
-
+  console.log(listings);
   return listings;
 }
 
+/**
+ * Filter out the listings with contains "test" in title, description or tags.
+ * @param {array} listings
+ * @returns
+ */
 export const noTests = (listings) => {
-  listings = listings.filter((listing) => negativeFilter(listing, "test"));
+  listings = listings.filter((listing) => !searchFilter(listing, "test"));
 
   return listings;
 };
-
-// export const withImages = (listings) => {
-//   listings = listings.filter((listing) => listing.media.length);
-//   console.log(listings);
-//   return listings;
-// };

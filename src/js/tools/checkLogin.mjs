@@ -1,21 +1,26 @@
 import { load } from "../storage/local.mjs";
-import { show, hide } from "../tools/toggleDisplay.mjs";
 import { clearHTML } from "./clear.mjs";
+import * as tool from "../tools/index.mjs";
 
+/**
+ * Check whether the user is logged-in or not,
+ * and change the visibility of CTA/Nav Btns accordingly.
+ */
 export function checkLogin() {
   const navBtn = document.querySelector("#navBtn");
   const nameContainer = document.querySelector(".user-name");
   const container = document.querySelector("#welcome-btns");
 
+  // For logged-in user
   if (load("accessToken")) {
     const username = load("userDetails").name;
     if (container) {
-      show("#create-btn");
+      tool.show("#create-btn");
     }
 
     nameContainer.innerText = `Hi ${username}!`;
-    show("#navBtn");
-    show(".welcome-user");
+    tool.show("#navBtn");
+    tool.show(".welcome-user");
 
     const avatar = load("userDetails").avatar
       ? load("userDetails").avatar
@@ -27,12 +32,12 @@ export function checkLogin() {
     const pointsContainer = document.querySelector("#points-display");
     pointsContainer.innerHTML = `<small><img src="../../../asset/img/coin.png" class="gold-coin-sm mb-1" alt="bid point icon"></img> ${myPoint} pt</small>`;
   } else {
+    // For un-logged-in users
     if (container) {
-      show("#login-CTA");
-      show("#signup-CTA");
+      tool.show("#login-CTA");
+      tool.show("#signup-CTA");
     }
-    // hide("#navBtn");
-    show(".welcome-stranger");
-    hide("#navBtn");
+    tool.show(".welcome-stranger");
+    tool.hide("#navBtn");
   }
 }
