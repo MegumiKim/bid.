@@ -10848,6 +10848,10 @@ a:hover {
   width: 20px;
 }
 
+input {
+  color-scheme: dark;
+}
+
 .form-control {
   border: none;
   border-bottom: 2px white solid;
@@ -11046,6 +11050,7 @@ img {
 .accordion-button {
   background-color: #2b2d34;
   color: white;
+  border-left: 2rem solid white;
 }
 
 .accordion-button:not(.collapsed) {
@@ -11056,6 +11061,7 @@ img {
 .accordion-button:hover {
   color: rgb(35, 189, 168);
   background-color: rgb(50, 48, 48);
+  border-color: rgb(35, 189, 168);
 }
 
 .carousel-item {

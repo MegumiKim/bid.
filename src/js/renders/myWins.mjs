@@ -1,5 +1,6 @@
 import * as render from "../renders/index.mjs";
 import * as storage from "../storage/session.mjs";
+import { postListingCard } from "../templates/listingCard.mjs";
 
 export function myWins(data) {
   const container = document.querySelector("#my-wins-container");
@@ -9,18 +10,18 @@ export function myWins(data) {
   console.log(myBids);
 
   let myWins = [];
-
-  wins.forEach((win) => {
-    const itemExists = myBids.find(function (bid) {
-      return bid.listing.id === win;
+  if (wins.length) {
+    accordionBtn.innerText = `My Wins (${wins.length})`;
+    wins.forEach((win) => {
+      const itemExists = myBids.find(function (bid) {
+        return bid.listing.id === win;
+      });
+      myWins.push(itemExists);
     });
-    myWins.push(itemExists.listing);
-  });
-
-  if (myWins.length) {
-    console.log(myWins);
-    accordionBtn.innerText = `My Wins (${myWins.length})`;
-    render.renderCards(myWins, container);
+    myWins.forEach((win) => {
+      console.log(win);
+      postListingCard(win.listing, container, win.amount);
+    });
   } else {
     container.innerHTML = `<p class="text-light">You have no listings yet.</p>`;
   }

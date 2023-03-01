@@ -5,6 +5,7 @@
 .accordion-button {
   background-color: $myDark;
   color: white;
+  border-left: 2rem solid white;
 }
 
 .accordion-button:not(.collapsed) {
@@ -15,4 +16,5 @@
 .accordion-button:hover {
   color: $main;
   background-color: rgb(50, 48, 48);
+  border-color: $main;
 }
