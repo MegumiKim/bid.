@@ -6,9 +6,9 @@ let currentPage = 1;
 let offset = 0;
 let totalPages = 0;
 const pageIndication = document.querySelector(".page-indication");
-const listings = load("cached-listings");
 
 export function prevPage(event) {
+  const listings = load("cached-listings");
   if (currentPage > 1) {
     currentPage--;
     offset = (currentPage - 1) * perPage;
@@ -23,6 +23,7 @@ export function prevPage(event) {
 }
 
 export function nextPage(event) {
+  const listings = load("cached-listings");
   if (currentPage * perPage < listings.length) {
     currentPage++;
     offset = currentPage * perPage;
