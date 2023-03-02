@@ -23,7 +23,7 @@ export function renderSortedItems(selectedOption, listings) {
   const pageIndication = document.querySelector(".page-indication");
   save("cached-listings", sortedListings);
   render.renderOffsetListings(sortedListings, 0);
-  pageIndication.innerText = `1 / ${Math.ceil(sortedListings.length / 12)}`;
+  pageIndication.innerText = `1 / ${Math.floor(sortedListings.length / 12)}`;
 }
 
 function sortSelect(listings, selectedOption) {

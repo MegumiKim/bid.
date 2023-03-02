@@ -22,7 +22,7 @@ export function prevPage(event) {
     event.target.classList.add("disabled");
     offset = 0;
   }
-  totalPages = Math.ceil(listings.length / perPage);
+  totalPages = Math.floor(listings.length / perPage);
   pageIndication.innerText = `${currentPage} / ${totalPages}`;
   render.renderOffsetListings(listings, offset);
 }
@@ -34,14 +34,14 @@ export function prevPage(event) {
  */
 export function nextPage(event) {
   const listings = load("cached-listings");
-  if (currentPage * perPage < listings.length) {
-    currentPage++;
-    offset = currentPage * perPage;
-    totalPages = Math.ceil(listings.length / perPage);
-    pageIndication.innerText = `${currentPage} / ${totalPages}`;
-    render.renderOffsetListings(listings, offset);
-    document.querySelector("#prevBtn").classList.remove("disabled");
-  } else {
+
+  currentPage++;
+  offset = currentPage * perPage;
+  if (listings.length - offset < perPage) {
     event.target.classList.add("disabled");
   }
+  totalPages = Math.floor(listings.length / perPage);
+  pageIndication.innerText = `${currentPage} / ${totalPages}`;
+  render.renderOffsetListings(listings, offset);
+  document.querySelector("#prevBtn").classList.remove("disabled");
 }
