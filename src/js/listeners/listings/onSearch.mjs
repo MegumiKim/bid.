@@ -7,7 +7,6 @@ import * as filter from "../../sort/filters/index.mjs";
  * Render the results.
  * @param {*} event
  * @param {Array} listings
- * @returns
  */
 export function onSearch(event, listings) {
   event.preventDefault();

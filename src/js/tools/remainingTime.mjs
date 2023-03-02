@@ -2,7 +2,6 @@
  * Takes date string (endsAt) and calculate the remaining time from current time.
  * Returns dates/hours/minutes or "Expired" according to the time left.
  * @param {string} rawData
- * @returns
  */
 export const remainingTime = (rawData) => {
   const now = new Date();

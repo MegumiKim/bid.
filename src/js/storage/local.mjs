@@ -10,7 +10,6 @@ export const save = (key, value) => {
 /**
  * Get items identified by the key and parse it to objects
  * @param {String} key
- * @returns
  */
 export const load = (key) => {
   try {

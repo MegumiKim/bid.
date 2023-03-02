@@ -36,7 +36,6 @@ export function highest(listings) {
 /**
  * Filter out the listings with contains "test" in title, description or tags.
  * @param {array} listings
- * @returns
  */
 export const noTests = (listings) => {
   listings = listings.filter((listing) => !searchFilter(listing, "test"));

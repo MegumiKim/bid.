@@ -40,6 +40,14 @@ npm i
 npm run build
 ```
 
+### JSDocs
+
+```bash
+npm run docs
+```
+
+Run index.html in /out folder with liveserver.
+
 ## Project Planning
 
 Github Project:

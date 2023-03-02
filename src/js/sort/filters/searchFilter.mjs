@@ -2,7 +2,6 @@
  * Returns a listing which contains the given search term in its title, description or tags.
  * @param {object} listing
  * @param {string} searchTerm
- * @returns
  */
 export function searchFilter(listing, searchTerm) {
   const title = listing.title.toLowerCase();
