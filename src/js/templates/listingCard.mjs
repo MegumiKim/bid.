@@ -30,7 +30,7 @@ export const postListingCard = (data, parent, amount = 0) => {
   }
   doc.querySelector("a.card").href = `/product/?id=${data.id}`;
   doc.querySelector("h4").innerText = data.title;
-  doc.querySelector("p.card-text").innerText = data.description;
+  // doc.querySelector("p.card-text").innerText = data.description;
   doc.querySelector("div.created").innerText = created;
 
   const img = doc.querySelector("img");

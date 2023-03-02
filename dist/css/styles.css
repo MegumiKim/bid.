@@ -10948,10 +10948,6 @@ a:hover {
   margin: auto;
 }
 
-.card-body {
-  padding: 1.5rem;
-}
-
 .card-title,
 .card-footer > div {
   color: white;
@@ -11016,6 +11012,10 @@ img {
   padding: 5px 10px;
   color: white;
   border-radius: 0 0 0 10px;
+}
+
+.card-text > div {
+  align-self: center;
 }
 
 .lead {
