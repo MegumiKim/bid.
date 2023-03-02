@@ -2,6 +2,7 @@ import * as API from "../../API/index.mjs";
 import * as render from "../../renders/index.mjs";
 import * as tool from "../../tools/index.mjs";
 import * as storage from "../../storage/local.mjs";
+import * as template from "../../templates/index.mjs";
 
 /**
  * Listen to form submit event and makes a payload.
@@ -15,6 +16,7 @@ export async function makeBidListener(event) {
   const formData = new FormData(form);
   const error = document.querySelector("#user-alert");
   const closeBtn = document.querySelector("#close-modal-btn");
+  const welcomeUser = document.querySelector(".welcome-user");
 
   let payload = Object.fromEntries(formData.entries());
   payload.amount = parseInt(payload.amount);
@@ -25,6 +27,7 @@ export async function makeBidListener(event) {
     storage.save("credits", myCredits);
     form.reset();
     render.singleEntry();
+    template.postCreditNAV(welcomeUser);
     closeBtn.click();
   } catch (e) {
     render.userAlert(error, e.message, "secondary");

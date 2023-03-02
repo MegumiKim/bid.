@@ -3,7 +3,6 @@ import * as template from "../templates/index.mjs";
 import * as tool from "../tools/index.mjs";
 import * as render from "./index.mjs";
 import * as storage from "../storage/session.mjs";
-import { clearHTML } from "../tools/clear.mjs";
 
 export const myBids = async () => {
   const container = document.querySelector("#my-bids-container");
@@ -24,6 +23,6 @@ export const myBids = async () => {
       container.innerHTML = `<p class="text-light">You have no bids yet.</p>`;
     }
   } catch (e) {
-    render.userAlert(container, e.message, "secondary");
+    render.userAlert(container, "Failed to fetch data", "secondary");
   }
 };

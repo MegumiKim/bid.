@@ -1,6 +1,5 @@
 import * as sort from "../sort/index.mjs";
 import * as template from "../../templates/index.mjs";
-import { clearHTML } from "../../tools/clear.mjs";
 
 /**
  * Sorts out the item which expires the soonest and renders in the featured item container

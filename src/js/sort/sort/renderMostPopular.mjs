@@ -1,5 +1,4 @@
 import { postListingCard } from "../../templates/listingCard.mjs";
-import { clearHTML } from "../../tools/clear.mjs";
 import * as sort from "../sort/sort.mjs";
 
 /**

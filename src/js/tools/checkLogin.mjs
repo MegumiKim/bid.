@@ -1,6 +1,6 @@
 import { load } from "../storage/local.mjs";
-import { clearHTML } from "./clear.mjs";
 import * as tool from "../tools/index.mjs";
+import * as template from "../templates/creditNAV.mjs";
 
 /**
  * Check whether the user is logged-in or not,
@@ -8,17 +8,13 @@ import * as tool from "../tools/index.mjs";
  */
 export async function checkLogin() {
   const navBtn = document.querySelector("#navBtn");
-  const nameContainer = document.querySelector(".user-name");
   const container = document.querySelector("#welcome-btns");
 
   // For logged-in user
   if (load("accessToken")) {
-    const username = load("userDetails").name;
     if (container) {
       tool.show("#create-btn");
     }
-
-    nameContainer.innerText = `Hi ${username}!`;
     tool.show("#navBtn");
     tool.show(".welcome-user");
 
@@ -27,10 +23,7 @@ export async function checkLogin() {
       : "../../../asset/img/avatar-placeholder.png";
 
     navBtn.src = avatar;
-
-    const myPoint = load("credits");
-    const pointsContainer = document.querySelector("#points-display");
-    pointsContainer.innerHTML = pointsHTML(myPoint);
+    template.postCreditNAV();
   } else {
     // For un-logged-in users
     if (container) {
@@ -42,6 +35,6 @@ export async function checkLogin() {
   }
 }
 
-const pointsHTML = (myPoint) => {
-  return `<small><img src="../../../asset/img/coin.png" class="gold-coin-sm mb-1" alt="bid point icon"></img> ${myPoint} pt</small>`;
-};
+// const pointsHTML = (myPoint) => {
+//   return `<small><img src="../../../asset/img/coin.png" class="gold-coin-sm mb-1" alt="bid point icon"></img> ${myPoint} pt</small>`;
+// };

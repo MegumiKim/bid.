@@ -13,7 +13,8 @@ export function onChangeSortSelect(event, listings) {
 }
 
 /**
- * Renders the listings and change the set the first page indications, according to the selected sort options.
+ * Renders the listings and set the first page indications,
+ * according to the selected sort options.
  * @param {*} selectedOption
  * @param {Array} listings
  */

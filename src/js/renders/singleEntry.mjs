@@ -3,7 +3,6 @@ import * as templates from "../templates/index.mjs";
 import * as ui from "../ui/index.mjs";
 import * as tool from "../tools/index.mjs";
 import * as render from "./index.mjs";
-import { clearHTML } from "../tools/clear.mjs";
 
 /**
  * Fetches single entry data, renders product specific page and sets up functions.

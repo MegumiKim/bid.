@@ -1,4 +1,3 @@
-import { clearHTML } from "../tools/clear.mjs";
 export function userAlert(
   container,
   message = "An error occurred.",

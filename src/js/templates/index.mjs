@@ -7,3 +7,4 @@ export * from "./productCTASection.mjs";
 export * from "./productDescription.mjs";
 export * from "./seller.mjs";
 export * from "./tags.mjs";
+export * from "./creditNAV.mjs";

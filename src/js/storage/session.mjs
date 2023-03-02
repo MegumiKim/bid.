@@ -15,7 +15,7 @@ export const load = (key) => {
   try {
     return JSON.parse(sessionStorage.getItem(key));
   } catch (error) {
-    return null;
+    return [];
   }
 };
 

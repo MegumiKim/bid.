@@ -1,5 +1,4 @@
 import * as render from "../renders/index.mjs";
-import { clearHTML } from "../tools/clear.mjs";
 export async function renderOffsetListings(listings, offset) {
   const container = document.querySelector("#listings-container");
   try {

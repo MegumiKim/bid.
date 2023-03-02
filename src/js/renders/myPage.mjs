@@ -2,7 +2,6 @@ import * as API from "../API/index.mjs";
 import * as template from "../templates/index.mjs";
 import * as tool from "../tools/index.mjs";
 import * as render from "./index.mjs";
-import { clearHTML } from "../tools/clear.mjs";
 
 export const myPage = async () => {
   const container = document.querySelector("#profile-container");
