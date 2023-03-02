@@ -1,8 +1,7 @@
-import { postListingCard } from "../templates/listingCard.mjs";
-
+import * as template from "../templates/index.mjs";
 export const renderCards = (listings, parent) => {
   parent.clearHTML();
   listings.forEach((listing) => {
-    postListingCard(listing, parent);
+    template.postListingCard(listing, parent);
   });
 };

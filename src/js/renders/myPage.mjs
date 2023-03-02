@@ -25,6 +25,7 @@ export const myPage = async () => {
         "Fail to fetch data, please refresh the page.",
         "secondary"
       );
+      console.warn(e);
     }
   }
 };

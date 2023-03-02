@@ -1,6 +1,5 @@
-import { postListingCard } from "../../templates/listingCard.mjs";
 import * as sort from "../sort/sort.mjs";
-
+import * as template from "../../templates/index.mjs";
 /**
  *  * Sorts out the item with the most bids and renders in the featured item container
  * @param {*} container
@@ -10,5 +9,5 @@ export function renderMostPopular(container, listings) {
   const item = sort.mostPopular(listings)[0];
 
   container.clearHTML();
-  postListingCard(item, container);
+  template.postListingCard(item, container);
 }
