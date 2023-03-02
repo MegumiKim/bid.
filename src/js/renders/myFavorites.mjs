@@ -8,7 +8,7 @@ export const myFavorites = async () => {
   try {
     const listings = storage.load("favorite");
     const accordionBtn = document.querySelector("#myFavBtn");
-    if (!listings) {
+    if (!listings.length) {
       accordionBtn.innerText = `My Favorites (0)`;
       container.innerHTML = "<p class='text-light'>No Favorite item saved</p>";
     } else {
