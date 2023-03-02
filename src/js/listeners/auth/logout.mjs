@@ -1,6 +1,6 @@
 import * as storage from "../../storage/local.mjs";
 /**
- * clears local storage and redirect the user to main page
+ * Remove token and userDetails from local storage and redirect the user to main page
  */
 export function logout() {
   const logoutBtn = document.querySelector("#logout-btn");

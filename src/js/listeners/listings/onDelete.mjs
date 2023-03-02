@@ -13,7 +13,7 @@ export async function deleteListingListener(event, id) {
   const error = document.querySelector("#user-alert-delete");
   try {
     await API.deleteListing(id);
-    listener.myPageBtnListener();
+    listener.jumpToProfilePage();
   } catch (e) {
     render.userAlert(error, e.message, "secondary");
   }

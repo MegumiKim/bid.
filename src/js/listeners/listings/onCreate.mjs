@@ -30,7 +30,7 @@ export async function createListingListener(event) {
     await API.createListing(payload);
     form.reset();
     render.myPage();
-    listener.myPageBtnListener();
+    listener.jumpToProfilePage();
   } catch (e) {
     render.userAlert(error, e.message, "secondary");
   }

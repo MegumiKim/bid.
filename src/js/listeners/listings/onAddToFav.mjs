@@ -8,9 +8,7 @@ import * as storage from "../../storage/local.mjs";
  */
 export const addToFavListener = (data) => {
   const id = data.id;
-  // const currentList = getCurrentList();
   const currentList = storage.load("favorite");
-
   const itemExists = currentList.find(function (item) {
     return item.id === id;
   });

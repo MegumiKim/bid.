@@ -8,10 +8,10 @@ import { clearHTML } from "../tools/clear.mjs";
 export const myBids = async () => {
   const container = document.querySelector("#my-bids-container");
   const name = tool.getParam("name");
+  container.clearHTML();
 
   try {
-    container.clearHTML();
-    const myBids = await API.bidRecords(name);
+    const myBids = await API.bidHistory(name);
     storage.save("myBids", myBids);
     const myBidsBtn = document.querySelector("#myBidsBtn");
     myBidsBtn.innerText = `My Bids (${myBids.length})`;

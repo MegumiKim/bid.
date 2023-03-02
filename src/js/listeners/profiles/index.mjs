@@ -1,2 +1,2 @@
 export * from "./editAvatar.mjs";
-export * from "./myPageBtn.mjs";
+export * from "./jumpToProfilePage.mjs";

@@ -2,6 +2,8 @@
 
 https://auction.kimuramegumi.site/
 
+[Homepage Preview](./asset/img/site-screenshot.png)
+
 ## Brief
 
 bid. is an auction platform where users can post a listing for auction and bid on other users's listings.

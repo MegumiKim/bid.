@@ -23,8 +23,8 @@ export function router() {
     checkLogin();
   } else if (path === "/profile/") {
     render.myPage();
-    render.myBids();
-    render.myListings();
+    // render.myBids();
+    // render.myListings();
     listeners.logout();
     ui.createListingForm();
     ui.editAvatar();

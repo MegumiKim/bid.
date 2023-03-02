@@ -1,5 +1,6 @@
 import * as storage from "../storage/session.mjs";
 import * as template from "../templates/listingCard.mjs";
+import * as sort from "../sort/sort/index.mjs";
 
 export function myWins(data) {
   const container = document.querySelector("#my-wins-container");
@@ -15,7 +16,8 @@ export function myWins(data) {
       });
       myWins.push(itemExists);
     });
-    myWins.forEach((win) => {
+    const sortedWins = sort.latest(myWins);
+    sortedWins.forEach((win) => {
       template.postListingCard(win.listing, container, win.amount);
     });
   } else {

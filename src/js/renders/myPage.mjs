@@ -15,11 +15,17 @@ export const myPage = async () => {
     try {
       const data = await API.fetchSingleUser(name);
       template.postMyPage(data, container);
+      render.myListings();
+      render.myBids();
       render.myWins(data);
       render.myFavorites();
       navBtn.src = data.avatar;
     } catch (e) {
-      render.userAlert(container, e.message, "secondary");
+      render.userAlert(
+        container,
+        "Fail to fetch data, please refresh the page.",
+        "secondary"
+      );
     }
   }
 };
