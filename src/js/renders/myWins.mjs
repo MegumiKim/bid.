@@ -2,16 +2,18 @@ import * as storage from "../storage/session.mjs";
 import * as template from "../templates/listingCard.mjs";
 import * as sort from "../sort/sort/index.mjs";
 import * as render from "../renders/index.mjs";
+import { debounce } from "../tools/debounce.mjs";
 
-export function myWins(data) {
+export function myWins(data, myBids) {
   const container = document.querySelector("#my-wins-container");
   container.clearHTML();
 
   try {
     const wins = data.wins;
-    const myBids = storage.load("myBids");
     document.querySelector("#myWinsBtn").innerText = `My Wins (${wins.length})`;
 
+    // const myBids = storage.load("myBids") ? storage.load("myBids") : [];
+    // if (myBids) {
     let myWins = [];
     if (wins.length) {
       wins.forEach((win) => {
@@ -29,5 +31,6 @@ export function myWins(data) {
     }
   } catch (e) {
     render.userAlert(container, "Failed to fetch data", "danger");
+    console.log(e);
   }
 }

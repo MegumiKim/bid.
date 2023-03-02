@@ -22,6 +22,7 @@ export const myBids = async () => {
     } else {
       container.innerHTML = `<p class="text-light">You have no bids yet.</p>`;
     }
+    return myBids;
   } catch (e) {
     render.userAlert(container, "Failed to fetch data", "secondary");
   }

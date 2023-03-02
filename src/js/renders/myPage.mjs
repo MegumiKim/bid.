@@ -13,10 +13,10 @@ export const myPage = async () => {
 
     try {
       const data = await API.fetchSingleUser(name);
+      const myBids = await render.myBids();
       template.postMyPage(data, container);
       render.myListings();
-      render.myBids();
-      render.myWins(data);
+      render.myWins(data, myBids);
       render.myFavorites();
       navBtn.src = data.avatar;
     } catch (e) {

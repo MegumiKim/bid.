@@ -8,7 +8,7 @@
  * ```
  */
 export const formatDate = (rawData) => {
-  const formattedDate = new Date(rawData).toLocaleString(undefined, {
+  const formattedDate = new Date(rawData).toLocaleString("en-GB", {
     // year: "numeric",
     month: "numeric",
     day: "numeric",

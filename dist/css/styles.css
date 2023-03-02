@@ -11033,6 +11033,7 @@ img {
 
 #username-h1 {
   font-size: 4rem;
+  overflow-wrap: break-word;
 }
 
 .modal-header {
