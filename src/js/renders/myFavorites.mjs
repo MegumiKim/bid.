@@ -3,10 +3,10 @@ import * as storage from "../storage/local.mjs";
 
 export const myFavorites = async () => {
   const container = document.querySelector("#my-favs-container");
-  // const name = tool.getParam("name");
 
   try {
     const listings = storage.load("favorite") ? storage.load("favorite") : [];
+
     const accordionBtn = document.querySelector("#myFavBtn");
     if (!listings.length) {
       accordionBtn.innerText = `My Favorites (0)`;
@@ -16,6 +16,7 @@ export const myFavorites = async () => {
       render.renderCards(listings, container);
     }
   } catch (e) {
-    render.userAlert(container, e.message, "secondary");
+    render.userAlert(container, "failed to fetch data", "secondary");
+    console.warn(e);
   }
 };

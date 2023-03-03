@@ -12,8 +12,6 @@ export function myWins(data, myBids) {
     const wins = data.wins;
     document.querySelector("#myWinsBtn").innerText = `My Wins (${wins.length})`;
 
-    // const myBids = storage.load("myBids") ? storage.load("myBids") : [];
-    // if (myBids) {
     let myWins = [];
     if (wins.length) {
       wins.forEach((win) => {
@@ -31,6 +29,6 @@ export function myWins(data, myBids) {
     }
   } catch (e) {
     render.userAlert(container, "Failed to fetch data", "danger");
-    console.log(e);
+    console.warn(e);
   }
 }

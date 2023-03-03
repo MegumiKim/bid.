@@ -2,7 +2,6 @@ import * as API from "../API/index.mjs";
 import * as template from "../templates/index.mjs";
 import * as tool from "../tools/index.mjs";
 import * as render from "./index.mjs";
-import * as storage from "../storage/session.mjs";
 
 export const myBids = async () => {
   const container = document.querySelector("#my-bids-container");
@@ -11,7 +10,6 @@ export const myBids = async () => {
 
   try {
     const myBids = await API.bidHistory(name);
-    storage.save("myBids", myBids);
     const myBidsBtn = document.querySelector("#myBidsBtn");
     myBidsBtn.innerText = `My Bids (${myBids.length})`;
 

@@ -2,7 +2,7 @@
 
 https://auction.kimuramegumi.site/
 
-[Homepage Preview](./asset/img/site-screenshot.png)
+![Homepage Preview](./asset/img/site-screenshot.png)
 
 ## Brief
 
