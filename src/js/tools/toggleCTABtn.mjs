@@ -24,7 +24,9 @@ export const toggleCTABtn = (data) => {
 
       // Case - user is NOT the owner of the product
     } else {
-      if (!tool.remainingTime(data.endsAt === "Expired")) {
+      if (tool.remainingTime(data.endsAt) === "Expired") {
+        tool.show("div#sold");
+      } else {
         tool.show("button#bidBtn");
         tool.show("button#favBtn");
 
@@ -32,8 +34,6 @@ export const toggleCTABtn = (data) => {
         if (tool.isFavorite(data)) {
           favBtn.innerText = "Remove From Favorite";
         }
-      } else {
-        tool.show("div#sold");
       }
     }
   }
