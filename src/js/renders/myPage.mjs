@@ -14,6 +14,7 @@ export const myPage = async () => {
     try {
       const data = await API.fetchSingleUser(name);
       const myBids = await render.myBids();
+
       template.postMyPage(data, container);
       render.myListings();
       render.myWins(data, myBids);

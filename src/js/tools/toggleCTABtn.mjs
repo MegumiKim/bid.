@@ -24,12 +24,16 @@ export const toggleCTABtn = (data) => {
 
       // Case - user is NOT the owner of the product
     } else {
-      tool.show("button#bidBtn");
-      tool.show("button#favBtn");
+      if (!tool.remainingTime(data.endsAt === "Expired")) {
+        tool.show("button#bidBtn");
+        tool.show("button#favBtn");
 
-      // Case - product is already added in my Favorite
-      if (tool.isFavorite(data)) {
-        favBtn.innerText = "Remove From Favorite";
+        // Case - product is already added in my Favorite
+        if (tool.isFavorite(data)) {
+          favBtn.innerText = "Remove From Favorite";
+        }
+      } else {
+        tool.show("div#sold");
       }
     }
   }

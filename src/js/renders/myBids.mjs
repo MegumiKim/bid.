@@ -11,10 +11,15 @@ export const myBids = async () => {
   try {
     const myBids = await API.bidHistory(name);
     const myBidsBtn = document.querySelector("#myBidsBtn");
-    myBidsBtn.innerText = `My Bids (${myBids.length})`;
 
-    if (myBids.length) {
-      myBids.forEach((bid) => {
+    // Eliminate the duplicates
+    const uniqueItems = [
+      ...new Map(myBids.reverse().map((bid) => [bid.listing.id, bid])).values(),
+    ];
+    myBidsBtn.innerText = `My Bids (${uniqueItems.length})`;
+
+    if (uniqueItems.length) {
+      uniqueItems.reverse().forEach((bid) => {
         template.postListingCard(bid.listing, container, bid.amount);
       });
     } else {
