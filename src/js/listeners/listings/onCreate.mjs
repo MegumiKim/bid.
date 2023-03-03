@@ -1,7 +1,7 @@
 import * as API from "../../API/index.mjs";
 import * as tool from "../../tools/index.mjs";
 import * as render from "../../renders/index.mjs";
-import * as listener from "./index.mjs";
+import * as listener from "../index.mjs";
 
 /**
  * Listens to form submit event and makes a payload.

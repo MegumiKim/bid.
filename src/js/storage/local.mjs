@@ -12,12 +12,20 @@ export const save = (key, value) => {
  * @param {String} key
  */
 export const load = (key) => {
-  try {
-    return JSON.parse(localStorage.getItem(key));
-  } catch (error) {
+  if (!key) {
     return [];
+  } else {
+    return JSON.parse(localStorage.getItem(key));
   }
 };
+
+// export const load = (key) => {
+//   try {
+//     return JSON.parse(localStorage.getItem(key));
+//   } catch (error) {
+//     return [];
+//   }
+// };
 /**
  * Removes items identified by the key from local storage
  * @param {String} key
