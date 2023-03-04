@@ -10848,6 +10848,11 @@ a:hover {
   width: 20px;
 }
 
+#search-head {
+  max-width: 80%;
+  margin: auto;
+}
+
 input {
   color-scheme: dark;
 }
