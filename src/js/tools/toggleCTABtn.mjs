@@ -17,15 +17,17 @@ export const toggleCTABtn = (data) => {
     const seller = data.seller.email;
     const myEmail = load("userDetails").email;
 
-    // Case - user is the owner of the product
-    if (seller === myEmail) {
-      tool.show("button#editBtn");
-      tool.show("button#deleteBtn");
+    // Case - Product expired:
 
-      // Case - user is NOT the owner of the product
+    if (tool.remainingTime(data.endsAt) === "Expired") {
+      tool.show("div#sold");
     } else {
-      if (tool.remainingTime(data.endsAt) === "Expired") {
-        tool.show("div#sold");
+      // Case - user is the owner of the product
+      if (seller === myEmail) {
+        tool.show("button#editBtn");
+        tool.show("button#deleteBtn");
+
+        // Case - user is NOT the owner of the product
       } else {
         tool.show("button#bidBtn");
         tool.show("button#favBtn");
