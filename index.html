@@ -20,7 +20,8 @@
           <a href="/" class="logo mb-lg-0">bid. </a>
 
           <div class="d-flex flex-wrap align-items-center text-center">
-            <a href="#search" class="d-none d-sm-block mx-3">          
+            <a href="#search-section" class="d-none d-sm-block mx-3">          
+            <!-- <a href="#search" class="d-none d-sm-block mx-3">           -->
               <input
               class="form-control"
               placeholder="Search"
@@ -53,7 +54,7 @@
                 id="nav-dropdown"
               >
               <li><a class="dropdown-item active" href="/">Home</a></li>
-              <li><a class="dropdown-item" href="#search">Listings</a></li>
+              <li><a class="dropdown-item" href="#search-section">Listings</a></li>
                 <li><a class="dropdown-item" href="#" id="my-page">My Page</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
@@ -70,7 +71,7 @@
           </div>
         </div>
       </div>
-      <a href="#search" class="d-sm-none px-3">          
+      <a href="#search-section" class="d-sm-none px-3">          
         <input
         id="search-head"
         class="form-control fs-3"
@@ -225,7 +226,7 @@
             </div>
             <div class="form-group mb-3">
               <label for="">🕒  Ends date (required)</label>
-              <input type="date" class="form-control" name="endsAt" required"/>
+              <input type="datetime-local" class="form-control" name="endsAt" required"/>
             </div>
             <div class="form-group mb-3">
               <label for="">✎  Short description</label>
