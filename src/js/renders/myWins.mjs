@@ -1,8 +1,6 @@
-import * as storage from "../storage/session.mjs";
 import * as template from "../templates/listingCard.mjs";
 import * as sort from "../sort/sort/index.mjs";
 import * as render from "../renders/index.mjs";
-import { debounce } from "../tools/debounce.mjs";
 
 export function myWins(data, myBids) {
   const container = document.querySelector("#my-wins-container");
@@ -10,8 +8,10 @@ export function myWins(data, myBids) {
 
   try {
     const wins = data.wins;
+
     document.querySelector("#myWinsBtn").innerText = `My Wins (${wins.length})`;
 
+    console.log(wins);
     let myWins = [];
     if (wins.length) {
       wins.forEach((win) => {
