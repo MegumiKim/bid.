@@ -19,7 +19,9 @@ export const postProductCTASection = (data, parent) => {
     template.renderTags(data, tagContainer);
     doc.querySelector("h1").innerText = data.title;
     doc.querySelector("div.endsAt").innerText = endsAt;
-    doc.querySelector("div.bids").innerText = `${highest} pt`;
+    doc.querySelector(
+      "div.bids"
+    ).innerHTML = ` <img src="../../../asset/img/coin.png" class="gold-coin-sm mb-1 me-2" alt="bid point icon"></img>${highest} pt`;
     doc.querySelector("div.created").innerText = created;
     doc.querySelector("div.time-remain").innerText = `( ${timeLeft} )`;
 

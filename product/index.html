@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Learn ore about the product and bid!" />
+    <meta name="description" content="Learn more about the product and bid!" />
     <title>bid. | Product Name</title>
     <link rel="stylesheet" href="/dist/css/styles.css" />
     <script defer src="../src/js/index.mjs" type="module"></script>
@@ -18,18 +18,12 @@
     <header class="p-3 mb-3">
       <div>
         <div class="d-flex justify-content-between">
-          <a href="/" class="logo  mb-2 mb-lg-0"> bid. </a>
+          <a href="/" class="logo mb-lg-0"> bid. </a>
 
-          <div class=" d-sm-flex align-items-center text-center">
-            <a href="/#search-section" class="d-none d-sm-block mx-3">          
-              <input
-              class="form-control"
-              placeholder="Search"
-              aria-label="Search"
-            /></a>
-            <div class="d-none welcome-stranger">
-              <p class="mb-0">Welcome stranger: </p>
-              <a href="../login">Login</a>
+          <div class=" d-sm-flex align-items-center text-center my-auto me-sm-4">
+            <div class=" d-none welcome-stranger m-auto justify-content-end">
+              <a href="/" class="d-block "> HOME</a>
+              <a href="../login" class="ms-sm-5">LOGIN</a>
             </div>
             <div class="d-none welcome-user">
               <p class="mb-0 user-name"> </p>
@@ -52,7 +46,6 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark text-small mt-2">
                   <li><a class="dropdown-item" href="/">Home</a></li>
-                  <li><a class="dropdown-item" href="/#search-section">Listings</a></li>
                   <li><a class="dropdown-item" href="#" id="my-page">My Page</a></li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
@@ -115,6 +108,15 @@
 
     </main>
 
+    <footer class="mt-auto py-3 my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">© 2023 auction platform - bid.</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+    </footer>
+    
     <!-- Modal place a bid -->
     <div
       class="modal fade"
@@ -221,7 +223,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="logout">Delete</h1>
+            <h1 class="modal-title fs-5" id="delete">Delete</h1>
             <button
               type="button"
               class="btn-close"
@@ -275,7 +277,7 @@
                 Back
               </button>
               <button
-                class="btn btn-primary"
+                class="btn btn-outline-secondary"
                 data-bs-dismiss="modal"
                 id="logout-btn"
               >
@@ -286,15 +288,6 @@
         </div>
       </div>
     </div>
-    <footer class="mt-auto py-3 my-5 pt-5 text-muted text-center text-small">
-      <p class="mb-1">© 2023 auction platform - bid.</p>
-      <ul class="list-inline">
-        <li class="list-inline-item"><a href="#">Privacy</a></li>
-        <li class="list-inline-item"><a href="#">Terms</a></li>
-        <li class="list-inline-item"><a href="#">Support</a></li>
-      </ul>
-    </footer>
-
 
     <!-- Templates -->
     <div class="d-none templates">
@@ -302,7 +295,7 @@
       <template id="credit-NAV">
         <p class="mb-0 user-name"> </p>
         <div id="points-display" class="mt-1">
-        <img src="../../../asset/img/coin.png" class="gold-coin-sm mb-1" alt="bid point icon"></img>          <small class="credit"></small>
+        <img src="../../../asset/img/coin.png" class="gold-coin-sm mb-1" alt="bid point icon"></img><small class="credit"></small>
         </div>
       </template>
 
@@ -317,16 +310,16 @@
       </div>
 
       <div class="card card-specific mt-0 rounded-3  col col-md-4">
-        <div class="card-header py-3">
+        <div class="card-header py-3 ">
           <h2 class="my-0 fw-normal">Seller</h2>
       </div>
-        <div class="d-flex list-group-item list-group-item-action py-3" aria-current="true">
+        <div class="d-flex list-group-item  py-3" aria-current="true">
           <img onerror="this.onerror=null;this.src='../asset/img/avatar-placeholder.png'" class="bd-placeholder-img flex-shrink-0 me-3 rounded" width="50" height="50" id="seller-img">
-          <div class="d-flex w-100 justify-content-between lh-md ">
-            <div>
-              <strong class="seller-name"></strong>
+          <div class=" w-100 justify-content-between lh-md ">
+
+              <strong class="seller-name "></strong>
               <p class="mb-0 email"></p>
-            </div>
+
           </div>
         </div>
       </div>
@@ -336,7 +329,7 @@
           <h2 class="my-0 fw-normal">Bid History</h2>
         </div>
         <div class="card-body">
-          <div id="bid-history-container" class="row">
+          <div id="bid-history-container" class="row overflow-y-scroll">
           </div>
         </div>
       </div>

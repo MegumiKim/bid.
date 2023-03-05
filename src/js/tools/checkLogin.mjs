@@ -9,6 +9,7 @@ import * as template from "../templates/creditNAV.mjs";
 export async function checkLogin() {
   const navBtn = document.querySelector("#navBtn");
   const container = document.querySelector("#welcome-btns");
+  const unLoggedInNav = document.querySelector(".welcome-stranger");
 
   // For logged-in user
   if (load("accessToken")) {
@@ -31,6 +32,7 @@ export async function checkLogin() {
       tool.show("#signup-CTA");
     }
     tool.show(".welcome-stranger");
+    unLoggedInNav.classList.add("d-sm-flex");
     tool.hide("#navBtn");
   }
 }

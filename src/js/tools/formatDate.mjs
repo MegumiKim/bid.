@@ -17,3 +17,11 @@ export const formatDate = (rawData) => {
   });
   return formattedDate;
 };
+
+export const formatOnlyDate = (rawData) => {
+  const formattedDate = new Date(rawData).toLocaleString("en-GB", {
+    month: "numeric",
+    day: "numeric",
+  });
+  return formattedDate;
+};

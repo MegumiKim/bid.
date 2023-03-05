@@ -24,7 +24,7 @@ const createBidItem = (items, container) => {
     const bid = document.createElement("div");
     bid.classList.add("d-flex");
     bid.classList.add("flex-wrap");
-    bid.innerHTML = `<div class="me-2"> ${item.amount}pt - ${date} </div><div class="mb-2"> by ${item.bidderName}</div>
+    bid.innerHTML = `<div class="me-2"> <img src="../../../asset/img/coin.png" class="gold-coin-sm mb-1 me-2" alt="bid point icon"></img>${item.amount}pt - ${date} </div><div class="mb-2"> by ${item.bidderName}</div>
      `;
     container.append(bid);
   });

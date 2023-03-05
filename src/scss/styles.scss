@@ -27,3 +27,18 @@ body {
   background-color: #2b2d34;
   color: #fff;
 }
+
+// product specific page
+
+#description-container > .card-body {
+  max-height: 30vh;
+  overflow-y: scroll;
+}
+.list-group-item {
+  overflow-x: scroll;
+}
+
+#bid-history-container {
+  overflow-y: scroll;
+  max-height: 20vh;
+}

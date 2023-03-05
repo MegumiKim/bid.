@@ -10,7 +10,7 @@ import * as template from "./index.mjs";
  */
 export const postListingCard = (data, parent, amount = 0) => {
   const doc = template.cloneTemplate("card-template");
-  const created = tool.formatDate(data.created);
+  const created = tool.formatOnlyDate(data.created);
   const timeLeft = tool.remainingTime(data.endsAt);
   const bids = sort.highestBid(data, amount);
 
@@ -31,7 +31,7 @@ export const postListingCard = (data, parent, amount = 0) => {
   doc.querySelector("a.card").href = `/product/?id=${data.id}`;
   doc.querySelector("h4").innerText = data.title;
   // doc.querySelector("p.card-text").innerText = data.description;
-  doc.querySelector("div.created").innerText = created;
+  doc.querySelector("div.created").innerText = `Created: ${created}`;
 
   const img = doc.querySelector("img");
 
