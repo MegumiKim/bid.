@@ -10802,7 +10802,6 @@ textarea.form-control-lg {
 }
 .logo {
   font-family: "Comfortaa", cursive;
-  padding: 0 1rem 0 1rem;
   font-size: 4rem;
 }
 
@@ -11106,6 +11105,7 @@ img {
 }
 .avatar-main {
   aspect-ratio: 1;
+  height: 200px;
   max-width: 12rem;
   object-position: center center;
   object-fit: cover;
