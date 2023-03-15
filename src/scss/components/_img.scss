@@ -1,6 +1,6 @@
 .avatar-main {
-  width: 200px;
-  height: 200px;
+  aspect-ratio: 1;
+  max-width: 12rem;
   object-position: center center;
   object-fit: cover;
 }

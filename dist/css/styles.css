@@ -10959,6 +10959,8 @@ a:hover {
   border-radius: 0;
   max-width: 400px;
   margin: auto;
+  border: white 3px solid;
+  border-radius: 2px;
 }
 
 .card-title,
@@ -11010,10 +11012,6 @@ img {
   color: #fff;
 }
 
-#product-summary:hover {
-  background-color: none;
-}
-
 .highest {
   color: #faacaa;
 }
@@ -11037,11 +11035,6 @@ img {
 
 .logo-img-wrapper > img {
   max-width: 100%;
-}
-
-#featured-items {
-  border: 2px solid rgb(35, 189, 168);
-  border-radius: 10px;
 }
 
 #username-h1 {
@@ -11112,8 +11105,8 @@ img {
   }
 }
 .avatar-main {
-  width: 200px;
-  height: 200px;
+  aspect-ratio: 1;
+  max-width: 12rem;
   object-position: center center;
   object-fit: cover;
 }

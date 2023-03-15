@@ -3,11 +3,10 @@
   border-radius: 0;
   max-width: 400px;
   margin: auto;
+  border: white 3px solid;
+  border-radius: 2px;
 }
 
-// .card-body {
-//   padding: 1.5rem;
-// }
 .card-title,
 .card-footer > div {
   color: white;
@@ -20,8 +19,6 @@
 .card-text,
 .card-title,
 .tags {
-  // display: block;
-  // width: 90%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -57,9 +54,9 @@ img {
   color: #fff;
 }
 
-#product-summary:hover {
-  background-color: none;
-}
+// #product-summary:hover {
+//   background-color: none;
+// }
 
 .highest {
   color: $myPink;
