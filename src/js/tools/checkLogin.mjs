@@ -36,7 +36,3 @@ export async function checkLogin() {
     tool.hide("#navBtn");
   }
 }
-
-// const pointsHTML = (myPoint) => {
-//   return `<small><img src="../../../asset/img/coin.png" class="gold-coin-sm mb-1" alt="bid point icon"></img> ${myPoint} pt</small>`;
-// };

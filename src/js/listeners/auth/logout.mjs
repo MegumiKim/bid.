@@ -10,6 +10,7 @@ export function logout() {
       event.preventDefault();
       storage.remove("accessToken");
       storage.remove("userDetails");
+      storage.remove("credits");
       window.location.replace("/");
     });
   }

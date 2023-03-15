@@ -1,9 +1,7 @@
 export const highestBid = (data, bidAmount = 0) => {
   if (data.bids) {
     if (data.bids.length) {
-      const myBids = data.bids.map((item) => item.amount);
-      const highest = Math.max(...myBids);
-      return highest;
+      return Math.max(...data.bids.map((item) => item.amount));
     } else {
       return 0;
     }
