@@ -25,7 +25,7 @@ The site's target audience is Noroff students community.
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/MegumiKim/SP2.git
+git clone https://github.com/MegumiKim/bid..git
 ```
 
 2. install dependencies
