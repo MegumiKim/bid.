@@ -10953,12 +10953,22 @@ a:hover {
   width: 50px;
 }
 
+#featured-items {
+  display: flex;
+  gap: 1rem;
+  overflow: scroll;
+}
+
+#featured-items > * {
+  flex: 1;
+  max-width: 300px;
+}
+
 .card {
   background-color: #2b2d34;
   border-radius: 0;
   max-width: 400px;
   margin: auto;
-  border: white 3px solid;
   border-radius: 2px;
 }
 

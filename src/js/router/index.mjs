@@ -29,3 +29,40 @@ export function router() {
     checkLogin();
   }
 }
+
+export const routerSwitch = () => {
+  const path = location.pathname;
+  console.log(path);
+  switch (path) {
+    case "/signup/":
+      ui.signupForm();
+      break;
+
+    case "/login":
+      ui.loginForm();
+      break;
+
+    case "/product/":
+      render.singleEntry();
+      listeners.logout();
+      ui.myPageBtn();
+      checkLogin();
+      break;
+
+    case "/profile/":
+      render.myPage();
+      listeners.logout();
+      ui.createListingForm();
+      ui.editAvatar();
+      checkLogin();
+
+    default:
+      render.listings();
+      ui.myPageBtn();
+      listeners.logout();
+      ui.createListingForm();
+      checkLogin();
+
+      break;
+  }
+};
