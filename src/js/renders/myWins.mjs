@@ -11,7 +11,6 @@ export function myWins(data, myBids) {
 
     document.querySelector("#myWinsBtn").innerText = `My Wins (${wins.length})`;
 
-    console.log(wins);
     let myWins = [];
     if (wins.length) {
       wins.forEach((win) => {
