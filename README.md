@@ -1,4 +1,4 @@
-# bid. Auction Site
+# bid Auction Site
 
 https://auction.kimuramegumi.site/
 
@@ -6,7 +6,7 @@ https://auction.kimuramegumi.site/
 
 ## Brief
 
-bid. is an auction platform where users can post a listing for auction and bid on other users's listings.
+bid is an auction platform where users can post a listing for auction and bid on other users's listings.
 Only the registered users can bid and create listings, while unregistered users can also search through the listings.
 The site's target audience is Noroff students community.
 
@@ -25,7 +25,7 @@ The site's target audience is Noroff students community.
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/MegumiKim/bid..git
+git clone https://github.com/MegumiKim/bid.git
 ```
 
 2. install dependencies
