@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "Auction site where users can sell items and bid ",
   "type": "module",
-  "main": "index.js",
+  "main": "index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "sass src/scss:dist/css",

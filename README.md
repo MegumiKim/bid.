@@ -22,13 +22,13 @@ The site's target audience is Noroff students community.
 
 ### Installing
 
-1. Clone the repo:
+1; Clone the repo:
 
 ```bash
 git clone https://github.com/MegumiKim/bid.git
 ```
 
-2. install dependencies
+2; install dependencies
 
 ```bash
 npm i
