@@ -5,6 +5,7 @@ export * from "./myListings.mjs";
 export * from "./myBids.mjs";
 export * from "./offsetListings.mjs";
 export * from "./userAlert.mjs";
+export * from "./mainListings.mjs";
 export * from "./myWins.mjs";
 export * from "./renderCards.mjs";
 export * from "./carousel.mjs";
