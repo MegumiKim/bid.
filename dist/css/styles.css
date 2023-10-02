@@ -10815,7 +10815,7 @@ textarea.form-control-lg {
 
 .add-btn {
   padding: 0;
-  color: #fff;
+  color: white;
   border-radius: 50%;
 }
 
@@ -11129,7 +11129,7 @@ img {
 body {
   font-family: "Roboto", sans-serif;
   background-color: #2b2d34;
-  color: #fff;
+  color: white;
 }
 
 #description-container > .card-body {
