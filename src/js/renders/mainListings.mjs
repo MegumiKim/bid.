@@ -15,9 +15,9 @@ export async function listings() {
 
   ui.prevBtn();
   ui.nextBtn();
-  ui.endingSoonItem(allListings);
-  ui.mostPopularItem(allListings);
-  ui.highestBid(allListings);
+  // ui.endingSoonItem(allListings);
+  // ui.mostPopularItem(allListings);
+  // ui.highestBid(allListings);
   ui.searchInput(allListings);
   listener.renderSortedItems(sortOption, allListings);
 }
