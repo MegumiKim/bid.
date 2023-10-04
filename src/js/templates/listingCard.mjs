@@ -37,8 +37,8 @@ export const postListingCard = (data, parent, amount = 0) => {
 
   img.src = data.media[0];
   img.alt = data.title;
-  img.onerror = (event) => {
-    event.target.src = "../../../asset/img/placeholder_img.png";
-  };
+  // img.onerror = (event) => {
+  //   event.target.src = "../../../asset/img/placeholder_img.png";
+  // };
   parent.append(doc);
 };

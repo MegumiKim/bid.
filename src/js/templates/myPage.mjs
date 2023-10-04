@@ -17,9 +17,9 @@ export const postMyPage = (data, parent) => {
   const img = doc.querySelector("img.rounded-circle");
   img.alt = data.name;
   img.src = data.avatar;
-  img.onerror = (event) => {
-    event.target.src = "../../../asset/img/avatar-placeholder.png";
-  };
+  // img.onerror = (event) => {
+  //   event.target.src = "../../../asset/img/avatar-placeholder.png";
+  // };
 
   doc.querySelector("h3.username").innerText = data.name;
   doc.querySelector("p.email").innerText = data.email;
