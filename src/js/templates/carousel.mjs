@@ -17,9 +17,9 @@ export const postCarousel = (media, altTxt, parent) => {
     const imgModal = doc.querySelector("img.myModal");
     imgModal.src = media;
     imgModal.alt = altTxt;
-    // img.onerror = (event) => {
-    //   event.target.src = "../../../asset/img/placeholder_img.png";
-    // };
+    img.onerror = (event) => {
+      event.target.src = "../../../asset/img/placeholder_img.png";
+    };
     parent.append(doc);
   } catch (e) {
     userAlert(parent, "Failed to fetch data", "danger");
