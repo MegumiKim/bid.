@@ -1,6 +1,6 @@
 # bid Auction Site
 
-https://auction.kimuramegumi.site/
+https://bid.megumi.no/
 
 ![Homepage Preview](./asset/img/site-screenshot.png)
 
@@ -11,6 +11,8 @@ Only the registered users can bid and create listings, while unregistered users 
 The site's target audience is Noroff students community.
 
 ## Built With
+
+This project uses only vanilla JS for its functionality.
 
 - HTML
 - CSS
@@ -31,13 +33,13 @@ git clone https://github.com/MegumiKim/bid.git
 2; install dependencies
 
 ```bash
-npm i
+npm install
 ```
 
 ### Running
 
 ```bash
-npm run build
+npm run start
 ```
 
 ### JSDocs
@@ -50,11 +52,9 @@ Run index.html in /out folder with liveserver.
 
 ## Project Planning
 
-Github Project:
-https://github.com/users/MegumiKim/projects/2/views/1
+[Github Project](https://github.com/users/MegumiKim/projects/2/views/1)
 
-Adobe XD:
-https://xd.adobe.com/view/2ca4cf01-6e1d-4aaf-9d8d-4cd26039b789-79f7/
+[Adobe XD](https://xd.adobe.com/view/2ca4cf01-6e1d-4aaf-9d8d-4cd26039b789-79f7/)
 
 ## Contact
 
